@@ -4,9 +4,9 @@ module vga (
   input CLOCK_50,
   input reset,
   // Sinais do módulo de controle
-  input [7:0] R,
-  input [7:0] G,
-  input [7:0] B,
+  input [1:0] R,
+  input [1:0] G,
+  input [1:0] B,
   // -------------------------
   // Sinais para o DAC
   output wire VGA_CLK,
@@ -21,13 +21,13 @@ module vga (
   output VGA_VS,
   // ------------------------
   // Sinais de controle do pixel atual
+  output active,
   output reg [9:0] x,
   output reg [9:0] y
 );
 
   reg [10:0] hcounter = 0;
   reg [10:0] vcounter = 0;
-  wire active_display;
   reg vga_clk_aux = 0;
 
   parameter [9:0] VTA = 2;
@@ -44,10 +44,10 @@ module vga (
   assign VGA_SYNC_N = 1;
   assign VGA_HS = (hcounter < HTA) ? 0 : 1;
   assign VGA_VS = (vcounter < VTA) ? 0 : 1;
-  assign active_display = ((hcounter >= HTB) && (hcounter < HTC) && (vcounter >= VTB) && (vcounter < VTD))? 1 : 0;
-  assign VGA_R = (active_display) ? R : 0; 
-  assign VGA_G = (active_display) ? G : 0;
-  assign VGA_B = (active_display) ? B : 0;
+  assign active = ((hcounter >= HTB) && (hcounter < HTC) && (vcounter >= VTB) && (vcounter < VTD))? 1 : 0;
+  assign VGA_R = (active) ? {R, 6'b0} : 0; 
+  assign VGA_G = (active) ? {G, 6'b0} : 0;
+  assign VGA_B = (active) ? {B, 6'b0} : 0;
 
   always @(posedge CLOCK_50) begin
       vga_clk_aux = !vga_clk_aux;
