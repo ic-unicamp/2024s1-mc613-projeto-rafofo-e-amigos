@@ -2,12 +2,13 @@ module update #(
     parameter MAPA_HEIGHT,
     parameter MAPA_WIDTH
 ) (
-    input [3:0] mapa_dado_read,
-    output [3:0] mapa_dado_write,
+	 input clk,
+    output reg [3:0] mapa_dado_read,
+    output reg [3:0] mapa_dado_write,
     output reg mapa_read,
     output reg mapa_write,
-    output [4:0] mapa_x,
-    output [4:0] mapa_y,
+    output reg [4:0] mapa_x,
+    output reg [4:0] mapa_y,
 
     input [1:0] cobra_dir
 );
@@ -56,7 +57,7 @@ always @(posedge clk) begin
         mapa_y = cauda_y;
 
         // Descobre a direção da cauda
-        mapa_dado_read = 1;
+        mapa_read = 1;
         cauda_dir = mapa_dado_read;
 
         mapa_dado_read = 0;
@@ -68,7 +69,7 @@ always @(posedge clk) begin
         mapa_write = 0;
 
         // Posição da nova cauda
-        case (cauda_dir) begin
+        case (cauda_dir)
             0: begin
                 cauda_x = cauda_x;
                 cauda_y = cauda_y - 1;

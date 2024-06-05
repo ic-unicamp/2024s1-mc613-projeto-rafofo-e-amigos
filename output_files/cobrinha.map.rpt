@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cobrinha
-Mon Jun  3 22:38:25 2024
+Wed Jun  5 18:13:03 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -10,8 +10,33 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |main
+ 12. Parameter Settings for User Entity Instance: vga:out
+ 13. Parameter Settings for User Entity Instance: mapa:mapa
+ 14. Parameter Settings for User Entity Instance: renderer:renderer
+ 15. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:pontuacaoDir
+ 16. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:high_scoreEsq
+ 17. Port Connectivity Checks: "bin2display:display|bin2bcd:high_scoreEsq"
+ 18. Port Connectivity Checks: "bin2display:display|bin2bcd:pontuacaoDir"
+ 19. Port Connectivity Checks: "bin2display:display|bcd2display:display5"
+ 20. Port Connectivity Checks: "bin2display:display|bcd2display:display4"
+ 21. Port Connectivity Checks: "bin2display:display|bcd2display:display3"
+ 22. Port Connectivity Checks: "bin2display:display|bcd2display:display2"
+ 23. Port Connectivity Checks: "bin2display:display|bcd2display:display1"
+ 24. Port Connectivity Checks: "bin2display:display|bcd2display:display0"
+ 25. Port Connectivity Checks: "renderer:renderer"
+ 26. Port Connectivity Checks: "mapa:mapa"
+ 27. Port Connectivity Checks: "vga:out"
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
+ 31. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -35,22 +60,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                 ;
-+-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Jun  3 22:38:25 2024              ;
-; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name               ; cobrinha                                       ;
-; Top-level Entity Name       ; main                                           ;
-; Family                      ; Cyclone V                                      ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
-; Total registers             ; N/A until Partition Merge                      ;
-; Total pins                  ; N/A until Partition Merge                      ;
-; Total virtual pins          ; N/A until Partition Merge                      ;
-; Total block memory bits     ; N/A until Partition Merge                      ;
-; Total PLLs                  ; N/A until Partition Merge                      ;
-; Total DLLs                  ; N/A until Partition Merge                      ;
-+-----------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Jun  5 18:13:03 2024          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; cobrinha                                       ;
+; Top-level Entity Name           ; main                                           ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 23                                             ;
+; Total pins                      ; 86                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -149,11 +179,332 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------+---------+
+; bcd2display.v                    ; yes             ; User Verilog HDL File  ; /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/bcd2display.v ;         ;
+; bin2bcd.v                        ; yes             ; User Verilog HDL File  ; /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/bin2bcd.v     ;         ;
+; bin2display.v                    ; yes             ; User Verilog HDL File  ; /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v ;         ;
+; main.v                           ; yes             ; User Verilog HDL File  ; /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v        ;         ;
+; mapa.v                           ; yes             ; User Verilog HDL File  ; /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v        ;         ;
+; renderer.v                       ; yes             ; User Verilog HDL File  ; /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/renderer.v    ;         ;
+; vga.v                            ; yes             ; User Verilog HDL File  ; /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/vga.v         ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimate of Logic utilization (ALMs needed) ; 23                  ;
+;                                             ;                     ;
+; Combinational ALUT usage for logic          ; 38                  ;
+;     -- 7 input functions                    ; 0                   ;
+;     -- 6 input functions                    ; 8                   ;
+;     -- 5 input functions                    ; 2                   ;
+;     -- 4 input functions                    ; 3                   ;
+;     -- <=3 input functions                  ; 25                  ;
+;                                             ;                     ;
+; Dedicated logic registers                   ; 23                  ;
+;                                             ;                     ;
+; I/O pins                                    ; 86                  ;
+;                                             ;                     ;
+; Total DSP Blocks                            ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; vga:out|vga_clk_aux ;
+; Maximum fan-out                             ; 24                  ;
+; Total fan-out                               ; 286                 ;
+; Average fan-out                             ; 1.23                ;
++---------------------------------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |main                      ; 38 (0)              ; 23 (0)                    ; 0                 ; 0          ; 86   ; 0            ; |main               ; main        ; work         ;
+;    |vga:out|               ; 38 (38)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |main|vga:out       ; vga         ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; renderer:renderer|cor[0]              ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 23    ;
+; Number of registers using Synchronous Clear  ; 22    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 11    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |main|vga:out|hcounter[9]  ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |main|vga:out|vcounter[10] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |main ;
++----------------+------------+----------------------------------------+
+; Parameter Name ; Value      ; Type                                   ;
++----------------+------------+----------------------------------------+
+; SCREEN_WIDTH   ; 1010000000 ; Unsigned Binary                        ;
+; SCREEN_HEIGHT  ; 0111100000 ; Unsigned Binary                        ;
+; BLOCK_SIZE     ; 0000010000 ; Unsigned Binary                        ;
+; BLOCK_BITS     ; 00100      ; Unsigned Binary                        ;
+; MAPA_WIDTH     ; 0000101000 ; Unsigned Binary                        ;
+; MAPA_HEIGHT    ; 0000011110 ; Unsigned Binary                        ;
++----------------+------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga:out ;
++----------------+------------+------------------------+
+; Parameter Name ; Value      ; Type                   ;
++----------------+------------+------------------------+
+; VTA            ; 0000000010 ; Unsigned Binary        ;
+; VTB            ; 0000100011 ; Unsigned Binary        ;
+; VTC            ; 1000000011 ; Unsigned Binary        ;
+; VTD            ; 1000001101 ; Unsigned Binary        ;
+; HTA            ; 0001100000 ; Unsigned Binary        ;
+; HTB            ; 0010010000 ; Unsigned Binary        ;
+; HTC            ; 1100010000 ; Unsigned Binary        ;
+; HTD            ; 1100100000 ; Unsigned Binary        ;
++----------------+------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mapa:mapa ;
++----------------+------------+--------------------------+
+; Parameter Name ; Value      ; Type                     ;
++----------------+------------+--------------------------+
+; MAPA_WIDTH     ; 0000101000 ; Unsigned Binary          ;
+; MAPA_HEIGHT    ; 0000011110 ; Unsigned Binary          ;
++----------------+------------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: renderer:renderer ;
++----------------+------------+----------------------------------+
+; Parameter Name ; Value      ; Type                             ;
++----------------+------------+----------------------------------+
+; SCREEN_WIDTH   ; 1010000000 ; Unsigned Binary                  ;
+; BLOCK_BITS     ; 00100      ; Unsigned Binary                  ;
+; BLOCK_SIZE     ; 0000010000 ; Unsigned Binary                  ;
++----------------+------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:pontuacaoDir ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; W              ; 20    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:high_scoreEsq ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; W              ; 20    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2display:display|bin2bcd:high_scoreEsq"                                                 ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; bcd[25..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2display:display|bin2bcd:pontuacaoDir"                                                  ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; bcd[25..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2display:display|bcd2display:display5"                                                                                                   ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; flag ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2display:display|bcd2display:display4"                                                                                                   ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; flag ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2display:display|bcd2display:display3"                                                                                                   ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; flag ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2display:display|bcd2display:display2"                                                                                                   ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; flag ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2display:display|bcd2display:display1"                                                                                                   ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; flag ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bin2display:display|bcd2display:display0"                                                                                                   ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; flag ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "renderer:renderer"                                                                                                                                   ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                          ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; pixel_x  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "pixel_x[9..1]" will be connected to GND. ;
+; pixel_y  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "pixel_y[9..1]" will be connected to GND. ;
+; cor      ; Output ; Warning  ; Output or bidir port (6 bits) is wider than the port expression (1 bits) it drives; bit(s) "cor[5..1]" have no fanouts                           ;
+; mapa_x   ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (1 bits) it drives; bit(s) "mapa_x[9..1]" have no fanouts                       ;
+; mapa_y   ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (1 bits) it drives; bit(s) "mapa_y[9..1]" have no fanouts                       ;
+; mapa_cor ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "mapa_cor[5..1]" will be connected to GND. ;
++----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mapa:mapa"                                                                                                                                                ;
++-----------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                                                                                        ;
++-----------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; cobra_write     ; Input  ; Info     ; Explicitly unconnected                                                                                                                         ;
+; cobra_dado      ; Input  ; Info     ; Explicitly unconnected                                                                                                                         ;
+; cobra_x         ; Input  ; Info     ; Explicitly unconnected                                                                                                                         ;
+; cobra_y         ; Input  ; Info     ; Explicitly unconnected                                                                                                                         ;
+; fruta_write     ; Input  ; Info     ; Explicitly unconnected                                                                                                                         ;
+; fruta_dado      ; Input  ; Info     ; Explicitly unconnected                                                                                                                         ;
+; fruta_x         ; Input  ; Info     ; Explicitly unconnected                                                                                                                         ;
+; fruta_y         ; Input  ; Info     ; Explicitly unconnected                                                                                                                         ;
+; obstaculo_write ; Input  ; Info     ; Explicitly unconnected                                                                                                                         ;
+; obstaculo_dado  ; Input  ; Info     ; Explicitly unconnected                                                                                                                         ;
+; obstaculo_x     ; Input  ; Info     ; Explicitly unconnected                                                                                                                         ;
+; obstaculo_y     ; Input  ; Info     ; Explicitly unconnected                                                                                                                         ;
+; vga_dado        ; Output ; Warning  ; Output or bidir port (6 bits) is wider than the port expression (1 bits) it drives; bit(s) "vga_dado[5..1]" have no fanouts                    ;
+; vga_x           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "vga_x[9..1]" will be connected to GND. ;
+; vga_y           ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "vga_y[9..1]" will be connected to GND. ;
+; fruta_read      ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.   ;
+; obstaculo_read  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.   ;
++-----------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga:out"                                                                                                                                    ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; RGB  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (6 bits) it drives.  Extra input bit(s) "RGB[5..1]" will be connected to GND. ;
+; x    ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (1 bits) it drives; bit(s) "x[9..1]" have no fanouts                       ;
+; y    ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (1 bits) it drives; bit(s) "y[9..1]" have no fanouts                       ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 23                          ;
+;     ENA SCLR          ; 11                          ;
+;     SCLR              ; 11                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 41                          ;
+;     arith             ; 22                          ;
+;         1 data inputs ; 22                          ;
+;     normal            ; 19                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 2                           ;
+;         4 data inputs ; 3                           ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 86                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.70                        ;
+; Average LUT depth     ; 3.03                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,7 +513,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Mon Jun  3 22:38:16 2024
+    Info: Processing started: Wed Jun  5 18:12:52 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cobrinha -c cobrinha
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -185,17 +536,141 @@ Info (12021): Found 1 design units, including 1 entities, in source file obstacu
     Info (12023): Found entity 1: obstaculo File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/obstaculo.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file renderer.v
     Info (12023): Found entity 1: renderer File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/renderer.v Line: 1
-Error (10170): Verilog HDL syntax error at update.v(71) near text: "begin";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 71
-Error (10112): Ignored design unit "update" at update.v(1) due to previous errors File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file update.v
+Info (12021): Found 1 design units, including 1 entities, in source file update.v
+    Info (12023): Found entity 1: update File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga.v
     Info (12023): Found entity 1: vga File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at main.v(57): created implicit net for "vga_rgb" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 57
+Warning (10236): Verilog HDL Implicit Net warning at main.v(66): created implicit net for "vga_active" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 66
+Warning (10236): Verilog HDL Implicit Net warning at main.v(67): created implicit net for "vga_x" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 67
+Warning (10236): Verilog HDL Implicit Net warning at main.v(68): created implicit net for "vga_y" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 68
+Warning (10236): Verilog HDL Implicit Net warning at main.v(92): created implicit net for "mapa_read" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 92
+Warning (10236): Verilog HDL Implicit Net warning at main.v(93): created implicit net for "mapa_cor_read" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 93
+Warning (10236): Verilog HDL Implicit Net warning at main.v(94): created implicit net for "mapa_x_read" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 94
+Warning (10236): Verilog HDL Implicit Net warning at main.v(95): created implicit net for "mapa_y_read" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 95
+Warning (10222): Verilog HDL Parameter Declaration warning at mapa.v(29): Parameter Declaration in module "mapa" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v Line: 29
+Warning (10222): Verilog HDL Parameter Declaration warning at mapa.v(30): Parameter Declaration in module "mapa" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v Line: 30
+Warning (10222): Verilog HDL Parameter Declaration warning at mapa.v(31): Parameter Declaration in module "mapa" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v Line: 31
+Warning (10222): Verilog HDL Parameter Declaration warning at mapa.v(32): Parameter Declaration in module "mapa" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v Line: 32
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(16): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 16
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Info (12128): Elaborating entity "vga" for hierarchy "vga:out" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 69
+Warning (10230): Verilog HDL assignment warning at vga.v(51): truncated value with size 32 to match size of target (1) File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 51
+Warning (10230): Verilog HDL assignment warning at vga.v(52): truncated value with size 32 to match size of target (1) File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 52
+Warning (10230): Verilog HDL assignment warning at vga.v(53): truncated value with size 32 to match size of target (1) File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 53
+Warning (10230): Verilog HDL assignment warning at vga.v(54): truncated value with size 32 to match size of target (8) File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 54
+Warning (10230): Verilog HDL assignment warning at vga.v(55): truncated value with size 32 to match size of target (8) File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 55
+Warning (10230): Verilog HDL assignment warning at vga.v(56): truncated value with size 32 to match size of target (8) File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 56
+Warning (10230): Verilog HDL assignment warning at vga.v(69): truncated value with size 32 to match size of target (11) File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 69
+Warning (10230): Verilog HDL assignment warning at vga.v(72): truncated value with size 32 to match size of target (11) File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 72
+Warning (10230): Verilog HDL assignment warning at vga.v(78): truncated value with size 32 to match size of target (10) File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 78
+Warning (10230): Verilog HDL assignment warning at vga.v(79): truncated value with size 32 to match size of target (10) File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 79
+Info (12128): Elaborating entity "mapa" for hierarchy "mapa:mapa" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 96
+Warning (10855): Verilog HDL warning at mapa.v(43): initial value for variable map should be constant File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v Line: 43
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "map" into its bus
+Info (12128): Elaborating entity "renderer" for hierarchy "renderer:renderer" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 112
+Warning (10036): Verilog HDL or VHDL warning at renderer.v(22): object "linha" assigned a value but never read File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/renderer.v Line: 22
+Warning (10230): Verilog HDL assignment warning at renderer.v(42): truncated value with size 32 to match size of target (10) File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/renderer.v Line: 42
+Info (12128): Elaborating entity "bin2display" for hierarchy "bin2display:display" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 124
+Info (12128): Elaborating entity "bcd2display" for hierarchy "bin2display:display|bcd2display:display0" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at bcd2display.v(22): variable "flag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/bcd2display.v Line: 22
+Info (12128): Elaborating entity "bin2bcd" for hierarchy "bin2display:display|bin2bcd:pontuacaoDir" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v Line: 59
+Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 7
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 7
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 7
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 7
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 7
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 7
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 7
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 8
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 8
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 8
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 8
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 8
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 8
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 8
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 9
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 9
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 9
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 9
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 9
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 9
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 9
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_G[6]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 19
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 20
+Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/output_files/cobrinha.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
-    Error: Peak virtual memory: 397 megabytes
-    Error: Processing ended: Mon Jun  3 22:38:25 2024
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:22
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 5
+    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 5
+    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 5
+    Warning (15610): No output dependent on input pin "SW[0]" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+Info (21057): Implemented 146 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 71 output pins
+    Info (21061): Implemented 60 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 112 warnings
+    Info: Peak virtual memory: 455 megabytes
+    Info: Processing ended: Wed Jun  5 18:13:03 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+

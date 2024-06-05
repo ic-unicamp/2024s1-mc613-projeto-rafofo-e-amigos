@@ -1,1 +1,2 @@
-Warning (10268): Verilog HDL information at renderer.v(33): always construct contains both blocking and non-blocking assignments File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/renderer.v Line: 33
+Warning (10268): Verilog HDL information at mapa.v(47): always construct contains both blocking and non-blocking assignments File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v Line: 47
+Warning (10268): Verilog HDL information at renderer.v(31): always construct contains both blocking and non-blocking assignments File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/renderer.v Line: 31

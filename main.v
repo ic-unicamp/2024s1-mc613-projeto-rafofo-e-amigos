@@ -53,7 +53,7 @@ module main (
   // Display vga
   vga out (
     .CLOCK_50(CLOCK_50),
-    .reset(reset),
+    .reset(KEY[0]),
     .RGB(vga_rgb),
     .VGA_CLK(VGA_CLK),
     .VGA_G(VGA_G),
@@ -63,8 +63,9 @@ module main (
     .VGA_BLANK_N(VGA_BLANK_N),
     .VGA_HS(VGA_HS),
     .VGA_VS(VGA_VS),
-    .x(x),
-    .y(y)
+    .active(vga_active),
+    .x(vga_x),
+    .y(vga_y)
   );
 
   // RAM do mapa
@@ -72,17 +73,26 @@ module main (
     .MAPA_HEIGHT(MAPA_HEIGHT),
     .MAPA_WIDTH(MAPA_WIDTH)
   ) mapa (
-    .cobra_clk(),
+    .clk(CLOCK_50),
     .cobra_write(),
     .cobra_dado(),
     .cobra_x(),
     .cobra_y(),
 
-    .fruta_clk(),
     .fruta_write(),
     .fruta_dado(),
     .fruta_x(),
-    .fruta_y()
+    .fruta_y(),
+
+    .obstaculo_write(),
+    .obstaculo_dado(),
+    .obstaculo_x(),
+    .obstaculo_y(),
+
+    .vga_read(mapa_read),
+    .vga_dado(mapa_cor_read),
+    .vga_x(mapa_x_read),
+    .vga_y(mapa_y_read)
   );
 
   renderer #(
@@ -92,8 +102,6 @@ module main (
   ) renderer (
     .clk(CLOCK_50),
     .pixel_read(vga_active),
-    .hsync(hsync),
-    .vsync(vsync),
     .pixel_x(vga_x),
     .pixel_y(vga_y),
     .cor(vga_rgb),

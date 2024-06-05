@@ -23,12 +23,13 @@ module mapa #(
   input vga_read,
   input [9:0] vga_x,
   input [9:0] vga_y,
-  output reg [3:0] vga_dado
+  output reg [5:0] vga_dado
 );
 
-  parameter [1:0] NADA = 0;
-  parameter [1:0] COBRA = 1;
-  parameter [1:0] FRUTA = 2;
+  parameter [3:0] NADA = 0;
+  parameter [3:0] COBRA = 1;
+  parameter [3:0] FRUTA = 2;
+  parameter [3:0] OBSTACULO = 3;
 
   // Mapa do jogo
   // 4 bits
@@ -37,8 +38,21 @@ module mapa #(
   // bit [1:0] direcao da cauda
 
   reg [3:0] map [MAPA_HEIGHT-1:0][MAPA_WIDTH-1:0];
+  reg [3:0] aux;
+
+  initial begin
+    map[10][10] = 4'b0001;
+  end
 
   always @(posedge clk) begin
+    if (vga_read) begin
+      aux = map[vga_y][vga_x];
+      if (aux == 4'b0010) begin
+        vga_dado <= 6'b110000;
+      end else if (aux == 4'b0001) begin
+        vga_dado <= 6'b001100;
+      end
+    end
     if (cobra_write) begin
       if (cobra_dado) begin
         map[cobra_y][cobra_x] <= COBRA;
@@ -46,9 +60,6 @@ module mapa #(
         map[cobra_y][cobra_x] <= NADA;
       end
     end
-  end
-
-  always @(posedge clk) begin
     if (fruta_write) begin
       if (fruta_dado) begin
         map[fruta_y][fruta_x] <= FRUTA;
@@ -56,12 +67,9 @@ module mapa #(
         map[fruta_y][fruta_x] <= NADA;
       end
     end
-  end
-
-  always @(posedge clk) begin
     if (obstaculo_write) begin
       if (obstaculo_dado) begin
-        map[obstaculo_y][obstaculo_x] <= obstaculo;
+        map[obstaculo_y][obstaculo_x] <= OBSTACULO;
       end else begin
         map[obstaculo_y][obstaculo_x] <= NADA;
       end
