@@ -40,22 +40,21 @@ module main (
   wire [19:0] score;
   wire [19:0] high_score;
 
-  parameter [9:0] SCREEN_WIDTH_PIXELS = 640;
-  parameter [9:0] SCREEN_HEIGHT_PIXELS = 480;
+  parameter [9:0] SCREEN_WIDTH= 640;
+  parameter [9:0] SCREEN_HEIGHT= 480;
 
   // TODO: Decidir tamanho
-  parameter [9:0] BLOCK_SIZE = 10;
+  parameter [9:0] BLOCK_SIZE = 16;
+  parameter [4:0] BLOCK_BITS = 4;
 
-  parameter [9:0] SCREEN_WIDTH = SCREEN_WIDTH_PIXELS / BLOCK_SIZE;
-  parameter [9:0] SCREEN_HEIGHT = SCREEN_HEIGHT_PIXELS / BLOCK_SIZE;
+  parameter [9:0] MAPA_WIDTH = SCREEN_WIDTH / BLOCK_SIZE;
+  parameter [9:0] MAPA_HEIGHT = SCREEN_HEIGHT / BLOCK_SIZE;
 
   // Display vga
   vga out (
     .CLOCK_50(CLOCK_50),
     .reset(reset),
-    .R(R),
-    .G(G),
-    .B(B),
+    .RGB(vga_rgb),
     .VGA_CLK(VGA_CLK),
     .VGA_G(VGA_G),
     .VGA_R(VGA_R),
@@ -69,7 +68,10 @@ module main (
   );
 
   // RAM do mapa
-  mapa mapa (
+  mapa #(
+    .MAPA_HEIGHT(MAPA_HEIGHT),
+    .MAPA_WIDTH(MAPA_WIDTH)
+  ) mapa (
     .cobra_clk(),
     .cobra_write(),
     .cobra_dado(),
@@ -81,6 +83,24 @@ module main (
     .fruta_dado(),
     .fruta_x(),
     .fruta_y()
+  );
+
+  renderer #(
+    .SCREEN_WIDTH(SCREEN_WIDTH),
+    .BLOCK_SIZE(BLOCK_SIZE),
+    .BLOCK_BITS(BLOCK_BITS)
+  ) renderer (
+    .clk(CLOCK_50),
+    .pixel_read(vga_active),
+    .hsync(hsync),
+    .vsync(vsync),
+    .pixel_x(vga_x),
+    .pixel_y(vga_y),
+    .cor(vga_rgb),
+    .mapa_x(mapa_x_read),
+    .mapa_y(mapa_y_read),
+    .mapa_cor(mapa_cor_read),
+    .mapa_read(mapa_read)
   );
 
   // Display da pontuação

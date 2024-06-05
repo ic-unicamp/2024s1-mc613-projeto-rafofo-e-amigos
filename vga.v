@@ -4,9 +4,7 @@ module vga (
   input CLOCK_50,
   input reset,
   // Sinais do módulo de controle
-  input [1:0] R,
-  input [1:0] G,
-  input [1:0] B,
+  input [5:0] RGB,
   // -------------------------
   // Sinais para o DAC
   output wire VGA_CLK,
@@ -29,6 +27,14 @@ module vga (
   reg [10:0] hcounter = 0;
   reg [10:0] vcounter = 0;
   reg vga_clk_aux = 0;
+
+  wire [1:0] R;
+  wire [1:0] G;
+  wire [1:0] B;
+
+  assign R = RGB[5:4];
+  assign G = RGB[3:2];
+  assign B = RGB[1:0];
 
   parameter [9:0] VTA = 2;
   parameter [9:0] VTB = 35; // 2 + 33

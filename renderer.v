@@ -1,91 +1,50 @@
 module renderer #(
-    parameter BLOCK_SIZE,
-    parameter MAPA_WIDTH,
-    parameter MAPA_HEIGHT,
-    parameter SCREEN_WIDTH,
-    parameter SCREEN_HEIGHT,
+  parameter SCREEN_WIDTH,
+  parameter BLOCK_BITS,
+  parameter BLOCK_SIZE
 ) (
+  input clk,
 
-    input clk,
-    input vga_active,
+  // Sinais de sincronização vga
+  input pixel_read,
+  input hsync,
+  input vsync,
+  input [9:0] pixel_x,
+  input [9:0] pixel_y,
+  // Sinal de saída para o vga
+  output reg [5:0] cor,
 
-    input [3:0] mapa_block,
-    output [9:0] mapa_x,
-    output [9:0] mapa_y,
-    output mapa_read,
-
-    output [5:0] buffer_cor,
-    output [9:0] buffer_x,
-    output [9:0] buffer_y,
-    output buffer_write
+  // Sinais do mapa
+  output [9:0] mapa_x,
+  output [9:0] mapa_y,
+  input [5:0] mapa_cor,
+  output reg mapa_read
 );
 
-    reg [3:0] block_aux = 0;
-    reg [7:0] block_x = 0;
-    reg [7:0] block_y = 0;
-    reg done = 0;
+    reg [5:0] linha [(SCREEN_WIDTH / BLOCK_SIZE) - 1:0];
+
+    assign mapa_x = pixel_x[9:BLOCK_BITS];
+    assign mapa_y = pixel_y[9:BLOCK_BITS];
+
+    reg [9:0] mapa_y_buf;
+
+    reg [9:0] linha_x = 0; // Até qual bloco da linha foi memorizado
 
     always @(posedge clk) begin
-        if (~vga_active && ~done) begin
-
-            if (block_x == 0 && block_y == 0) begin
+        if (pixel_read) begin
+            if(mapa_y_buf != mapa_y) begin
+                // Se a linha do vga ta diferente da linha armazenada,
+                // reseta ela
+                linha_x = 0;
+            end
+            if (mapa_x == linha_x) begin
                 mapa_read = 1;
-            end else begin
+                linha[mapa_x] <= mapa_cor;
+                cor = linha[mapa_x];
+                linha_x = linha_x + 1;
                 mapa_read = 0;
+                mapa_y_buf = mapa_y;
             end
-
-            if (mapa_block == 4'b0001) begin
-                // Fruta
-                buffer_dado = 6'b110000;
-            end else if (mapa_block == 4'b0010) begin
-                // Obstáculo
-                buffer_dado = 6'b111111;
-            end else if (mapa_block & 4'b1100 == 4'b1000) begin
-                // Cobra 1
-                buffer_dado = 6'b001100;
-            end else if (mapa_block & 4'b1100 == 4'b1100) begin
-                // Cobra 2
-                buffer_dado = 6'b001111;
-            end else begin
-                buffer_dado = 6'b0;
-            end
-
-            buffer_write = 1;
-
-            block_x = block_x + 1;
-
-            if (block_x == BLOCK_SIZE) begin
-                // Linha do bloco
-                block_x = 0;
-                block_y = block_y + 1;
-
-                if (block_y == BLOCK_SIZE) begin
-                    // Final do bloco
-                    block_y = 0;
-                    mapa_x = mapa_x + 1;
-
-                    if (mapa_x == MAPA_WIDTH) begin
-                        // Linha do mapa
-                        mapa_x = 0;
-                        mapa_y = mapa_y + 1;
-
-                        if (mapa_y == MAPA_HEIGHT) begin
-                            // Final do mapa
-                            mapa_y = 0;
-                            done = 1;
-                        end
-                    end
-                end
-            end
-
-        end else begin
-            mapa_read = 0;
-            mapa_x = 0;
-            mapa_y = 0;
-            buffer_write = 0;
-            buffer_x = 0;
-            buffer_y = 0;
-            done = 0;
         end
     end
 

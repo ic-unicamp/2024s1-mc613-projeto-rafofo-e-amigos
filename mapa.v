@@ -1,4 +1,7 @@
-module mapa (
+module mapa #(
+    parameter MAPA_WIDTH,
+    parameter MAPA_HEIGHT
+) (
   input clk,
   input cobra_write,
   input [3:0] cobra_dado,
@@ -17,10 +20,10 @@ module mapa (
   input [9:0] obstaculo_x,
   input [9:0] obstaculo_y,
 
-  input renderer_read,
-  input [9:0] renderer_x,
-  input [9:0] renderer_y,
-  output [3:0] renderer_dado,
+  input vga_read,
+  input [9:0] vga_x,
+  input [9:0] vga_y,
+  output reg [3:0] vga_dado
 );
 
   parameter [1:0] NADA = 0;
@@ -33,7 +36,7 @@ module mapa (
   // bit 2: cobra 1 ou 2
   // bit [1:0] direcao da cauda
 
-  reg [1:0] map [SCREEN_HEIGHT:0][SCREEN_WIDTH:0];
+  reg [3:0] map [MAPA_HEIGHT-1:0][MAPA_WIDTH-1:0];
 
   always @(posedge clk) begin
     if (cobra_write) begin
@@ -51,6 +54,16 @@ module mapa (
         map[fruta_y][fruta_x] <= FRUTA;
       end else begin
         map[fruta_y][fruta_x] <= NADA;
+      end
+    end
+  end
+
+  always @(posedge clk) begin
+    if (obstaculo_write) begin
+      if (obstaculo_dado) begin
+        map[obstaculo_y][obstaculo_x] <= obstaculo;
+      end else begin
+        map[obstaculo_y][obstaculo_x] <= NADA;
       end
     end
   end
