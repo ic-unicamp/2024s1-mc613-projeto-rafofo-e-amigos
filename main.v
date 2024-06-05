@@ -54,7 +54,9 @@ module main (
   vga out (
     .CLOCK_50(CLOCK_50),
     .reset(KEY[0]),
-    .RGB(vga_rgb),
+    .R(R),
+    .G(G),
+    .B(B),
     .VGA_CLK(VGA_CLK),
     .VGA_G(VGA_G),
     .VGA_R(VGA_R),
@@ -90,7 +92,9 @@ module main (
     .obstaculo_y(),
 
     .vga_read(mapa_read),
-    .vga_dado(mapa_cor_read),
+    .mapa_R(mapa_R),
+    .mapa_G(mapa_G),
+    .mapa_B(mapa_B),
     .vga_x(mapa_x_read),
     .vga_y(mapa_y_read)
   );
@@ -104,10 +108,14 @@ module main (
     .pixel_read(vga_active),
     .pixel_x(vga_x),
     .pixel_y(vga_y),
-    .cor(vga_rgb),
+    .R(R),
+    .G(G),
+    .B(B),
     .mapa_x(mapa_x_read),
     .mapa_y(mapa_y_read),
-    .mapa_cor(mapa_cor_read),
+    .mapa_R(mapa_R),
+    .mapa_G(mapa_G),
+    .mapa_B(mapa_B),
     .mapa_read(mapa_read)
   );
 

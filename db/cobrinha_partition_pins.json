@@ -8,7 +8,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[6]",
+					"name" : "VGA_R[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[7]",
 					"strict" : false
 				},
 				{

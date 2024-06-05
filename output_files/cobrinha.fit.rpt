@@ -1,5 +1,5 @@
 Fitter report for cobrinha
-Wed Jun  5 18:14:21 2024
+Wed Jun  5 18:57:33 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -62,7 +62,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Wed Jun  5 18:14:21 2024          ;
+; Fitter Status                   ; Successful - Wed Jun  5 18:57:33 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; cobrinha                                       ;
 ; Top-level Entity Name           ; main                                           ;
@@ -157,7 +157,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
+;     Processor 2            ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -389,12 +389,12 @@ The pin-out file can be found in /home/erittner/coding/uni/circuitos-logicos/202
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 24 / 32,070        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 24                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 26 / 32,070        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 8                  ;       ;
-;         [b] ALMs used for LUT logic                         ; 14                 ;       ;
-;         [c] ALMs used for registers                         ; 4                  ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 24 / 32,070        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 10                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 12                 ;       ;
+;         [c] ALMs used for registers                         ; 2                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 32,070         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 32,070         ; 0 %   ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -403,8 +403,8 @@ The pin-out file can be found in /home/erittner/coding/uni/circuitos-logicos/202
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 6 / 3,207          ; < 1 % ;
-;     -- Logic LABs                                           ; 6                  ;       ;
+; Total LABs:  partially or completely used                   ; 4 / 3,207          ; < 1 % ;
+;     -- Logic LABs                                           ; 4                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 39                 ;       ;
@@ -476,12 +476,12 @@ The pin-out file can be found in /home/erittner/coding/uni/circuitos-logicos/202
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.5% / 0.5% / 0.5% ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.1% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.5% / 0.5% / 0.4% ;       ;
 ; Maximum fan-out                                             ; 24                 ;       ;
 ; Highest non-global fan-out                                  ; 24                 ;       ;
-; Total fan-out                                               ; 286                ;       ;
-; Average fan-out                                             ; 1.22               ;       ;
+; Total fan-out                                               ; 288                ;       ;
+; Average fan-out                                             ; 1.23               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -492,12 +492,12 @@ The pin-out file can be found in /home/erittner/coding/uni/circuitos-logicos/202
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 24 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 24                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 26 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 8                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 14                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 4                    ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 24 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 10                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 12                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 2                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 32070 ( 0 % )    ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )    ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -506,8 +506,8 @@ The pin-out file can be found in /home/erittner/coding/uni/circuitos-logicos/202
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 6 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 6                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 4 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 4                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Combinational ALUT usage for logic                          ; 39                   ; 0                              ;
@@ -543,7 +543,7 @@ The pin-out file can be found in /home/erittner/coding/uni/circuitos-logicos/202
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 286                  ; 0                              ;
+;     -- Total Connections                                    ; 288                  ; 0                              ;
 ;     -- Registered Connections                               ; 85                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
@@ -1699,8 +1699,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+-------------+--------------+
-; |main                      ; 23.5 (0.5)           ; 25.0 (0.5)                       ; 1.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 39 (1)              ; 23 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 86   ; 0            ; |main               ; main        ; work         ;
-;    |vga:out|               ; 23.0 (23.0)          ; 24.5 (24.5)                      ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 38 (38)             ; 23 (23)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |main|vga:out       ; vga         ; work         ;
+; |main                      ; 23.5 (0.5)           ; 23.5 (0.5)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 39 (1)              ; 23 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 86   ; 0            ; |main               ; main        ; work         ;
+;    |vga:out|               ; 23.0 (23.0)          ; 23.0 (23.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 38 (38)             ; 23 (23)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |main|vga:out       ; vga         ; work         ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1795,7 +1795,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_HS      ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; VGA_VS      ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; CLOCK_50    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; KEY[0]      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; KEY[0]      ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +-------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -1820,21 +1820,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CLOCK_50                      ;                   ;         ;
 ;      - vga:out|vga_clk_aux    ; 0                 ; 0       ;
 ; KEY[0]                        ;                   ;         ;
-;      - vga:out|vcounter[10]~0 ; 0                 ; 0       ;
-;      - vga:out|hcounter[9]~0  ; 0                 ; 0       ;
+;      - vga:out|vcounter[10]~0 ; 1                 ; 0       ;
+;      - vga:out|hcounter[9]~0  ; 1                 ; 0       ;
 +-------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                    ;
-+------------------------+----------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; Name                   ; Location             ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------+----------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50               ; PIN_AF14             ; 1       ; Clock                     ; no     ; --                   ; --               ; --                        ;
-; vga:out|hcounter[9]~0  ; MLABCELL_X34_Y71_N36 ; 22      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; vga:out|vcounter[10]~0 ; LABCELL_X35_Y71_N39  ; 11      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; vga:out|vga_clk_aux    ; FF_X34_Y71_N11       ; 24      ; Clock                     ; no     ; --                   ; --               ; --                        ;
-+------------------------+----------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                  ;
++------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
+; Name                   ; Location           ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50               ; PIN_AF14           ; 1       ; Clock                     ; no     ; --                   ; --               ; --                        ;
+; vga:out|hcounter[9]~0  ; LABCELL_X36_Y1_N51 ; 22      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; vga:out|vcounter[10]~0 ; LABCELL_X35_Y1_N36 ; 11      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; vga:out|vga_clk_aux    ; FF_X35_Y1_N17      ; 24      ; Clock                     ; no     ; --                   ; --               ; --                        ;
++------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------+
@@ -1842,14 +1842,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+------------------------+
 ; Routing Resource Type                       ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Block interconnects                         ; 64 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 14 / 13,420 ( < 1 % )  ;
-; C2 interconnects                            ; 14 / 119,108 ( < 1 % ) ;
-; C4 interconnects                            ; 12 / 56,300 ( < 1 % )  ;
+; Block interconnects                         ; 73 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 7 / 13,420 ( < 1 % )   ;
+; C2 interconnects                            ; 7 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 65 / 56,300 ( < 1 % )  ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )         ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )         ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )         ;
-; Direct links                                ; 15 / 289,320 ( < 1 % ) ;
+; Direct links                                ; 13 / 289,320 ( < 1 % ) ;
 ; Global clocks                               ; 0 / 16 ( 0 % )         ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )          ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )          ;
@@ -1905,11 +1905,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )          ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )         ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )         ;
-; Local interconnects                         ; 36 / 84,580 ( < 1 % )  ;
+; Local interconnects                         ; 37 / 84,580 ( < 1 % )  ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )         ;
-; R14 interconnects                           ; 10 / 12,676 ( < 1 % )  ;
-; R14/C12 interconnect drivers                ; 22 / 20,720 ( < 1 % )  ;
-; R3 interconnects                            ; 29 / 130,992 ( < 1 % ) ;
+; R14 interconnects                           ; 6 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 12 / 20,720 ( < 1 % )  ;
+; R3 interconnects                            ; 33 / 130,992 ( < 1 % ) ;
 ; R6 interconnects                            ; 27 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 0 / 360 ( 0 % )        ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )     ;
@@ -2112,32 +2112,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; CLOCK_50        ; CLOCK_50             ; 5.9               ;
+; CLOCK_50        ; CLOCK_50             ; 4.5               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+-----------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                   ;
-+----------------------+----------------------+-------------------+
-; Source Register      ; Destination Register ; Delay Added in ns ;
-+----------------------+----------------------+-------------------+
-; vga:out|vga_clk_aux  ; vga:out|vga_clk_aux  ; 5.866             ;
-; vga:out|hcounter[8]  ; vga:out|vcounter[9]  ; 0.399             ;
-; vga:out|hcounter[10] ; vga:out|vcounter[9]  ; 0.331             ;
-; vga:out|hcounter[9]  ; vga:out|vcounter[9]  ; 0.259             ;
-; vga:out|hcounter[7]  ; vga:out|vcounter[9]  ; 0.202             ;
-; vga:out|hcounter[6]  ; vga:out|vcounter[9]  ; 0.202             ;
-; vga:out|hcounter[5]  ; vga:out|vcounter[9]  ; 0.202             ;
-; vga:out|hcounter[4]  ; vga:out|vcounter[9]  ; 0.202             ;
-; vga:out|hcounter[3]  ; vga:out|vcounter[9]  ; 0.202             ;
-; vga:out|hcounter[2]  ; vga:out|vcounter[9]  ; 0.202             ;
-; vga:out|hcounter[1]  ; vga:out|vcounter[9]  ; 0.202             ;
-; vga:out|hcounter[0]  ; vga:out|vcounter[9]  ; 0.202             ;
-; KEY[0]               ; vga:out|vcounter[9]  ; 0.093             ;
-+----------------------+----------------------+-------------------+
-Note: This table only shows the top 13 path(s) that have the largest delay added for hold.
++----------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                  ;
++---------------------+----------------------+-------------------+
+; Source Register     ; Destination Register ; Delay Added in ns ;
++---------------------+----------------------+-------------------+
+; vga:out|vga_clk_aux ; vga:out|vga_clk_aux  ; 4.460             ;
++---------------------+----------------------+-------------------+
+Note: This table only shows the top 1 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2340,14 +2328,14 @@ Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X33_Y70 to location X44_Y81
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X33_Y0 to location X44_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.40 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.41 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2356,10 +2344,10 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/output_files/cobrinha.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 178 warnings
-    Info: Peak virtual memory: 1530 megabytes
-    Info: Processing ended: Wed Jun  5 18:14:22 2024
-    Info: Elapsed time: 00:00:43
-    Info: Total CPU time (on all processors): 00:01:03
+    Info: Peak virtual memory: 1497 megabytes
+    Info: Processing ended: Wed Jun  5 18:57:33 2024
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:01:02
 
 
 +----------------------------+

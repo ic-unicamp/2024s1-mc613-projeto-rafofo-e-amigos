@@ -23,7 +23,9 @@ module mapa #(
   input vga_read,
   input [9:0] vga_x,
   input [9:0] vga_y,
-  output reg [5:0] vga_dado
+  output reg [1:0] mapa_R,
+  output reg [1:0] mapa_G,
+  output reg [1:0] mapa_B
 );
 
   parameter [3:0] NADA = 0;
@@ -48,10 +50,19 @@ module mapa #(
     if (vga_read) begin
       aux = map[vga_y][vga_x];
       if (aux == 4'b0010) begin
-        vga_dado <= 6'b110000;
+        mapa_R = 2'b11;
+        mapa_G = 2'b00;
+        mapa_B = 2'b00;
       end else if (aux == 4'b0001) begin
-        vga_dado <= 6'b001100;
+        mapa_R = 2'b11;
+        mapa_G = 2'b01;
+        mapa_B = 2'b00;
       end
+		else begin
+		        mapa_R = 2'b00;
+        mapa_G = 2'b00;
+        mapa_B = 2'b00;
+		end
     end
     if (cobra_write) begin
       if (cobra_dado) begin
