@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at mapa.v(47): always construct contains both blocking and non-blocking assignments File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v Line: 47
+Warning (10268): Verilog HDL information at mapa.v(35): always construct contains both blocking and non-blocking assignments File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v Line: 35

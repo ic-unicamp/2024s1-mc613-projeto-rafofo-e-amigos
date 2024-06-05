@@ -75,22 +75,7 @@ module main (
     .MAPA_HEIGHT(MAPA_HEIGHT),
     .MAPA_WIDTH(MAPA_WIDTH)
   ) mapa (
-    .clk(CLOCK_50),
-    .cobra_write(),
-    .cobra_dado(),
-    .cobra_x(),
-    .cobra_y(),
-
-    .fruta_write(),
-    .fruta_dado(),
-    .fruta_x(),
-    .fruta_y(),
-
-    .obstaculo_write(),
-    .obstaculo_dado(),
-    .obstaculo_x(),
-    .obstaculo_y(),
-
+	 .clk(CLOCK_50),
     .vga_read(mapa_read),
     .mapa_R(mapa_R),
     .mapa_G(mapa_G),
@@ -130,6 +115,7 @@ module main (
     .digito4(HEX4),
     .digito5(HEX5)
   );
+
 
 // TODO: Módulo da cobra
 

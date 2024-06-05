@@ -1,5 +1,5 @@
 Flow report for cobrinha
-Wed Jun  5 19:03:28 2024
+Wed Jun  5 20:06:04 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -38,24 +38,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+-----------------------------+------------------------------------------------+
-; Flow Status                 ; Flow Failed - Wed Jun  5 19:03:28 2024         ;
-; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name               ; cobrinha                                       ;
-; Top-level Entity Name       ; main                                           ;
-; Family                      ; Cyclone V                                      ;
-; Device                      ; 5CSEMA5F31C6                                   ;
-; Timing Models               ; Final                                          ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
-; Total registers             ; N/A until Partition Merge                      ;
-; Total pins                  ; N/A until Partition Merge                      ;
-; Total virtual pins          ; N/A until Partition Merge                      ;
-; Total block memory bits     ; N/A until Partition Merge                      ;
-; Total PLLs                  ; N/A until Partition Merge                      ;
-; Total DLLs                  ; N/A until Partition Merge                      ;
-+-----------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++---------------------------------+------------------------------------------------+
+; Flow Status                     ; Successful - Wed Jun  5 20:06:04 2024          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; cobrinha                                       ;
+; Top-level Entity Name           ; main                                           ;
+; Family                          ; Cyclone V                                      ;
+; Device                          ; 5CSEMA5F31C6                                   ;
+; Timing Models                   ; Final                                          ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 23                                             ;
+; Total pins                      ; 86                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/05/2024 19:03:19 ;
+; Start date & time ; 06/05/2024 20:05:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; cobrinha            ;
 +-------------------+---------------------+
@@ -74,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 233515712238172.171761419930824        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 233515712238172.171761795442783        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -99,8 +104,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 394 MB              ; 00:00:23                           ;
-; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:23                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 432 MB              ; 00:00:24                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
