@@ -3,20 +3,27 @@ module update #(
     parameter MAPA_WIDTH
 ) (
     input clk,
-    output reg state_read,
-    input [3:0] state_rdata,
-    output reg [9:0] state_xr,
-    output reg [9:0] state_yr,
 
-    output reg state_write,
-    output reg [3:0] state_wdata,
-    output reg [9:0] state_xw,
-    output reg [9:0] state_yw,
+    output reg update_renable,
+    input [3:0] update_rdata,
+    output reg [9:0] update_rx,
+    output reg [9:0] update_ry,
+
+    output reg update_wenable,
+    output reg [3:0] update_wdata,
+    output reg [9:0] update_wx,
+    output reg [9:0] update_wy,
+
+    output fruta_wenable,
+    input [9:0] fruta_wx,
+    input [9:0] fruta_wy,
+
+    output obstaculo_wenable,
+    input [9:0] obstaculo_wx,
+    input [9:0] obstaculo_wy,
 
     input [1:0] cobra_dir
 );
-
-    parameter [4:0] OVERFLOW = 4'b1111;
 
     reg [29:0] speed = 50000000;
     reg [29:0] counter = 0;
@@ -47,32 +54,61 @@ always @(posedge clk) begin
 
     case (state) 
         IDLE: begin
-            state_write = 0;
-            state_read = 0;
+            update_wenable = 0;
+            update_renable = 0;
             counter = counter + 1;
             if (counter == speed) begin
                 counter = 0;
-                state = ESCREVE_CABECA;
+                state = CALCULA_POSICAO;
             end
         end
         CALCULA_POSICAO: begin
-            cabeca_x = cabeca_x + 1;
-            state = ESCREVE_CABECA;
+            // Calcula a proxima posição da cabeça com base na direção
+            case (cobra_dir) 
+                0: begin
+                    cabeca_y = (cabeca_y == 0) ? MAPA_HEIGHT - 1 : cabeca_y - 1;
+                end
+                1: begin
+                    cabeca_y = (cabeca_y == MAPA_HEIGHT - 1) ? 0 : cabeca_y + 1;
+                end
+                2: begin
+                    cabeca_x = (cabeca_x == 0) ? MAPA_WIDTH - 1 : cabeca_x - 1;
+                end
+                3: begin
+                    cabeca_x = (cabeca_x == MAPA_WIDTH - 1) ? 0 : cabeca_x + 1;
+                end
+            endcase
+
+            // Pede a leitura da nova posição pra conferir se ela
+            // é uma fruta ou obstaculo, mais ou menos assim:
+            // update_rx = cabeca_x;
+            // update_ty = cabeca_y;
+            // update_renable = 1;
+            state = CHECA_COLISAO;
         end
         CHECA_COLISAO: begin
+            // aux = update_rdata;
+            // Checa se é uma fruta ou obstaculo
+            // Se for um obstaculo: game_over
             state = ESCREVE_CABECA;
         end
         ESCREVE_CABECA: begin
-            state_xw = cabeca_x;
-            state_yw = cabeca_y;
-            state_wdata = 4'b1000;
-            state_write = 1;
+            // Escreve a cabeça
+            update_wx = cabeca_x;
+            update_wy = cabeca_y;
+            update_wdata = 4'b1000;
+            update_wenable = 1;
             state = CHECA_CAUDA;
         end
         CHECA_CAUDA: begin
+            // Se não tiver comido uma fruta, pede
+            // a leitura da cauda pra descobrir a
+            // direção dela
             state = ESCREVE_CAUDA;
         end
         ESCREVE_CAUDA: begin
+            // Com a direção da cauda, apaga a cauda
+            // antiga e seta a nova cauda
             state = IDLE;
         end
     endcase

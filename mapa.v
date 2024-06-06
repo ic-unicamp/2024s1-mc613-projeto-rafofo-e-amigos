@@ -4,21 +4,21 @@ module mapa #(
 ) (
   input clk,
   input vga_read,
-  input [9:0] mapa_x_read,
-  input [9:0] mapa_y_read,
+  input [9:0] renderer_rx,
+  input [9:0] renderer_ry,
   output [1:0] mapa_R,
   output [1:0] mapa_G,
   output [1:0] mapa_B,
 
-  input state_read,
-  input [9:0] state_xr,
-  input [9:0] state_yr,
-  output reg [3:0] state_rdata,
+  input update_renable,
+  input [9:0] update_rx,
+  input [9:0] update_ry,
+  output reg [3:0] update_rdata,
 
-  input state_write,
-  input [9:0] state_xw,
-  input [9:0] state_yw,
-  input [3:0] state_wdata
+  input update_wenable,
+  input [9:0] update_wx,
+  input [9:0] update_wy,
+  input [3:0] update_wdata
 );
 
   // Mapa do jogo
@@ -36,15 +36,15 @@ module mapa #(
 
   always @(posedge clk) begin
     if (vga_read) begin
-      aux = mapa[mapa_y_read][mapa_x_read];
+      aux = mapa[renderer_ry][renderer_rx];
     end
 
-    if (state_write) begin
-      mapa[state_yw][state_xw] = state_wdata;
+    if (update_wenable) begin
+      mapa[update_wy][update_wx] = update_wdata;
     end
 
-    if (state_read) begin
-      state_rdata = mapa[state_xr][state_yr];
+    if (update_renable) begin
+      update_rdata = mapa[update_rx][update_ry];
     end
   end
 endmodule

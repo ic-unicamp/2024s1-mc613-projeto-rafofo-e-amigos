@@ -31,29 +31,29 @@ module main (
 
   wire [1:0] cobra_dir;
 
-  wire [9:0] vga_x;
-  wire [9:0] vga_y;
+  wire [9:0] vga_rx;
+  wire [9:0] vga_ry;
 
-  wire [9:0] mapa_x_read;
-  wire [9:0] mapa_y_read;
+  wire [9:0] renderer_rx;
+  wire [9:0] renderer_ry;
 
-  wire fruta_write;
-  wire [9:0] fruta_xw;
-  wire [9:0] fruta_yw;
+  wire fruta_wenable;
+  wire [9:0] fruta_wx;
+  wire [9:0] fruta_wy;
 
-  wire obstaculo_write;
+  wire obstaculo_wenable;
   wire [9:0] obstaculo_xw;
   wire [9:0] obstaculo_yw;
 
-  wire state_read;
-  wire [3:0] state_rdata;
-  wire [9:0] state_xr;
-  wire [9:0] state_yr;
+  wire update_renable;
+  wire [3:0] update_rdata;
+  wire [9:0] update_rx;
+  wire [9:0] update_ry;
 
-  wire state_write;
-  wire [5:0] state_xw;
-  wire [9:0] state_yw;
-  wire [9:0] state_wdata;
+  wire update_wenable;
+  wire [5:0] update_wx;
+  wire [9:0] update_wy;
+  wire [9:0] update_wdata;
 
   // Calculated colors
   wire [7:0] R;
@@ -89,8 +89,8 @@ module main (
     .VGA_HS(VGA_HS),
     .VGA_VS(VGA_VS),
     .active(vga_active),
-    .x(vga_x),
-    .y(vga_y)
+    .vga_rx(vga_rx),
+    .vga_ry(vga_ry)
   );
 
   // Faz a comunicação entre o vga e o mapa
@@ -101,13 +101,13 @@ module main (
   ) renderer (
     .clk(CLOCK_50),
     .pixel_read(vga_active),
-    .pixel_x(vga_x),
-    .pixel_y(vga_y),
+    .vga_rx(vga_rx),
+    .vga_ry(vga_ry),
     .R(R),
     .G(G),
     .B(B),
-    .mapa_x(mapa_x_read),
-    .mapa_y(mapa_y_read),
+    .renderer_rx(renderer_rx),
+    .renderer_ry(renderer_ry),
     .mapa_R(mapa_R),
     .mapa_G(mapa_G),
     .mapa_B(mapa_B),
@@ -126,18 +126,18 @@ module main (
     .mapa_R(mapa_R),
     .mapa_G(mapa_G),
     .mapa_B(mapa_B),
-    .mapa_x_read(mapa_x_read),
-    .mapa_y_read(mapa_y_read),
+    .renderer_rx(renderer_rx),
+    .renderer_ry(renderer_ry),
 
-    .state_read(state_read),
-    .state_xr(state_xr),
-    .state_yr(state_yr),
-    .state_rdata(state_rdata),
+    .update_renable(update_renable),
+    .update_rx(update_rx),
+    .update_ry(update_ry),
+    .update_rdata(update_rdata),
 
-    .state_write(state_write),
-    .state_xw(state_xw),
-    .state_yw(state_yw),
-    .state_wdata(state_wdata)
+    .update_wenable(update_wenable),
+    .update_wx(update_wx),
+    .update_wy(update_wy),
+    .update_wdata(update_wdata)
   );
 
   update #(
@@ -146,15 +146,23 @@ module main (
   ) update (
     .clk(CLOCK_50),
 
-    .state_read(state_read),
-    .state_rdata(state_rdata),
-    .state_xr(state_xr),
-    .state_yr(state_yr),
+    .update_renable(update_renable),
+    .update_rdata(update_rdata),
+    .update_rx(update_rx),
+    .update_ry(update_ry),
 
-    .state_write(state_write),
-    .state_wdata(state_wdata),
-    .state_xw(state_xw),
-    .state_yw(state_yw),
+    .update_wenable(update_wenable),
+    .update_wdata(update_wdata),
+    .update_wx(update_wx),
+    .update_wy(update_wy),
+
+    .fruta_wenable(fruta_wenable),
+    .fruta_wx(fruta_wx),
+    .fruta_wy(fruta_wy),
+
+    .obstaculo_wenable(obstaculo_wenable),
+    .obstaculo_wx(obstaculo_wx),
+    .obstaculo_wy(obstaculo_wy),
 
     .cobra_dir(cobra_dir)
   );
@@ -173,9 +181,9 @@ module main (
     .MAPA_WIDTH(MAPA_WIDTH)
   ) fruta (
     .clk(CLOCK_50),
-    .fruta_write(fruta_write),
-    .fruta_xw(fruta_xw),
-    .fruta_yw(fruta_yw)
+    .fruta_wenable(fruta_wenable),
+    .fruta_wx(fruta_wx),
+    .fruta_wy(fruta_wy)
   );
 
   // Display da pontuação

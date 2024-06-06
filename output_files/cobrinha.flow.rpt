@@ -1,5 +1,5 @@
 Flow report for cobrinha
-Thu Jun  6 19:50:43 2024
+Thu Jun  6 20:29:11 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Thu Jun  6 19:50:43 2024          ;
+; Flow Status                     ; Successful - Thu Jun  6 20:29:11 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; cobrinha                                       ;
 ; Top-level Entity Name           ; main                                           ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 67 / 32,070 ( < 1 % )                          ;
-; Total registers                 ; 35                                             ;
+; Logic utilization (in ALMs)     ; 126 / 32,070 ( < 1 % )                         ;
+; Total registers                 ; 113                                            ;
 ; Total pins                      ; 86 / 457 ( 19 % )                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 4,800 / 4,065,280 ( < 1 % )                    ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2024 19:48:29 ;
+; Start date & time ; 06/06/2024 20:27:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; cobrinha            ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 233515712238172.171770330959550        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 233515712238172.171770567865337        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -106,10 +106,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 423 MB              ; 00:00:32                           ;
-; Fitter               ; 00:01:41     ; 1.0                     ; 1596 MB             ; 00:02:11                           ;
-; Assembler            ; 00:00:11     ; 1.0                     ; 505 MB              ; 00:00:11                           ;
-; Total                ; 00:02:09     ; --                      ; --                  ; 00:02:54                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 426 MB              ; 00:00:24                           ;
+; Fitter               ; 00:00:51     ; 1.0                     ; 1600 MB             ; 00:01:16                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 509 MB              ; 00:00:06                           ;
+; Total                ; 00:01:07     ; --                      ; --                  ; 00:01:46                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

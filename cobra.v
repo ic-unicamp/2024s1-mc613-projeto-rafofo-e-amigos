@@ -22,8 +22,6 @@ always @(posedge clk) begin
   end else if (right) begin
     cobra_dir = 2'b11;
   end
-
-  cobra_dir = 2'b00;
 end
 
 endmodule
