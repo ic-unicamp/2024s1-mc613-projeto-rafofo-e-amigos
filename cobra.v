@@ -4,7 +4,7 @@ module cobra (
   input down,
   input left,
   input right,
-  output reg [1:0] next_pos
+  output reg [1:0] cobra_dir
 );
 
 // up - 00
@@ -14,14 +14,16 @@ module cobra (
 
 always @(posedge clk) begin
   if (up) begin
-    next_pos = 2'b00;
+    cobra_dir = 2'b00;
   end else if (down) begin
-    next_pos = 2'b01;
+    cobra_dir = 2'b01;
   end else if (left) begin
-    next_pos = 2'b10;
+    cobra_dir = 2'b10;
   end else if (right) begin
-    next_pos = 2'b11;
+    cobra_dir = 2'b11;
   end
+
+  cobra_dir = 2'b00;
 end
 
 endmodule

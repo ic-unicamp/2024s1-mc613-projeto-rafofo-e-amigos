@@ -1,0 +1,9 @@
+
+State Machine - |main|update:update|state
+Name state.ESCREVE_CAUDA state.CHECA_CAUDA state.ESCREVE_CABECA state.CHECA_COLISAO state.CALCULA_POSICAO state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.CALCULA_POSICAO 0 0 0 0 1 1 
+state.CHECA_COLISAO 0 0 0 1 0 1 
+state.ESCREVE_CABECA 0 0 1 0 0 1 
+state.CHECA_CAUDA 0 1 0 0 0 1 
+state.ESCREVE_CAUDA 1 0 0 0 0 1 

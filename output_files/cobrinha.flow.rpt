@@ -1,5 +1,5 @@
 Flow report for cobrinha
-Thu Jun  6 15:41:51 2024
+Thu Jun  6 19:50:43 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -38,24 +38,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+-----------------------------+------------------------------------------------+
-; Flow Status                 ; Flow Failed - Thu Jun  6 15:41:51 2024         ;
-; Quartus Prime Version       ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name               ; cobrinha                                       ;
-; Top-level Entity Name       ; main                                           ;
-; Family                      ; Cyclone V                                      ;
-; Device                      ; 5CSEMA5F31C6                                   ;
-; Timing Models               ; Final                                          ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
-; Total registers             ; N/A until Partition Merge                      ;
-; Total pins                  ; N/A until Partition Merge                      ;
-; Total virtual pins          ; N/A until Partition Merge                      ;
-; Total block memory bits     ; N/A until Partition Merge                      ;
-; Total PLLs                  ; N/A until Partition Merge                      ;
-; Total DLLs                  ; N/A until Partition Merge                      ;
-+-----------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++---------------------------------+------------------------------------------------+
+; Flow Status                     ; Successful - Thu Jun  6 19:50:43 2024          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; cobrinha                                       ;
+; Top-level Entity Name           ; main                                           ;
+; Family                          ; Cyclone V                                      ;
+; Device                          ; 5CSEMA5F31C6                                   ;
+; Timing Models                   ; Final                                          ;
+; Logic utilization (in ALMs)     ; 67 / 32,070 ( < 1 % )                          ;
+; Total registers                 ; 35                                             ;
+; Total pins                      ; 86 / 457 ( 19 % )                              ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 4,800 / 4,065,280 ( < 1 % )                    ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                                 ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                                  ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
++---------------------------------+------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2024 15:41:41 ;
+; Start date & time ; 06/06/2024 19:48:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; cobrinha            ;
 +-------------------+---------------------+
@@ -74,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 233515712238172.171768850120851        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 233515712238172.171770330959550        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -85,7 +90,6 @@ https://fpgasoftware.intel.com/eula.
 ; ENABLE_SIGNALTAP                    ; Off                                    ; --            ; --          ; --                                ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                                ;
-; MISC_FILE                           ; ram_bb.v                               ; --            ; --          ; --                                ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; main        ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; main        ; Top                               ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; main        ; Top                               ;
@@ -102,8 +106,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 388 MB              ; 00:00:23                           ;
-; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:23                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 423 MB              ; 00:00:32                           ;
+; Fitter               ; 00:01:41     ; 1.0                     ; 1596 MB             ; 00:02:11                           ;
+; Assembler            ; 00:00:11     ; 1.0                     ; 505 MB              ; 00:00:11                           ;
+; Total                ; 00:02:09     ; --                      ; --                  ; 00:02:54                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,6 +119,8 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; erittner-mac     ; Arch Linux ; Arch Linux ; x86_64         ;
+; Fitter               ; erittner-mac     ; Arch Linux ; Arch Linux ; x86_64         ;
+; Assembler            ; erittner-mac     ; Arch Linux ; Arch Linux ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -120,6 +128,8 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off cobrinha -c cobrinha
+quartus_fit --read_settings_files=on --write_settings_files=off cobrinha -c cobrinha
+quartus_asm --read_settings_files=off --write_settings_files=off cobrinha -c cobrinha
 
 
 

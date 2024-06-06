@@ -29,10 +29,31 @@ module main (
   wire left;
   wire right;
 
+  wire [1:0] cobra_dir;
+
   wire [9:0] vga_x;
   wire [9:0] vga_y;
+
   wire [9:0] mapa_x_read;
   wire [9:0] mapa_y_read;
+
+  wire fruta_write;
+  wire [9:0] fruta_xw;
+  wire [9:0] fruta_yw;
+
+  wire obstaculo_write;
+  wire [9:0] obstaculo_xw;
+  wire [9:0] obstaculo_yw;
+
+  wire state_read;
+  wire [3:0] state_rdata;
+  wire [9:0] state_xr;
+  wire [9:0] state_yr;
+
+  wire state_write;
+  wire [5:0] state_xw;
+  wire [9:0] state_yw;
+  wire [9:0] state_wdata;
 
   // Calculated colors
   wire [7:0] R;
@@ -99,13 +120,62 @@ module main (
     .MAPA_HEIGHT(MAPA_HEIGHT),
     .MAPA_WIDTH(MAPA_WIDTH)
   ) mapa (
-	 .clk(CLOCK_50),
+    .clk(CLOCK_50),
+
     .vga_read(mapa_read),
     .mapa_R(mapa_R),
     .mapa_G(mapa_G),
     .mapa_B(mapa_B),
     .mapa_x_read(mapa_x_read),
-    .mapa_y_read(mapa_y_read)
+    .mapa_y_read(mapa_y_read),
+
+    .state_read(state_read),
+    .state_xr(state_xr),
+    .state_yr(state_yr),
+    .state_rdata(state_rdata),
+
+    .state_write(state_write),
+    .state_xw(state_xw),
+    .state_yw(state_yw),
+    .state_wdata(state_wdata)
+  );
+
+  update #(
+    .MAPA_HEIGHT(MAPA_HEIGHT),
+    .MAPA_WIDTH(MAPA_WIDTH)
+  ) update (
+    .clk(CLOCK_50),
+
+    .state_read(state_read),
+    .state_rdata(state_rdata),
+    .state_xr(state_xr),
+    .state_yr(state_yr),
+
+    .state_write(state_write),
+    .state_wdata(state_wdata),
+    .state_xw(state_xw),
+    .state_yw(state_yw),
+
+    .cobra_dir(cobra_dir)
+  );
+
+  cobra (
+    .clk(CLOCK_50),
+    .up(KEY[0]),
+    .down(KEY[1]),
+    .right(KEY[2]),
+    .left(KEY[3]),
+    .cobra_dir(cobra_dir)
+  );
+
+  fruta #(
+    .MAPA_HEIGHT(MAPA_HEIGHT),
+    .MAPA_WIDTH(MAPA_WIDTH)
+  ) fruta (
+    .clk(CLOCK_50),
+    .fruta_write(fruta_write),
+    .fruta_xw(fruta_xw),
+    .fruta_yw(fruta_yw)
   );
 
   // Display da pontuação
@@ -119,10 +189,4 @@ module main (
     .digito4(HEX4),
     .digito5(HEX5)
   );
-
-
-// TODO: Módulo da cobra
-
-// TODO: Módulo de colisão
-
 endmodule

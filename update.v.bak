@@ -1,19 +1,142 @@
 module update #(
     parameter MAPA_HEIGHT,
-    parameter MAPA_WIDTH,
+    parameter MAPA_WIDTH
 ) (
-    input [1:0] mapa_dado,
-    output mapa_read,
-    output [9:0] mapa_x,
-    output [9:0] mapa_y,
+    input clk,
+    output reg state_read,
+    input [3:0] state_rdata,
+    output reg [4:0] state_xr,
+    output reg [4:0] state_yr,
 
-    input [1:0] cobra_dir,
+    output reg state_write,
+    output reg [3:0] state_wdata,
+    output reg [4:0] state_xw,
+    output reg [4:0] state_yw,
+
+    input [1:0] cobra_dir
 );
 
-    reg [9:0] cabeca_x;
-    reg [9:0] cabeca_y;
+    parameter [4:0] OVERFLOW = 4'b1111;
 
-    reg [9:0] cauda_x;
-    reg [9:0] cauda_y;
+    reg [29:0] speed = 50000000;
+    reg [29:0] counter = 0;
+
+    parameter IDLE = 0;
+    parameter CALCULA_POSICAO = 1;
+    parameter CHECA_COLISAO = 2;
+    parameter ESCREVE_CABECA = 3;
+    parameter CHECA_CAUDA = 4;
+    parameter ESCREVE_CAUDA = 5;
+
+    reg [2:0] state = IDLE;
+    reg [3:0] aux;
+
+    reg [4:0] cabeca_x = 3;
+    reg [4:0] cabeca_y = 3;
+    reg [4:0] cabeca_next_x;
+    reg [4:0] cabeca_next_y;
+
+    reg [4:0] cauda_x = 3;
+    reg [4:0] cauda_y = 3;
+    reg [1:0] cauda_dir;
+    reg [4:0] cauda_last_x;
+    reg [4:0] cauda_last_y;
+
+    reg game_over = 0;
+    reg comeu_fruta = 0;
+
+always @(posedge clk) begin
+    case (state)
+        IDLE: begin
+            counter = counter + 1;
+            state_read <= 0;
+            state_write <= 0;
+            if (counter == speed) begin
+                counter = 0;
+                state = CALCULA_POSICAO;
+            end
+        end
+        CALCULA_POSICAO: begin
+            case (cobra_dir)
+                0: begin // up
+                    cabeca_next_y = (cabeca_y == 0) ? MAPA_HEIGHT - 1 : cabeca_y - 1;
+                    cabeca_next_x = cabeca_x;
+                end 1: begin // down
+                    cabeca_next_y = (cabeca_y == MAPA_HEIGHT - 1) ? 0 : cabeca_y + 1;
+                    cabeca_next_x = cabeca_x;
+                end 2: begin // left
+                    cabeca_next_y = cabeca_y;
+                    cabeca_next_x = (cabeca_x == 0) ? MAPA_WIDTH - 1 : cabeca_x - 1;
+                end 3: begin //right
+                    cabeca_next_y = cabeca_y;
+                    cabeca_next_x = (cabeca_x == MAPA_WIDTH - 1) ? 0 : cabeca_x + 1;
+                end
+            endcase
+
+            state_xr = cabeca_next_x;
+            state_yr = cabeca_next_y;
+            state_read = 1;
+
+            state = CHECA_COLISAO;
+        end CHECA_COLISAO: begin
+            state_read = 0;
+            aux = state_rdata;
+
+            if (aux[3] == 1) begin
+                // É cobra
+                // TODO implementar game over
+            end else if (aux[1] == 1) begin
+                // É fruta
+                comeu_fruta = 1;
+            end else if (aux[0] == 1) begin
+                // É obstáculo
+                // TODO implementar game over
+                game_over = 1;
+            end
+
+            state = ESCREVE_CABECA;
+        end ESCREVE_CABECA: begin
+            // Atualiza a cabeça
+            cabeca_x = cabeca_next_x;
+            cabeca_y = cabeca_next_y;
+
+            // Pinta a nova cabeça
+            state_xw = cabeca_next_x;
+            state_yw = cabeca_next_y;
+            state_wdata = 4'b1000;
+            state_write = 1;
+
+            if (comeu_fruta) begin
+                state_xr = cauda_x;
+                state_yr = cauda_y;
+                state_read = 1;
+                state = CHECA_CAUDA;
+            end else begin
+                // Se comeu fruta não precisamos entrar nos dois
+                // últimos estados porque a cauda não vai mudar
+                state = IDLE;
+            end
+        end CHECA_CAUDA: begin
+            state_write = 0;
+            aux = state_rdata;
+
+            // TODO A partir da direção em aux[1:0] precisa
+            // setar cauda_x e cauda_y pra proxima posicao
+
+            state = ESCREVE_CAUDA;
+        end ESCREVE_CAUDA: begin
+
+            state_xw = cauda_last_x;
+            state_yw = cauda_last_y;
+            state_wdata = 0;
+            state_write = 1;
+
+            // Escreve na memória e reseta o contador
+            state_write = 1;
+
+            state = IDLE;
+        end
+    endcase
+end
 
 endmodule //update
