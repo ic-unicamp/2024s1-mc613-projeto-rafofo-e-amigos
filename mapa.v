@@ -6,6 +6,9 @@ module mapa #(
   input vga_read,
   input [9:0] mapa_x_read,
   input [9:0] mapa_y_read,
+  output [9:0] ram_x,
+  output [9:0] ram_y,
+  output ram_ren,
   output [1:0] mapa_R,
   output [1:0] mapa_G,
   output [1:0] mapa_B
@@ -42,7 +45,7 @@ module mapa #(
 
   always @(posedge clk) begin
     if (vga_read) begin
-      aux <= mapa[mapa_y_read][mapa_x_read];
+      aux = mapa[mapa_y_read][mapa_x_read];
     end
   end
 endmodule
