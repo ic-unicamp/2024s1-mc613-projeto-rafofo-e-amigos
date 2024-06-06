@@ -4,11 +4,11 @@ module mapa #(
 ) (
   input clk,
   input vga_read,
-  input [9:0] vga_x,
-  input [9:0] vga_y,
-  output reg [1:0] mapa_R,
-  output reg [1:0] mapa_G,
-  output reg [1:0] mapa_B
+  input [9:0] mapa_x_read,
+  input [9:0] mapa_y_read,
+  output [1:0] mapa_R,
+  output [1:0] mapa_G,
+  output [1:0] mapa_B
 );
 
   parameter [3:0] NADA = 0;
@@ -26,29 +26,23 @@ module mapa #(
   reg [3:0] aux;
 
   initial begin
-    mapa[0][0] = 1;
-    mapa[0][1] = 0;
-    mapa[0][2] = 0;
-    mapa[1][0] = 0;
+    mapa[0][0] = 4'b0001;
+    mapa[0][10] = 4'b0010;
+    mapa[14][19] = 4'b0001;
+    mapa[14][20] = 4'b0001;
+    mapa[15][19] = 4'b0001;
+    mapa[15][20] = 4'b0001;
+    mapa[10][10] = 4'b0010;
+    mapa[10][11] = 4'b0010;
   end
+
+  assign mapa_R = (aux == 4'b0001) ? 2'b11 : 2'b00;
+  assign mapa_G = (aux == 4'b0010) ? 2'b11 : 2'b00;
+  assign mapa_B = 2'b00;
 
   always @(posedge clk) begin
     if (vga_read) begin
-      aux = mapa[vga_y][vga_x];
-      if (aux == 4'b0010) begin
-        mapa_R <= 2'b11;
-        mapa_G <= 2'b00;
-        mapa_B <= 2'b00;
-      end else if (aux == 4'b0001) begin
-        mapa_R <= 2'b11;
-        mapa_G <= 2'b01;
-        mapa_B <= 2'b00;
-      end else begin
-        mapa_R <= 2'b00;
-        mapa_G <= 2'b00;
-        mapa_B <= 2'b00;
-      end
+      aux <= mapa[mapa_y_read][mapa_x_read];
     end
   end
-
 endmodule

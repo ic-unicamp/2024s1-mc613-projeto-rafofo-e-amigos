@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed Jun  5 20:00:42 2024
+Fitter Status : Successful - Thu Jun  6 14:56:07 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : cobrinha
 Top-level Entity Name : main
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 24 / 32,070 ( < 1 % )
-Total registers : 23
+Logic utilization (in ALMs) : 414 / 32,070 ( 1 % )
+Total registers : 897
 Total pins : 86 / 457 ( 19 % )
 Total virtual pins : 0
-Total block memory bits : 0 / 4,065,280 ( 0 % )
-Total RAM Blocks : 0 / 397 ( 0 % )
+Total block memory bits : 258,752 / 4,065,280 ( 6 % )
+Total RAM Blocks : 32 / 397 ( 8 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

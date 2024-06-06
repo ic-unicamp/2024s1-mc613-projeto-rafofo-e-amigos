@@ -29,8 +29,10 @@ module main (
   wire left;
   wire right;
 
-  wire [9:0] x;
-  wire [9:0] y;
+  wire [9:0] vga_x;
+  wire [9:0] vga_y;
+  wire [9:0] mapa_x_read;
+  wire [9:0] mapa_y_read;
 
   // Calculated colors
   wire [7:0] R;
@@ -70,20 +72,7 @@ module main (
     .y(vga_y)
   );
 
-  // RAM do mapa
-  mapa #(
-    .MAPA_HEIGHT(MAPA_HEIGHT),
-    .MAPA_WIDTH(MAPA_WIDTH)
-  ) mapa (
-	 .clk(CLOCK_50),
-    .vga_read(mapa_read),
-    .mapa_R(mapa_R),
-    .mapa_G(mapa_G),
-    .mapa_B(mapa_B),
-    .vga_x(mapa_x_read),
-    .vga_y(mapa_y_read)
-  );
-
+  // Faz a comunicação entre o vga e o mapa
   renderer #(
     .SCREEN_WIDTH(SCREEN_WIDTH),
     .BLOCK_SIZE(BLOCK_SIZE),
@@ -102,6 +91,21 @@ module main (
     .mapa_G(mapa_G),
     .mapa_B(mapa_B),
     .mapa_read(mapa_read)
+  );
+
+
+  // RAM do mapa
+  mapa #(
+    .MAPA_HEIGHT(MAPA_HEIGHT),
+    .MAPA_WIDTH(MAPA_WIDTH)
+  ) mapa (
+	 .clk(CLOCK_50),
+    .vga_read(mapa_read),
+    .mapa_R(mapa_R),
+    .mapa_G(mapa_G),
+    .mapa_B(mapa_B),
+    .mapa_x_read(mapa_x_read),
+    .mapa_y_read(mapa_y_read)
   );
 
   // Display da pontuação
