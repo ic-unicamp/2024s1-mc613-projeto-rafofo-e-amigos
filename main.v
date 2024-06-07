@@ -76,7 +76,7 @@ module main (
   // Display vga
   vga out (
     .CLOCK_50(CLOCK_50),
-    .reset(KEY[0]),
+    .reset(SW[0]),
     .R(R),
     .G(G),
     .B(B),
@@ -123,6 +123,7 @@ module main (
     .clk(CLOCK_50),
 
     .vga_read(mapa_read),
+    .reset(SW[0]),
     .mapa_R(mapa_R),
     .mapa_G(mapa_G),
     .mapa_B(mapa_B),
@@ -173,6 +174,7 @@ module main (
     .down(KEY[1]),
     .right(KEY[2]),
     .left(KEY[3]),
+    .cobra_dir_atual(cobra_dir),
     .cobra_dir(cobra_dir)
   );
 

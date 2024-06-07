@@ -4,6 +4,7 @@ module mapa #(
 ) (
   input clk,
   input vga_read,
+  input reset,
   input [9:0] renderer_rx,
   input [9:0] renderer_ry,
   output [1:0] mapa_R,
@@ -35,6 +36,10 @@ module mapa #(
   assign mapa_B = (aux == 4'b0001) ? 2'b11 : 2'b00;
 
   always @(posedge clk) begin
+    if (reset == 0) begin
+      
+  end
+
     if (vga_read) begin
       aux = mapa[renderer_ry][renderer_rx];
     end

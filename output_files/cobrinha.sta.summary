@@ -1,85 +1,101 @@
 ------------------------------------------------------------
-Timing Analyzer Summary
+TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
-Slack : 9.309
+Type  : Slow 1100mV 85C Model Setup 'vga:out|vga_clk_aux'
+Slack : -4.918
+TNS   : -148.173
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -4.280
+TNS   : -291.191
+
+Type  : Slow 1100mV 85C Model Hold 'vga:out|vga_clk_aux'
+Slack : 0.290
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
-Slack : 0.144
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.367
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
-Slack : 30.062
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -2.636
+TNS   : -174.428
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga:out|vga_clk_aux'
+Slack : -0.394
+TNS   : -17.838
+
+Type  : Slow 1100mV 0C Model Setup 'vga:out|vga_clk_aux'
+Slack : -5.077
+TNS   : -149.687
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -4.181
+TNS   : -282.550
+
+Type  : Slow 1100mV 0C Model Hold 'vga:out|vga_clk_aux'
+Slack : 0.285
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
-Slack : 0.863
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.368
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.239
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -2.636
+TNS   : -177.535
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga:out|vga_clk_aux'
+Slack : -0.394
+TNS   : -17.590
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -3.480
+TNS   : -145.376
+
+Type  : Fast 1100mV 85C Model Setup 'vga:out|vga_clk_aux'
+Slack : -2.520
+TNS   : -72.087
+
+Type  : Fast 1100mV 85C Model Hold 'vga:out|vga_clk_aux'
+Slack : 0.105
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
-Slack : 9.460
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.183
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.132
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -2.636
+TNS   : -139.146
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vga:out|vga_clk_aux'
+Slack : 0.074
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 30.202
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.986
+TNS   : -123.429
+
+Type  : Fast 1100mV 0C Model Setup 'vga:out|vga_clk_aux'
+Slack : -2.293
+TNS   : -65.026
+
+Type  : Fast 1100mV 0C Model Hold 'vga:out|vga_clk_aux'
+Slack : 0.086
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.833
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.107
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.239
-TNS   : 0.000
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -2.636
+TNS   : -139.218
 
-Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
-Slack : 12.298
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
-Slack : 0.035
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
-Slack : 31.055
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
-Slack : 0.394
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.005
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
-Slack : 12.767
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.022
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 31.288
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.345
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 15.034
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vga:out|vga_clk_aux'
+Slack : 0.098
 TNS   : 0.000
 
 ------------------------------------------------------------
