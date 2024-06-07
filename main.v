@@ -123,7 +123,7 @@ module main (
     .clk(CLOCK_50),
 
     .vga_read(mapa_read),
-    .reset(SW[0]),
+    // .reset(SW[0]),
     .mapa_R(mapa_R),
     .mapa_G(mapa_G),
     .mapa_B(mapa_B),

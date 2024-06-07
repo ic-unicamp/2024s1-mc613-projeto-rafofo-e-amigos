@@ -37,7 +37,8 @@ module update #(
     parameter ESCREVE_CABECA = 3;
     parameter CHECA_CAUDA = 4;
     parameter APAGA_CAUDA = 5;
-    // parameter GAME_OVER = 6;
+    parameter ATUALIZA_CAUDA = 6;
+    parameter GAME_OVER = 7;
 
     reg [2:0] state = IDLE;
     reg [3:0] aux;
@@ -46,6 +47,7 @@ module update #(
     reg [9:0] cabeca_y = 3;
 
     reg [1:0] cauda_dir;
+	
     reg [9:0] cauda_x = 3;
     reg [9:0] cauda_y = 3;
     reg [9:0] cauda_last_x;
@@ -55,7 +57,6 @@ module update #(
     reg comeu_fruta = 0;
 
 always @(posedge clk) begin
-
     case (state) 
         IDLE: begin
             update_wenable = 0;
@@ -82,6 +83,7 @@ always @(posedge clk) begin
                     cabeca_x = (cabeca_x == MAPA_WIDTH - 1) ? 0 : cabeca_x + 1;
                 end
             endcase
+
             // Pede a leitura da nova posição pra conferir se ela
             // é uma fruta ou obstaculo, mais ou menos assim:
             update_rx = cabeca_x;
@@ -96,8 +98,6 @@ always @(posedge clk) begin
             end else if (aux == 4'b0010) begin
                 comeu_fruta = 1;
             end 
-            
-
             // Checa se é uma fruta ou obstaculo ou cobra
             // Se for um obstaculo: game_over
             state = ESCREVE_CABECA;
@@ -106,7 +106,7 @@ always @(posedge clk) begin
             // Escreve a cabeça
             update_wx = cabeca_x;
             update_wy = cabeca_y;
-            update_wdata = 4'b1000;
+            update_wdata = 8 + cobra_dir;
             update_wenable = 1;
             state = CHECA_CAUDA;
         end
@@ -123,27 +123,43 @@ always @(posedge clk) begin
             
         end
         APAGA_CAUDA: begin
+            // Não comeu fruta
             // Com a direção da cauda, apaga a cauda
             // antiga e seta a nova cauda
             aux = update_rdata[1:0];
+            cauda_last_x = cauda_x;
+            cauda_last_y = cauda_y;
             case (aux)
                 0: begin
-                    cabeca_y = (cabeca_y == 0) ? MAPA_HEIGHT - 1 : cabeca_y - 1;
+                    cauda_y = (cauda_y == 0) ? MAPA_HEIGHT - 1 : cauda_y - 1;
                 end
                 1: begin
-                    cabeca_y = (cabeca_y == MAPA_HEIGHT - 1) ? 0 : cabeca_y + 1;
+                    cauda_y = (cauda_y == MAPA_HEIGHT - 1) ? 0 : cauda_y + 1;
                 end
                 2: begin
-                    cabeca_x = (cabeca_x == 0) ? MAPA_WIDTH - 1 : cabeca_x - 1;
+                    cauda_x = (cauda_x == 0) ? MAPA_WIDTH - 1 : cauda_x - 1;
                 end
                 3: begin
-                    cabeca_x = (cabeca_x == MAPA_WIDTH - 1) ? 0 : cabeca_x + 1;
+                    cauda_x = (cauda_x == MAPA_WIDTH - 1) ? 0 : cauda_x + 1;
                 end
-
             endcase
-
+            // Apaga a cauda atual
+            update_wx = cauda_last_x;
+            update_wy = cauda_last_y;
+            update_wdata = 4'b0000;
+            update_wenable = 1;
+            
+            state = ATUALIZA_CAUDA;
+        end
+        ATUALIZA_CAUDA: begin
+            // Atualiza o próximo nó para ser a cauda
+            update_wx = cauda_x;
+            update_wy = cauda_y;
+            update_wdata = aux;
+            update_wenable = 1;
             state = IDLE;
         end
+
     endcase
 end
 

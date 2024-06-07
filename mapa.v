@@ -4,7 +4,7 @@ module mapa #(
 ) (
   input clk,
   input vga_read,
-  input reset,
+  //input reset,
   input [9:0] renderer_rx,
   input [9:0] renderer_ry,
   output [1:0] mapa_R,
@@ -25,8 +25,8 @@ module mapa #(
   // Mapa do jogo
   // 4 bits
   // bit 3: se e cobra ou nao (se for 0: 0001 obstaculo; 0010 fruta)
-  // bit 2: cobra 1 ou 2
-  // bit [1:0] direcao da cauda
+  // bit 2: 
+  // bit [1:0] direcao do pedaço anterior
 
   reg [3:0] mapa [29:0][39:0];
   reg [3:0] aux;
@@ -36,10 +36,6 @@ module mapa #(
   assign mapa_B = (aux == 4'b0001) ? 2'b11 : 2'b00;
 
   always @(posedge clk) begin
-    if (reset == 0) begin
-      
-  end
-
     if (vga_read) begin
       aux = mapa[renderer_ry][renderer_rx];
     end

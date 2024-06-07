@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at update.v(48): always construct contains both blocking and non-blocking assignments File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 48
+Info (10281): Verilog HDL Declaration information at update.v(41): object "GAME_OVER" differs only in case from object "game_over" in the same scope File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 41

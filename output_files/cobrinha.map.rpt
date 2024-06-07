@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cobrinha
-Fri Jun  7 10:07:17 2024
+Fri Jun  7 16:13:36 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -19,34 +19,38 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Registers Packed Into Inferred Megafunctions
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for mapa:mapa|altsyncram:mapa_rtl_0|altsyncram_e5q1:auto_generated
- 16. Parameter Settings for User Entity Instance: Top-level Entity: |main
- 17. Parameter Settings for User Entity Instance: vga:out
- 18. Parameter Settings for User Entity Instance: renderer:renderer
- 19. Parameter Settings for User Entity Instance: mapa:mapa
- 20. Parameter Settings for User Entity Instance: update:update
- 21. Parameter Settings for User Entity Instance: fruta:fruta
- 22. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:pontuacaoDir
- 23. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:high_scoreEsq
- 24. Parameter Settings for Inferred Entity Instance: mapa:mapa|altsyncram:mapa_rtl_0
- 25. altsyncram Parameter Settings by Entity Instance
- 26. Port Connectivity Checks: "bin2display:display|bin2bcd:high_scoreEsq"
- 27. Port Connectivity Checks: "bin2display:display|bin2bcd:pontuacaoDir"
- 28. Port Connectivity Checks: "bin2display:display|bcd2display:display5"
- 29. Port Connectivity Checks: "bin2display:display|bcd2display:display4"
- 30. Port Connectivity Checks: "bin2display:display|bcd2display:display3"
- 31. Port Connectivity Checks: "bin2display:display|bcd2display:display2"
- 32. Port Connectivity Checks: "bin2display:display|bcd2display:display1"
- 33. Port Connectivity Checks: "bin2display:display|bcd2display:display0"
- 34. Port Connectivity Checks: "fruta:fruta"
- 35. Port Connectivity Checks: "update:update"
- 36. Port Connectivity Checks: "mapa:mapa"
- 37. Port Connectivity Checks: "renderer:renderer"
- 38. Port Connectivity Checks: "vga:out"
- 39. Post-Synthesis Netlist Statistics for Top Partition
- 40. Elapsed Time Per Partition
- 41. Analysis & Synthesis Messages
+ 14. Registers Added for RAM Pass-Through Logic
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for mapa:mapa|altsyncram:mapa_rtl_0|altsyncram_e5q1:auto_generated
+ 17. Source assignments for mapa:mapa|altsyncram:mapa_rtl_1|altsyncram_mll1:auto_generated
+ 18. Parameter Settings for User Entity Instance: Top-level Entity: |main
+ 19. Parameter Settings for User Entity Instance: vga:out
+ 20. Parameter Settings for User Entity Instance: renderer:renderer
+ 21. Parameter Settings for User Entity Instance: mapa:mapa
+ 22. Parameter Settings for User Entity Instance: update:update
+ 23. Parameter Settings for User Entity Instance: fruta:fruta
+ 24. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:pontuacaoDir
+ 25. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:high_scoreEsq
+ 26. Parameter Settings for Inferred Entity Instance: mapa:mapa|altsyncram:mapa_rtl_0
+ 27. Parameter Settings for Inferred Entity Instance: mapa:mapa|altsyncram:mapa_rtl_1
+ 28. altsyncram Parameter Settings by Entity Instance
+ 29. Port Connectivity Checks: "bin2display:display|bin2bcd:high_scoreEsq"
+ 30. Port Connectivity Checks: "bin2display:display|bin2bcd:pontuacaoDir"
+ 31. Port Connectivity Checks: "bin2display:display|bcd2display:display5"
+ 32. Port Connectivity Checks: "bin2display:display|bcd2display:display4"
+ 33. Port Connectivity Checks: "bin2display:display|bcd2display:display3"
+ 34. Port Connectivity Checks: "bin2display:display|bcd2display:display2"
+ 35. Port Connectivity Checks: "bin2display:display|bcd2display:display1"
+ 36. Port Connectivity Checks: "bin2display:display|bcd2display:display0"
+ 37. Port Connectivity Checks: "fruta:fruta"
+ 38. Port Connectivity Checks: "update:update"
+ 39. Port Connectivity Checks: "mapa:mapa"
+ 40. Port Connectivity Checks: "renderer:renderer"
+ 41. Port Connectivity Checks: "vga:out"
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
+ 45. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -72,16 +76,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jun  7 10:07:17 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri Jun  7 16:13:36 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; cobrinha                                    ;
 ; Top-level Entity Name           ; main                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 108                                         ;
+; Total registers                 ; 164                                         ;
 ; Total pins                      ; 86                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 4,800                                       ;
+; Total block memory bits         ; 9,600                                       ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -222,6 +226,7 @@ refer to the applicable agreement for further details.
 ; altram.inc                       ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altram.inc                                       ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.inc                                     ;         ;
 ; db/altsyncram_e5q1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_e5q1.tdf ;         ;
+; db/altsyncram_mll1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_mll1.tdf ;         ;
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------+---------+
 
 
@@ -230,27 +235,27 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 138            ;
+; Estimate of Logic utilization (ALMs needed) ; 192            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 212            ;
+; Combinational ALUT usage for logic          ; 295            ;
 ;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 61             ;
-;     -- 5 input functions                    ; 15             ;
-;     -- 4 input functions                    ; 22             ;
-;     -- <=3 input functions                  ; 113            ;
+;     -- 6 input functions                    ; 86             ;
+;     -- 5 input functions                    ; 28             ;
+;     -- 4 input functions                    ; 35             ;
+;     -- <=3 input functions                  ; 145            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 108            ;
+; Dedicated logic registers                   ; 164            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 86             ;
 ; Total MLAB memory bits                      ; 0              ;
-; Total block memory bits                     ; 4800           ;
+; Total block memory bits                     ; 9600           ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 78             ;
-; Total fan-out                               ; 1358           ;
-; Average fan-out                             ; 2.74           ;
+; Maximum fan-out                             ; 138            ;
+; Total fan-out                               ; 1929           ;
+; Average fan-out                             ; 3.02           ;
 +---------------------------------------------+----------------+
 
 
@@ -259,12 +264,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                  ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+-----------------+--------------+
-; |main                                     ; 212 (1)             ; 108 (0)                   ; 4800              ; 0          ; 86   ; 0            ; |main                                                                ; main            ; work         ;
+; |main                                     ; 295 (0)             ; 164 (0)                   ; 9600              ; 0          ; 86   ; 0            ; |main                                                                ; main            ; work         ;
 ;    |cobra:comb_3|                         ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |main|cobra:comb_3                                                   ; cobra           ; work         ;
-;    |mapa:mapa|                            ; 16 (16)             ; 0 (0)                     ; 4800              ; 0          ; 0    ; 0            ; |main|mapa:mapa                                                      ; mapa            ; work         ;
+;    |mapa:mapa|                            ; 33 (33)             ; 27 (27)                   ; 9600              ; 0          ; 0    ; 0            ; |main|mapa:mapa                                                      ; mapa            ; work         ;
 ;       |altsyncram:mapa_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 4800              ; 0          ; 0    ; 0            ; |main|mapa:mapa|altsyncram:mapa_rtl_0                                ; altsyncram      ; work         ;
 ;          |altsyncram_e5q1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4800              ; 0          ; 0    ; 0            ; |main|mapa:mapa|altsyncram:mapa_rtl_0|altsyncram_e5q1:auto_generated ; altsyncram_e5q1 ; work         ;
-;    |update:update|                        ; 94 (94)             ; 71 (71)                   ; 0                 ; 0          ; 0    ; 0            ; |main|update:update                                                  ; update          ; work         ;
+;       |altsyncram:mapa_rtl_1|             ; 0 (0)               ; 0 (0)                     ; 4800              ; 0          ; 0    ; 0            ; |main|mapa:mapa|altsyncram:mapa_rtl_1                                ; altsyncram      ; work         ;
+;          |altsyncram_mll1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4800              ; 0          ; 0    ; 0            ; |main|mapa:mapa|altsyncram:mapa_rtl_1|altsyncram_mll1:auto_generated ; altsyncram_mll1 ; work         ;
+;    |update:update|                        ; 161 (161)           ; 100 (100)                 ; 0                 ; 0          ; 0    ; 0            ; |main|update:update                                                  ; update          ; work         ;
 ;    |vga:out|                              ; 98 (98)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |main|vga:out                                                        ; vga             ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -276,37 +283,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                      ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
 +---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 ; mapa:mapa|altsyncram:mapa_rtl_0|altsyncram_e5q1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1200         ; 4            ; 1200         ; 4            ; 4800 ; None ;
+; mapa:mapa|altsyncram:mapa_rtl_1|altsyncram_mll1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1200         ; 4            ; 1200         ; 4            ; 4800 ; None ;
 +---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |main|update:update|state                                                                                                         ;
-+-----------------------+---------------------+-------------------+----------------------+---------------------+-----------------------+------------+
-; Name                  ; state.ESCREVE_CAUDA ; state.CHECA_CAUDA ; state.ESCREVE_CABECA ; state.CHECA_COLISAO ; state.CALCULA_POSICAO ; state.IDLE ;
-+-----------------------+---------------------+-------------------+----------------------+---------------------+-----------------------+------------+
-; state.IDLE            ; 0                   ; 0                 ; 0                    ; 0                   ; 0                     ; 0          ;
-; state.CALCULA_POSICAO ; 0                   ; 0                 ; 0                    ; 0                   ; 1                     ; 1          ;
-; state.CHECA_COLISAO   ; 0                   ; 0                 ; 0                    ; 1                   ; 0                     ; 1          ;
-; state.ESCREVE_CABECA  ; 0                   ; 0                 ; 1                    ; 0                   ; 0                     ; 1          ;
-; state.CHECA_CAUDA     ; 0                   ; 1                 ; 0                    ; 0                   ; 0                     ; 1          ;
-; state.ESCREVE_CAUDA   ; 1                   ; 0                 ; 0                    ; 0                   ; 0                     ; 1          ;
-+-----------------------+---------------------+-------------------+----------------------+---------------------+-----------------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |main|update:update|state                                                                                                                              ;
++-----------------------+----------------------+-------------------+-------------------+----------------------+---------------------+-----------------------+------------+
+; Name                  ; state.ATUALIZA_CAUDA ; state.APAGA_CAUDA ; state.CHECA_CAUDA ; state.ESCREVE_CABECA ; state.CHECA_COLISAO ; state.CALCULA_POSICAO ; state.IDLE ;
++-----------------------+----------------------+-------------------+-------------------+----------------------+---------------------+-----------------------+------------+
+; state.IDLE            ; 0                    ; 0                 ; 0                 ; 0                    ; 0                   ; 0                     ; 0          ;
+; state.CALCULA_POSICAO ; 0                    ; 0                 ; 0                 ; 0                    ; 0                   ; 1                     ; 1          ;
+; state.CHECA_COLISAO   ; 0                    ; 0                 ; 0                 ; 0                    ; 1                   ; 0                     ; 1          ;
+; state.ESCREVE_CABECA  ; 0                    ; 0                 ; 0                 ; 1                    ; 0                   ; 0                     ; 1          ;
+; state.CHECA_CAUDA     ; 0                    ; 0                 ; 1                 ; 0                    ; 0                   ; 0                     ; 1          ;
+; state.APAGA_CAUDA     ; 0                    ; 1                 ; 0                 ; 0                    ; 0                   ; 0                     ; 1          ;
+; state.ATUALIZA_CAUDA  ; 1                    ; 0                 ; 0                 ; 0                    ; 0                   ; 0                     ; 1          ;
++-----------------------+----------------------+-------------------+-------------------+----------------------+---------------------+-----------------------+------------+
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; update:update|update_wdata[3]         ; Stuck at VCC due to stuck port data_in ;
-; update:update|update_wdata[0..2]      ; Stuck at GND due to stuck port data_in ;
-; update:update|update_wy[8,9]          ; Lost fanout                            ;
-; update:update|state~8                 ; Lost fanout                            ;
-; update:update|state~9                 ; Lost fanout                            ;
-; update:update|state~10                ; Lost fanout                            ;
-; Total Number of Removed Registers = 9 ;                                        ;
-+---------------------------------------+----------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; update:update|update_wy[8,9]          ; Lost fanout        ;
+; update:update|update_rx[8,9]          ; Lost fanout        ;
+; update:update|state~9                 ; Lost fanout        ;
+; update:update|state~10                ; Lost fanout        ;
+; update:update|state~11                ; Lost fanout        ;
+; Total Number of Removed Registers = 7 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -314,12 +322,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 108   ;
-; Number of registers using Synchronous Clear  ; 68    ;
+; Total registers                              ; 164   ;
+; Number of registers using Synchronous Clear  ; 52    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 77    ;
+; Number of registers using Clock Enable       ; 118   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -329,40 +337,87 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; update:update|cabeca_x[0]              ; 5       ;
-; update:update|cabeca_x[1]              ; 5       ;
-; update:update|cabeca_y[0]              ; 4       ;
-; update:update|cabeca_y[1]              ; 3       ;
+; update:update|cabeca_x[0]              ; 6       ;
+; update:update|cabeca_x[1]              ; 6       ;
+; update:update|cabeca_y[0]              ; 5       ;
+; update:update|cabeca_y[1]              ; 6       ;
 ; Total number of inverted registers = 4 ;         ;
 +----------------------------------------+---------+
 
 
-+---------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions      ;
-+---------------------+----------------------+------+
-; Register Name       ; Megafunction         ; Type ;
-+---------------------+----------------------+------+
-; mapa:mapa|aux[0..3] ; mapa:mapa|mapa_rtl_0 ; RAM  ;
-+---------------------+----------------------+------+
++------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions               ;
++------------------------------+----------------------+------+
+; Register Name                ; Megafunction         ; Type ;
++------------------------------+----------------------+------+
+; mapa:mapa|aux[0..3]          ; mapa:mapa|mapa_rtl_0 ; RAM  ;
+; mapa:mapa|update_rdata[0..3] ; mapa:mapa|mapa_rtl_1 ; RAM  ;
++------------------------------+----------------------+------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |main|vga:out|hcounter[1]       ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |main|update:update|cabeca_x[3] ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |main|update:update|cabeca_y[2] ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|update:update|cabeca_x[1] ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|update:update|cabeca_y[1] ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |main|vga:out|hcounter          ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |main|vga:out|vcounter          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
++--------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic             ;
++---------------------------------+----------------------+
+; Register Name                   ; RAM Name             ;
++---------------------------------+----------------------+
+; mapa:mapa|mapa_rtl_1_bypass[0]  ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[1]  ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[2]  ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[3]  ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[4]  ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[5]  ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[6]  ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[7]  ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[8]  ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[9]  ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[10] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[11] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[12] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[13] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[14] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[15] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[16] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[17] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[18] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[19] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[20] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[21] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[22] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[23] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[24] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[25] ; mapa:mapa|mapa_rtl_1 ;
+; mapa:mapa|mapa_rtl_1_bypass[26] ; mapa:mapa|mapa_rtl_1 ;
++---------------------------------+----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |main|vga:out|hcounter[3]           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|update:update|update_wy[0]    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |main|update:update|update_wdata[0] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|update:update|cabeca_x[9]     ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |main|update:update|update_rx[5]    ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |main|vga:out|hcounter              ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |main|vga:out|vcounter              ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; No         ; |main|update:update|Mux10           ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |main|update:update|Mux6            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
 +---------------------------------------------------------------------------------------+
 ; Source assignments for mapa:mapa|altsyncram:mapa_rtl_0|altsyncram_e5q1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------+
+; Assignment                      ; Value              ; From ; To                      ;
++---------------------------------+--------------------+------+-------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                       ;
++---------------------------------+--------------------+------+-------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Source assignments for mapa:mapa|altsyncram:mapa_rtl_1|altsyncram_mll1:auto_generated ;
 +---------------------------------+--------------------+------+-------------------------+
 ; Assignment                      ; Value              ; From ; To                      ;
 +---------------------------------+--------------------+------+-------------------------+
@@ -528,12 +583,73 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: mapa:mapa|altsyncram:mapa_rtl_1 ;
++------------------------------------+----------------------+----------------------+
+; Parameter Name                     ; Value                ; Type                 ;
++------------------------------------+----------------------+----------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped              ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE       ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped              ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped              ;
+; WIDTH_A                            ; 4                    ; Untyped              ;
+; WIDTHAD_A                          ; 11                   ; Untyped              ;
+; NUMWORDS_A                         ; 1200                 ; Untyped              ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped              ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped              ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped              ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped              ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped              ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped              ;
+; WIDTH_B                            ; 4                    ; Untyped              ;
+; WIDTHAD_B                          ; 11                   ; Untyped              ;
+; NUMWORDS_B                         ; 1200                 ; Untyped              ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped              ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped              ;
+; RDCONTROL_REG_B                    ; CLOCK0               ; Untyped              ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped              ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped              ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped              ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped              ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped              ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped              ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped              ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped              ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped              ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped              ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped              ;
+; BYTE_SIZE                          ; 8                    ; Untyped              ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped              ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped              ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped              ;
+; INIT_FILE                          ; UNUSED               ; Untyped              ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped              ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped              ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped              ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped              ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped              ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped              ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped              ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped              ;
+; ENABLE_ECC                         ; FALSE                ; Untyped              ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped              ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped              ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped              ;
+; CBXI_PARAMETER                     ; altsyncram_mll1      ; Untyped              ;
++------------------------------------+----------------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                            ;
 +-------------------------------------------+---------------------------------+
 ; Name                                      ; Value                           ;
 +-------------------------------------------+---------------------------------+
-; Number of entity instances                ; 1                               ;
+; Number of entity instances                ; 2                               ;
 ; Entity Instance                           ; mapa:mapa|altsyncram:mapa_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                       ;
 ;     -- WIDTH_A                            ; 4                               ;
@@ -545,6 +661,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                    ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                            ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                        ;
+; Entity Instance                           ; mapa:mapa|altsyncram:mapa_rtl_1 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                       ;
+;     -- WIDTH_A                            ; 4                               ;
+;     -- NUMWORDS_A                         ; 1200                            ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                    ;
+;     -- WIDTH_B                            ; 4                               ;
+;     -- NUMWORDS_B                         ; 1200                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                          ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                    ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                            ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                       ;
 +-------------------------------------------+---------------------------------+
 
 
@@ -686,35 +813,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 108                         ;
-;     ENA               ; 20                          ;
-;     ENA SCLR          ; 57                          ;
+; arriav_ff             ; 164                         ;
+;     ENA               ; 77                          ;
+;     ENA SCLR          ; 41                          ;
 ;     SCLR              ; 11                          ;
-;     plain             ; 20                          ;
-; arriav_lcell_comb     ; 214                         ;
-;     arith             ; 81                          ;
-;         1 data inputs ; 54                          ;
-;         2 data inputs ; 18                          ;
+;     plain             ; 35                          ;
+; arriav_lcell_comb     ; 298                         ;
+;     arith             ; 101                         ;
+;         1 data inputs ; 92                          ;
 ;         4 data inputs ; 9                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 116                         ;
+;     normal            ; 172                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 13                          ;
-;         5 data inputs ; 15                          ;
-;         6 data inputs ; 61                          ;
-;     shared            ; 16                          ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 2                           ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 26                          ;
+;         5 data inputs ; 28                          ;
+;         6 data inputs ; 86                          ;
+;     shared            ; 24                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 7                           ;
 ; boundary_port         ; 86                          ;
-; stratixv_ram_block    ; 4                           ;
+; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.70                        ;
-; Average LUT depth     ; 3.89                        ;
+; Average LUT depth     ; 3.59                        ;
 +-----------------------+-----------------------------+
 
 
@@ -733,7 +859,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Jun  7 10:07:11 2024
+    Info: Processing started: Fri Jun  7 16:13:31 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cobrinha -c cobrinha
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -770,12 +896,14 @@ Warning (10236): Verilog HDL Implicit Net warning at main.v(114): created implic
 Warning (10236): Verilog HDL Implicit Net warning at main.v(165): created implicit net for "obstaculo_wx" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 165
 Warning (10236): Verilog HDL Implicit Net warning at main.v(166): created implicit net for "obstaculo_wy" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 166
 Warning (10222): Verilog HDL Parameter Declaration warning at fruta.v(12): Parameter Declaration in module "fruta" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 12
-Warning (10222): Verilog HDL Parameter Declaration warning at update.v(31): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 31
-Warning (10222): Verilog HDL Parameter Declaration warning at update.v(32): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 32
-Warning (10222): Verilog HDL Parameter Declaration warning at update.v(33): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 33
 Warning (10222): Verilog HDL Parameter Declaration warning at update.v(34): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 34
 Warning (10222): Verilog HDL Parameter Declaration warning at update.v(35): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 35
 Warning (10222): Verilog HDL Parameter Declaration warning at update.v(36): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 36
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(37): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 37
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(38): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 38
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(39): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 39
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(40): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 40
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(41): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 41
 Critical Warning (10846): Verilog HDL Instantiation warning at main.v(179): instance has no name File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 179
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "vga" for hierarchy "vga:out" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 94
@@ -794,19 +922,16 @@ Warning (10036): Verilog HDL or VHDL warning at renderer.v(40): object "linha_x"
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "linha" into its bus
 Info (12128): Elaborating entity "mapa" for hierarchy "mapa:mapa" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 142
 Info (12128): Elaborating entity "update" for hierarchy "update:update" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 169
-Warning (10036): Verilog HDL or VHDL warning at update.v(45): object "cauda_x" assigned a value but never read File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 45
-Warning (10036): Verilog HDL or VHDL warning at update.v(46): object "cauda_y" assigned a value but never read File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 46
-Warning (10036): Verilog HDL or VHDL warning at update.v(50): object "game_over" assigned a value but never read File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 50
-Warning (10036): Verilog HDL or VHDL warning at update.v(51): object "comeu_fruta" assigned a value but never read File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 51
-Warning (10230): Verilog HDL assignment warning at update.v(59): truncated value with size 32 to match size of target (30) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 59
-Warning (10230): Verilog HDL assignment warning at update.v(69): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 69
-Warning (10230): Verilog HDL assignment warning at update.v(72): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 72
-Warning (10230): Verilog HDL assignment warning at update.v(75): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 75
-Warning (10230): Verilog HDL assignment warning at update.v(78): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 78
-Warning (10034): Output port "update_rx" at update.v(9) has no driver File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 9
-Warning (10034): Output port "update_ry" at update.v(10) has no driver File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 10
-Warning (10034): Output port "fruta_wenable" at update.v(17) has no driver File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 17
-Warning (10034): Output port "obstaculo_wenable" at update.v(21) has no driver File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 21
+Warning (10036): Verilog HDL or VHDL warning at update.v(56): object "game_over" assigned a value but never read File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 56
+Warning (10230): Verilog HDL assignment warning at update.v(64): truncated value with size 32 to match size of target (30) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 64
+Warning (10230): Verilog HDL assignment warning at update.v(74): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 74
+Warning (10230): Verilog HDL assignment warning at update.v(77): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 77
+Warning (10230): Verilog HDL assignment warning at update.v(80): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 80
+Warning (10230): Verilog HDL assignment warning at update.v(83): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 83
+Warning (10230): Verilog HDL assignment warning at update.v(109): truncated value with size 32 to match size of target (4) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 109
+Warning (10230): Verilog HDL assignment warning at update.v(156): truncated value with size 32 to match size of target (4) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 156
+Warning (10034): Output port "fruta_wenable" at update.v(20) has no driver File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 20
+Warning (10034): Output port "obstaculo_wenable" at update.v(24) has no driver File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 24
 Info (12128): Elaborating entity "cobra" for hierarchy "cobra:comb_3" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 179
 Info (12128): Elaborating entity "fruta" for hierarchy "fruta:fruta" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 189
 Warning (10230): Verilog HDL assignment warning at fruta.v(19): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 19
@@ -856,9 +981,8 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "B[4]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
     Warning (12110): Net "B[3]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
     Warning (12110): Net "B[2]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "mapa:mapa|mapa" is uninferred due to asynchronous read logic File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v Line: 31
-Info (19000): Inferred 1 megafunctions from design logic
+Warning (276020): Inferred RAM node "mapa:mapa|mapa_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "mapa:mapa|mapa_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 4
@@ -875,6 +999,22 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+        Info (286033): Parameter RDCONTROL_REG_B set to CLOCK0
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "mapa:mapa|mapa_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 4
+        Info (286033): Parameter WIDTHAD_A set to 11
+        Info (286033): Parameter NUMWORDS_A set to 1200
+        Info (286033): Parameter WIDTH_B set to 4
+        Info (286033): Parameter WIDTHAD_B set to 11
+        Info (286033): Parameter NUMWORDS_B set to 1200
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter RDCONTROL_REG_B set to CLOCK0
 Info (12130): Elaborated megafunction instantiation "mapa:mapa|altsyncram:mapa_rtl_0"
 Info (12133): Instantiated megafunction "mapa:mapa|altsyncram:mapa_rtl_0" with the following parameter:
@@ -896,6 +1036,25 @@ Info (12133): Instantiated megafunction "mapa:mapa|altsyncram:mapa_rtl_0" with t
     Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_e5q1.tdf
     Info (12023): Found entity 1: altsyncram_e5q1 File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_e5q1.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "mapa:mapa|altsyncram:mapa_rtl_1"
+Info (12133): Instantiated megafunction "mapa:mapa|altsyncram:mapa_rtl_1" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "4"
+    Info (12134): Parameter "WIDTHAD_A" = "11"
+    Info (12134): Parameter "NUMWORDS_A" = "1200"
+    Info (12134): Parameter "WIDTH_B" = "4"
+    Info (12134): Parameter "WIDTHAD_B" = "11"
+    Info (12134): Parameter "NUMWORDS_B" = "1200"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_mll1.tdf
+    Info (12023): Found entity 1: altsyncram_mll1 File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_mll1.tdf Line: 27
 Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[0]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 7
@@ -964,7 +1123,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 19
     Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 20
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (17049): 7 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/output_files/cobrinha.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 9 input pin(s) that do not drive logic
@@ -977,15 +1137,21 @@ Warning (21074): Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
     Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
     Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
-Info (21057): Implemented 368 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 481 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 71 output pins
-    Info (21061): Implemented 278 logic cells
-    Info (21064): Implemented 4 RAM segments
+    Info (21061): Implemented 387 logic cells
+    Info (21064): Implemented 8 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 164 warnings
-    Info: Peak virtual memory: 1342 megabytes
-    Info: Processing ended: Fri Jun  7 10:07:17 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Peak virtual memory: 1344 megabytes
+    Info: Processing ended: Fri Jun  7 16:13:36 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:14
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/output_files/cobrinha.map.smsg.
 
 
