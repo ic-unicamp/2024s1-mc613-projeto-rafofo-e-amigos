@@ -46,14 +46,14 @@ module main (
   wire [9:0] obstaculo_yw;
 
   wire update_renable;
-  wire [3:0] update_rdata;
+  wire [1:0] update_rdata;
   wire [9:0] update_rx;
   wire [9:0] update_ry;
 
   wire update_wenable;
-  wire [5:0] update_wx;
+  wire [9:0] update_wx;
   wire [9:0] update_wy;
-  wire [9:0] update_wdata;
+  wire [1:0] update_wdata;
 
   // Calculated colors
   wire [7:0] R;
@@ -146,6 +146,7 @@ module main (
     .MAPA_WIDTH(MAPA_WIDTH)
   ) update (
     .clk(CLOCK_50),
+    .reset(SW[0]),
 
     .update_renable(update_renable),
     .update_rdata(update_rdata),

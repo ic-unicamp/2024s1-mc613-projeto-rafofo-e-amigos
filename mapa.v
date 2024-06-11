@@ -14,26 +14,27 @@ module mapa #(
   input update_renable,
   input [9:0] update_rx,
   input [9:0] update_ry,
-  output reg [3:0] update_rdata,
+  output reg [1:0] update_rdata,
 
   input update_wenable,
   input [9:0] update_wx,
   input [9:0] update_wy,
-  input [3:0] update_wdata
+  input [1:0] update_wdata
 );
 
   // Mapa do jogo
-  // 4 bits
-  // bit 3: se e cobra ou nao (se for 0: 0001 obstaculo; 0010 fruta)
-  // bit 2: 
-  // bit [1:0] direcao do pedaço anterior
+  // 2 bits
+  // 00 nada
+  // 01 cobra
+  // 10 fruta
+  // 11 obstaculo
 
-  reg [3:0] mapa [29:0][39:0];
-  reg [3:0] aux;
+  reg [1:0] mapa [29:0][39:0];
+  reg [1:0] aux;
 
-  assign mapa_R = (aux == 4'b0010) ? 2'b11 : 2'b00;
-  assign mapa_G = (aux[3] == 1) ? 2'b11 : 2'b00;
-  assign mapa_B = (aux == 4'b0001) ? 2'b11 : 2'b00;
+  assign mapa_R = (aux == 2'b10) ? 2'b11 : 2'b00;
+  assign mapa_G = (aux == 2'b01) ? 2'b11 : 2'b00;
+  assign mapa_B = (aux == 4'b11) ? 2'b11 : 2'b00;
 
   always @(posedge clk) begin
     if (vga_read) begin

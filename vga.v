@@ -23,7 +23,7 @@ module vga (
   // Sinais de controle do pixel atual
   output active,
   output reg [9:0] vga_rx,
-  output reg [9:0] vga_ry
+  output reg [9:0] rvga_y
 );
 
   reg [10:0] hcounter = 0;
@@ -70,7 +70,7 @@ module vga (
     end
 
     vga_rx = (hcounter >= HTB && hcounter < HTC) ? hcounter - HTB : -1;
-    vga_ry = (vcounter >= VTB && vcounter < VTC) ? vcounter - VTB : -1;
+    rvga_y = (vcounter >= VTB && vcounter < VTC) ? vcounter - VTB : -1;
   end
 
 endmodule
