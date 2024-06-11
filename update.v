@@ -177,6 +177,13 @@ always @(posedge clk) begin
                     fruta_wenable = 1;
                     state = NOVA_FRUTA;
                 end else begin
+                    if (corpo_counter == 0) begin
+                        update_wx = corpo_x[0];
+                        update_wy = corpo_y[0];
+                        update_wdata = 2'b00;
+                        update_wenable = 1;
+                    end
+
                     if (tamanho != 1 && corpo_counter < tamanho - 1) begin
                         corpo_x[corpo_counter] = corpo_x[corpo_counter + 1];
                         corpo_y[corpo_counter] = corpo_y[corpo_counter + 1];
