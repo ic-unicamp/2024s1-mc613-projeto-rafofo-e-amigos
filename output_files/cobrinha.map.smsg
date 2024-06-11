@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at update.v(41): object "GAME_OVER" differs only in case from object "game_over" in the same scope File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 41
+Info (10281): Verilog HDL Declaration information at update.v(6): object "reset" differs only in case from object "RESET" in the same scope File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 6

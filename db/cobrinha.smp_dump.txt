@@ -1,10 +1,10 @@
 
 State Machine - |main|update:update|state
-Name state.ATUALIZA_CAUDA state.APAGA_CAUDA state.CHECA_CAUDA state.ESCREVE_CABECA state.CHECA_COLISAO state.CALCULA_POSICAO state.IDLE 
-state.IDLE 0 0 0 0 0 0 0 
-state.CALCULA_POSICAO 0 0 0 0 0 1 1 
-state.CHECA_COLISAO 0 0 0 0 1 0 1 
-state.ESCREVE_CABECA 0 0 0 1 0 0 1 
-state.CHECA_CAUDA 0 0 1 0 0 0 1 
-state.APAGA_CAUDA 0 1 0 0 0 0 1 
-state.ATUALIZA_CAUDA 1 0 0 0 0 0 1 
+Name state.ATUALIZA_COBRA state.CHECA_COLISAO state.CALCULA_POSICAO state.IDLE state.DELAY state.RESET state.NOVA_FRUTA 
+state.RESET 0 0 0 0 0 0 0 
+state.DELAY 0 0 0 0 1 1 0 
+state.IDLE 0 0 0 1 0 1 0 
+state.CALCULA_POSICAO 0 0 1 0 0 1 0 
+state.CHECA_COLISAO 0 1 0 0 0 1 0 
+state.ATUALIZA_COBRA 1 0 0 0 0 1 0 
+state.NOVA_FRUTA 0 0 0 0 0 1 1 
