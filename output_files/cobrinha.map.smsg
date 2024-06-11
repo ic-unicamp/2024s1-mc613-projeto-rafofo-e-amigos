@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at update.v(6): object "reset" differs only in case from object "RESET" in the same scope File: /home/erittner/coding/uni/circuitos-logicos/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 6
+Info (10281): Verilog HDL Declaration information at update.v(6): object "reset" differs only in case from object "RESET" in the same scope File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 6

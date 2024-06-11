@@ -50,6 +50,8 @@ module update #(
 
     reg [9:0] cabeca_x = 10;
     reg [9:0] cabeca_y = 10;
+    reg [9:0] cabeca_last_x;
+    reg [9:0] cabeca_last_y;
 
     reg [1:0] cauda_dir;
 	
@@ -78,8 +80,8 @@ always @(posedge clk) begin
                 counter = 0;
                 cabeca_x = 10;
                 cabeca_y = 10;
-                cauda_x  = 10;
-                cauda_y = 10;
+                cauda_x  = 0;
+                cauda_y = 0;
                 tamanho = 1;
                 corpo_x[0] = 10;
                 corpo_y[0] = 10;
@@ -110,7 +112,7 @@ always @(posedge clk) begin
             end
             DELAY: begin
                 delaycounter = delaycounter + 1;
-                if (delaycounter == 1000000) begin
+                if (delaycounter == 100000000) begin
                     delaycounter = 0;
                     state = IDLE;
                 end
@@ -121,6 +123,8 @@ always @(posedge clk) begin
                 update_renable = 0;
                 fruta_wenable = 0;
                 obstaculo_wenable = 0;
+                // cabeca_last_x = cabeca_x;
+                // cabeca_last_y = cabeca_y;
                 if (counter >= speed) begin
                     counter = 0;
                     state = CALCULA_POSICAO;
@@ -156,45 +160,78 @@ always @(posedge clk) begin
                 update_wy = cabeca_y;
                 update_wdata = 2'b01;
                 update_wenable = 1;
+                // state = ATUALIZA_COBRA;
 
-                if (aux == 2'b01 || aux == 2'b11) begin
-                    game_over = 1;
-                    state = RESET;
-                end else if (aux == 2'b10) begin
+                if (aux == 2'b10) begin
                     comeu_fruta = 1;
                     tamanho = tamanho + 1;
-                    state = ATUALIZA_COBRA;
-                end else begin
-                    comeu_fruta = 0;
-                    state = ATUALIZA_COBRA;
                 end
+                state = ATUALIZA_COBRA;
+                // if (aux == 2'b01 || aux == 2'b11) begin
+                //     game_over = 1;
+                //     state = RESET;
+                // end else if (aux == 2'b10) begin
+                //     comeu_fruta = 1;
+                //     tamanho = tamanho + 1;
+                //     state = ATUALIZA_COBRA;
+                // end else begin
+                //     comeu_fruta = 0;
+                //     state = ATUALIZA_COBRA;
+                // end
             end
             ATUALIZA_COBRA: begin
-                update_wenable = 0;
-                if (comeu_fruta) begin
-                    corpo_x[tamanho - 1] = cabeca_x;
-                    corpo_y[tamanho - 1] = cabeca_y;
-                    fruta_wenable = 1;
-                    state = NOVA_FRUTA;
-                end else begin
-                    if (corpo_counter == 0) begin
-                        update_wx = corpo_x[0];
-                        update_wy = corpo_y[0];
-                        update_wdata = 2'b00;
-                        update_wenable = 1;
-                    end
-
-                    if (tamanho != 1 && corpo_counter < tamanho - 1) begin
-                        corpo_x[corpo_counter] = corpo_x[corpo_counter + 1];
-                        corpo_y[corpo_counter] = corpo_y[corpo_counter + 1];
-                    end else begin
-                        corpo_x[tamanho - 1] = cabeca_x;
-                        corpo_y[tamanho - 1] = cabeca_y;
-                        corpo_counter = 0;
-                        state = IDLE;
-                    end
-                    corpo_counter = corpo_counter + 1;
+                corpo_x[tamanho - 1] = cabeca_x;
+                corpo_y[tamanho - 1] = cabeca_y;
+                if (comeu_fruta == 0)begin
+                  if (tamanho == 1) begin
+                    update_wenable = 0;
+                    corpo_counter = 0;
+                    update_wx = corpo_x[0];
+                    update_wy = corpo_y[0];
+                    update_wdata = 2'b00;
+                    update_wenable = 1;
+                    corpo_x[0] = cabeca_x;
+                    corpo_y[0] = cabeca_y;
+                    
+                  end else begin
+                    update_wx = corpo_x[cauda_x];
+                    update_wy = corpo_y[cauda_y];
+                    update_wdata = 2'b00;
+                    update_wenable = 1;
+                    cauda_x = cauda_x + 1;
+                    cauda_y = cauda_y + 1;
+                  end
                 end
+                state = IDLE;
+                // if (comeu_fruta) begin
+                //     corpo_x[tamanho - 1] = cabeca_x;
+                //     corpo_y[tamanho - 1] = cabeca_y;
+                //     fruta_wenable = 1;
+                //     state = NOVA_FRUTA;
+                // end else begin
+                //     if (corpo_counter == 0) begin
+                //         update_wx = corpo_x[0];
+                //         update_wy = corpo_y[0];
+                //         update_wdata = 2'b00;
+                //         update_wenable = 1;
+                        
+                //     end
+                //     if (corpo_counter == 0 && tamanho == 1)begin
+                //         corpo_x[0] = cabeca_last_x;
+                //         corpo_y[0] = ;
+                //     end
+    
+                //     if (tamanho != 1 && corpo_counter < tamanho - 1) begin
+                //         corpo_x[corpo_counter] = corpo_x[corpo_counter + 1];
+                //         corpo_y[corpo_counter] = corpo_y[corpo_counter + 1];
+                //     end else begin
+                //         corpo_x[tamanho - 1] = cabeca_x;
+                //         corpo_y[tamanho - 1] = cabeca_y;
+                //         corpo_counter = 0;
+                //         state = IDLE;
+                //     end
+                //     corpo_counter = corpo_counter + 1;
+                // end
             end
             NOVA_FRUTA: begin
                 comeu_fruta = 0;
