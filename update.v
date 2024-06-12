@@ -31,7 +31,7 @@ module update #(
 
     input [1:0] cobra_dir,
 
-    output [19:0] score
+    output reg [19:0] score
 );
 
     reg [39:0] speed = 50000000;
@@ -73,8 +73,6 @@ module update #(
     reg game_over = 0;
     reg comeu_fruta = 0;
 
-    assign score = {{19{1'b0}}, comeu_fruta};
-
 always @(posedge clk) begin
     if (reset == 0) begin
         state = RESET;
@@ -91,7 +89,7 @@ always @(posedge clk) begin
                 corpo_x[0] = cabeca_x;
                 corpo_y[0] = cabeca_y;
                 temp_score = 0;
-                //score = 0;
+                score = 0;
 
                 update_wx = icounterx;
                 update_wy = icountery;
@@ -170,7 +168,7 @@ always @(posedge clk) begin
                     // Encontrou com uma fruta
                     comeu_fruta = 1;
                     temp_score = temp_score + 1;
-                    // score = temp_score; 
+                    score = temp_score; 
                 end else if ((obs_x == cabeca_x && obs_y == cabeca_y)) begin
                     // Encontrou com si mesma ou um obstáculo
                     game_over = 1;
