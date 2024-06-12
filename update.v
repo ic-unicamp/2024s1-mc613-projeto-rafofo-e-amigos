@@ -52,7 +52,6 @@ module update #(
     parameter speed_limit = 10000000;
 
     reg [3:0] state = RESET;
-    reg [3:0] last_state;
     reg [3:0] aux;
 
     reg [9:0] corpo_x [127:0];
