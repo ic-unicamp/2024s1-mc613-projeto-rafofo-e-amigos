@@ -37,6 +37,7 @@ module main (
   wire [9:0] renderer_rx;
   wire [9:0] renderer_ry;
 
+  wire fruta_enable;
   wire fruta_wenable;
   wire [9:0] fruta_wx;
   wire [9:0] fruta_wy;
@@ -153,11 +154,13 @@ module main (
     .update_rx(update_rx),
     .update_ry(update_ry),
 
+    .sw_switch(SW[1]),
     .update_wenable(update_wenable),
     .update_wdata(update_wdata),
     .update_wx(update_wx),
     .update_wy(update_wy),
 
+    .fruta_enable(fruta_enable),
     .fruta_wenable(fruta_wenable),
     .fruta_wx(fruta_wx),
     .fruta_wy(fruta_wy),
@@ -166,7 +169,9 @@ module main (
     .obstaculo_wx(obstaculo_wx),
     .obstaculo_wy(obstaculo_wy),
 
-    .cobra_dir(cobra_dir)
+    .cobra_dir(cobra_dir),
+
+    .score(score)
   );
 
   cobra (
@@ -184,6 +189,7 @@ module main (
     .MAPA_WIDTH(MAPA_WIDTH)
   ) fruta (
     .clk(CLOCK_50),
+    .fruta_enable(fruta_enable),
     .fruta_wenable(fruta_wenable),
     .fruta_wx(fruta_wx),
     .fruta_wy(fruta_wy)
