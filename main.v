@@ -150,7 +150,6 @@ module main (
   ) update (
     .clk(CLOCK_50),
     .reset(SW[0]),
-
     .update_renable(update_renable),
     .update_rdata(update_rdata),
     .update_rx(update_rx),
