@@ -49,6 +49,7 @@ module update #(
     parameter COLISAO_COBRA = 7;
     parameter NOVA_FRUTA = 8;
     parameter GAME_OVER = 6;
+    parameter PINTA_CABECA = 9;
     parameter speed_limit = 10000000;
 
     reg [3:0] state = RESET;
@@ -56,8 +57,6 @@ module update #(
 
     reg [9:0] corpo_x [127:0];
     reg [9:0] corpo_y [127:0];
-
-    reg [9:0] colisao_counter = 0;
 
     reg [9:0] cabeca_x = 10;
     reg [9:0] cabeca_y = 10;
@@ -68,15 +67,15 @@ module update #(
     reg [9:0] obs_x = 3;
     reg [9:0] obs_y = 4;
 
-    reg [9:0] cabeca_lista;
-    reg [9:0] cauda_lista;
+    reg [9:0] colisao_counter = 0;
+    reg [9:0] cabeca_lista = 0;
+    reg [9:0] cauda_lista = 0;
 
     reg [29:0] delaycounter = 0;
 
     reg [9:0] icounterx = 0;
     reg [9:0] icountery = 0;
 
-    
     reg comeu_fruta = 0;
 
 always @(posedge clk) begin
@@ -90,8 +89,11 @@ always @(posedge clk) begin
                 counter = 0;
                 cabeca_x = 10;
                 cabeca_y = 10;
+                fruta_x = 15;
+                fruta_y = 15;
                 cauda_lista  = 0;
                 cabeca_lista = 0;
+                colisao_counter = 0;
                 corpo_x[0] = cabeca_x;
                 corpo_y[0] = cabeca_y;
                 temp_score = 0;
@@ -163,11 +165,6 @@ always @(posedge clk) begin
                 state = CHECA_COLISAO;
             end
             CHECA_COLISAO: begin
-                // Pinta a nova cabeça
-                update_wx = cabeca_x;
-                update_wy = cabeca_y;
-                update_wdata = 2'b01;
-                update_wenable = 1;
 
                 if (fruta_x == cabeca_x && fruta_y == cabeca_y) begin 
                     // Encontrou com uma fruta
@@ -189,19 +186,18 @@ always @(posedge clk) begin
                     // Encontrou com um obstaculo
                     game_over = 1;
                     state = GAME_OVER;
-                    state = RESET;
                 end else begin
                     state = COLISAO_COBRA;
                 end
             end
             COLISAO_COBRA: begin
-                if (colisao_counter == cabeca_lista) begin
+                if (score == 0 || colisao_counter == cabeca_lista) begin
                     state = ATUALIZA_COBRA;
                 end else begin
                     if (cabeca_x == corpo_x[colisao_counter] &&
                         cabeca_y == corpo_y[colisao_counter]) begin
                         game_over = 1;
-                        state = RESET;
+                        state = GAME_OVER;
                     end else begin
                         colisao_counter = (colisao_counter + 1) % 128;
                     end
@@ -216,15 +212,28 @@ always @(posedge clk) begin
 
                 if (comeu_fruta == 1)begin
                     fruta_enable = 1;
-                    state = NOVA_FRUTA;
+                    state = PINTA_CABECA;
                 end else begin
+                    // Zera a cauda antiga
                     update_wx = corpo_x[cauda_lista];
                     update_wy = corpo_y[cauda_lista];
-
                     update_wdata = 2'b00;
                     update_wenable = 1;
 
                     cauda_lista = (cauda_lista + 1) % 128;
+                    state = PINTA_CABECA;
+                end
+            end
+            PINTA_CABECA: begin
+                // Pinta a nova cabeça
+                update_wx = cabeca_x;
+                update_wy = cabeca_y;
+                update_wdata = 2'b01;
+                update_wenable = 1;
+
+                if (comeu_fruta == 1) begin
+                    state = NOVA_FRUTA;
+                end else begin
                     state = IDLE;
                 end
             end
