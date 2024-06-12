@@ -2,9 +2,10 @@ module mapa #(
     parameter MAPA_WIDTH,
     parameter MAPA_HEIGHT
 ) (
+  input beating_high_score,
+  input game_over,
   input clk,
   input vga_read,
-  //input reset,
   input [9:0] renderer_rx,
   input [9:0] renderer_ry,
   output [1:0] mapa_R,
@@ -32,9 +33,9 @@ module mapa #(
   reg [1:0] mapa [29:0][39:0];
   reg [1:0] aux;
 
-  assign mapa_R = (aux == 2'b10) ? 2'b11 : 2'b00;
-  assign mapa_G = (aux == 2'b01) ? 2'b11 : 2'b00;
-  assign mapa_B = (aux == 2'b11) ? 2'b11 : 2'b00;
+  assign mapa_R = (game_over) ? 2'b11 : (aux == 2'b10) ? 2'b11 : (aux == 2'b01 && beating_high_score) ? 2'b11 : 2'b00;
+  assign mapa_G = (game_over) ? 2'b00 : (aux == 2'b01) ? 2'b11 : 2'b00;
+  assign mapa_B = (game_over) ? 2'b00 : (aux == 2'b11) ? 2'b11 : 2'b00;
 
   always @(posedge clk) begin
     if (vga_read) begin

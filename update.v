@@ -31,7 +31,10 @@ module update #(
 
     input [1:0] cobra_dir,
 
-    output reg [19:0] score
+    output reg [19:0] score,
+    output reg [19:0] high_score,
+    output reg beating_high_score,
+    output reg game_over
 );
 
     reg [39:0] speed = 50000000;
@@ -45,6 +48,7 @@ module update #(
     parameter CHECA_COLISAO = 4;
     parameter ATUALIZA_COBRA = 5;
     parameter NOVA_FRUTA = 8;
+    parameter GAME_OVER = 6;
 
     reg [3:0] state = RESET;
     reg [3:0] aux;
@@ -70,7 +74,6 @@ module update #(
     reg [9:0] icounterx = 0;
     reg [9:0] icountery = 0;
 
-    reg game_over = 0;
     reg comeu_fruta = 0;
 
 always @(posedge clk) begin
@@ -90,6 +93,7 @@ always @(posedge clk) begin
                 corpo_y[0] = cabeca_y;
                 temp_score = 0;
                 score = 0;
+                beating_high_score = 0;
 
                 update_wx = icounterx;
                 update_wy = icountery;
@@ -169,11 +173,17 @@ always @(posedge clk) begin
                     comeu_fruta = 1;
                     temp_score = temp_score + 1;
                     score = temp_score; 
+                    if (score > high_score) begin
+                        high_score = score;
+                        beating_high_score = 1;
+                    end
                 end else if ((obs_x == cabeca_x && obs_y == cabeca_y)) begin
                     // Encontrou com si mesma ou um obstáculo
                     game_over = 1;
-                    state = RESET;
+                    state = GAME_OVER;
                 end
+            end
+            GAME_OVER: begin
             end
             ATUALIZA_COBRA: begin
                 cabeca_lista = (cabeca_lista + 1) % 128;

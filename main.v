@@ -63,6 +63,8 @@ module main (
 
   wire [19:0] score;
   wire [19:0] high_score;
+  wire beating_high_score;
+  wire game_over;
 
   parameter [9:0] SCREEN_WIDTH= 640;
   parameter [9:0] SCREEN_HEIGHT= 480;
@@ -122,9 +124,9 @@ module main (
     .MAPA_WIDTH(MAPA_WIDTH)
   ) mapa (
     .clk(CLOCK_50),
-
+    .beating_high_score(beating_high_score),
+    .game_over(game_over),
     .vga_read(mapa_read),
-    // .reset(SW[0]),
     .mapa_R(mapa_R),
     .mapa_G(mapa_G),
     .mapa_B(mapa_B),
@@ -171,7 +173,10 @@ module main (
 
     .cobra_dir(cobra_dir),
 
-    .score(score)
+    .score(score),
+    .high_score(high_score),
+    .beating_high_score(beating_high_score),
+    .game_over(game_over)
   );
 
   cobra (
