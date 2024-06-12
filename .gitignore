@@ -2,4 +2,7 @@
 tb_vga
 gabarito
 teste.txt
+*/*
+db/*
+incremental_db/*
 *.vcd
