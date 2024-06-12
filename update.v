@@ -31,7 +31,7 @@ module update #(
 
     input [1:0] cobra_dir,
 
-    output reg [19:0] score
+    output [19:0] score
 );
 
     reg [39:0] speed = 50000000;
@@ -54,13 +54,15 @@ module update #(
 
     reg [9:0] cabeca_x = 10;
     reg [9:0] cabeca_y = 10;
-    reg [9:0] cabeca_antx;
-    reg [9:0] cabeca_anty;
 
-    reg [1:0] cauda_dir;
-	
-    reg [9:0] cauda_x;
-    reg [9:0] cauda_y;
+    reg [9:0] fruta_x = 13;
+    reg [9:0] fruta_y = 13;
+
+    reg [9:0] obs_x = 3;
+    reg [9:0] obs_y = 4;
+
+    reg [9:0] cabeca_lista;
+    reg [9:0] cauda_lista;
 
     reg [29:0] delaycounter = 0;
 
@@ -71,18 +73,9 @@ module update #(
     reg game_over = 0;
     reg comeu_fruta = 0;
 
-    initial begin
-        update_wx = cabeca_x;
-        update_wy = cabeca_y;
-        update_wdata = 2'b01;
-        update_wenable = 1;
-    end
+    assign score = {{19{1'b0}}, comeu_fruta};
 
 always @(posedge clk) begin
-    // if (sw_switch == 0) begin
-    //   fruta_enable = 1;
-    //   state = NOVA_FRUTA;
-    // end
     if (reset == 0) begin
         state = RESET;
     end else begin
@@ -93,23 +86,21 @@ always @(posedge clk) begin
                 counter = 0;
                 cabeca_x = 10;
                 cabeca_y = 10;
-                cauda_x  = 0;
-                cauda_y = 0;
-                cabeca_antx = 0;
-                cabeca_anty = 0;
+                cauda_lista  = 0;
+                cabeca_lista = 0;
                 corpo_x[0] = cabeca_x;
                 corpo_y[0] = cabeca_y;
                 temp_score = 0;
-                score = 0;
+                //score = 0;
 
                 update_wx = icounterx;
                 update_wy = icountery;
 
-                if (icounterx == 10 && icountery == 10) begin
+                if (icounterx == cabeca_x && icountery == cabeca_y) begin
                     update_wdata = 2'b01;
-                end else if (icounterx == 13 && icountery == 13)begin
+                end else if (icounterx == fruta_x && icountery == fruta_y)begin
                     update_wdata = 2'b10;
-                end else if (icounterx == 3 && icountery == 4)begin
+                end else if (icounterx == obs_x && icountery == obs_y)begin
                     update_wdata = 2'b11;
                 end else begin
                     update_wdata = 0;
@@ -164,15 +155,9 @@ always @(posedge clk) begin
                     end
                 endcase
 
-                update_rx = cabeca_x;
-                update_ry = cabeca_y;
-                update_renable = 1;
-
                 state = CHECA_COLISAO;
             end
             CHECA_COLISAO: begin
-                update_renable = 0;
-                aux = update_rdata;
 
                 update_wx = cabeca_x;
                 update_wy = cabeca_y;
@@ -180,40 +165,44 @@ always @(posedge clk) begin
                 update_wenable = 1;
 
                 // QUANDO TEM TAMANHO 2 NAO TA RECONHECENDO A Fruta, SO AS VEZES E QUANDO RECINHECE BUGA A COBRA
-                if (aux == 2'b10) begin 
+                state = ATUALIZA_COBRA;
+                if (fruta_x == cabeca_x && fruta_y == cabeca_y) begin 
                     // Encontrou com uma fruta
                     comeu_fruta = 1;
                     temp_score = temp_score + 1;
-                    score = temp_score; 
-                end else if ((aux == 2'b01) || (aux == 2'b11)) begin
+                    // score = temp_score; 
+                end else if ((obs_x == cabeca_x && obs_y == cabeca_y)) begin
                     // Encontrou com si mesma ou um obstáculo
                     game_over = 1;
                     state = RESET;
                 end
-                state = ATUALIZA_COBRA;
             end
             ATUALIZA_COBRA: begin
-                cabeca_antx = (cabeca_antx +1)%128;
-                cabeca_anty = (cabeca_anty +1)%128;
-                corpo_x[(cabeca_antx)] = cabeca_x;
-                corpo_y[(cabeca_anty)] = cabeca_y;
+                cabeca_lista = (cabeca_lista + 1) % 128;
+                corpo_x[(cabeca_lista)] = cabeca_x;
+                corpo_y[(cabeca_lista)] = cabeca_y;
+
                 if (comeu_fruta == 1)begin
                     fruta_enable = 1;
                     state = NOVA_FRUTA;
                 end else begin
-                    update_wx = corpo_x[cauda_x];
-                    update_wy = corpo_y[cauda_y];
+                    update_wx = corpo_x[cauda_lista];
+                    update_wy = corpo_y[cauda_lista];
+
                     update_wdata = 2'b00;
                     update_wenable = 1;
 
-                    cauda_x = (cauda_x + 1)%128;
-                    cauda_y = (cauda_y + 1)%128;
+                    cauda_lista = (cauda_lista + 1) % 128;
                     state = IDLE;
                 end
             end
             NOVA_FRUTA: begin
                 comeu_fruta = 0;
                 fruta_enable = 0;
+
+                fruta_x = fruta_wx;
+                fruta_y = fruta_wy;
+
                 update_wx = fruta_wx;
                 update_wy = fruta_wy;
                 update_wdata = 2'b10;
