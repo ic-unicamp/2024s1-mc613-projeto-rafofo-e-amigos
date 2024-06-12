@@ -34,7 +34,7 @@ module mapa #(
 
   assign mapa_R = (aux == 2'b10) ? 2'b11 : 2'b00;
   assign mapa_G = (aux == 2'b01) ? 2'b11 : 2'b00;
-  assign mapa_B = (aux == 4'b11) ? 2'b11 : 2'b00;
+  assign mapa_B = (aux == 2'b11) ? 2'b11 : 2'b00;
 
   always @(posedge clk) begin
     if (vga_read) begin

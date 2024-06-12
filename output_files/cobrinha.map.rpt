@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cobrinha
-Tue Jun 11 22:29:45 2024
+Wed Jun 12 10:16:34 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -19,40 +19,44 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  11. Removed Registers Triggering Further Register Optimizations
  12. General Register Statistics
  13. Inverted Register Statistics
- 14. Registers Packed Into Inferred Megafunctions
- 15. Registers Added for RAM Pass-Through Logic
+ 14. Registers Added for RAM Pass-Through Logic
+ 15. Registers Packed Into Inferred Megafunctions
  16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for mapa:mapa|altsyncram:mapa_rtl_0|altsyncram_a5q1:auto_generated
- 18. Source assignments for mapa:mapa|altsyncram:mapa_rtl_1|altsyncram_ill1:auto_generated
- 19. Parameter Settings for User Entity Instance: Top-level Entity: |main
- 20. Parameter Settings for User Entity Instance: vga:out
- 21. Parameter Settings for User Entity Instance: renderer:renderer
- 22. Parameter Settings for User Entity Instance: mapa:mapa
- 23. Parameter Settings for User Entity Instance: update:update
- 24. Parameter Settings for User Entity Instance: fruta:fruta
- 25. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:pontuacaoDir
- 26. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:high_scoreEsq
- 27. Parameter Settings for Inferred Entity Instance: mapa:mapa|altsyncram:mapa_rtl_0
- 28. Parameter Settings for Inferred Entity Instance: mapa:mapa|altsyncram:mapa_rtl_1
- 29. Parameter Settings for Inferred Entity Instance: fruta:fruta|lpm_divide:Mod0
- 30. Parameter Settings for Inferred Entity Instance: fruta:fruta|lpm_divide:Mod1
- 31. altsyncram Parameter Settings by Entity Instance
- 32. Port Connectivity Checks: "bin2display:display|bin2bcd:high_scoreEsq"
- 33. Port Connectivity Checks: "bin2display:display|bin2bcd:pontuacaoDir"
- 34. Port Connectivity Checks: "bin2display:display|bcd2display:display5"
- 35. Port Connectivity Checks: "bin2display:display|bcd2display:display4"
- 36. Port Connectivity Checks: "bin2display:display|bcd2display:display3"
- 37. Port Connectivity Checks: "bin2display:display|bcd2display:display2"
- 38. Port Connectivity Checks: "bin2display:display|bcd2display:display1"
- 39. Port Connectivity Checks: "bin2display:display|bcd2display:display0"
- 40. Port Connectivity Checks: "update:update"
- 41. Port Connectivity Checks: "mapa:mapa"
- 42. Port Connectivity Checks: "renderer:renderer"
- 43. Port Connectivity Checks: "vga:out"
- 44. Post-Synthesis Netlist Statistics for Top Partition
- 45. Elapsed Time Per Partition
- 46. Analysis & Synthesis Messages
- 47. Analysis & Synthesis Suppressed Messages
+ 17. Source assignments for update:update|altsyncram:corpo_x_rtl_0|altsyncram_l5k1:auto_generated
+ 18. Source assignments for update:update|altsyncram:corpo_y_rtl_0|altsyncram_33k1:auto_generated
+ 19. Source assignments for mapa:mapa|altsyncram:mapa_rtl_0|altsyncram_a5q1:auto_generated
+ 20. Source assignments for mapa:mapa|altsyncram:mapa_rtl_1|altsyncram_ill1:auto_generated
+ 21. Parameter Settings for User Entity Instance: Top-level Entity: |main
+ 22. Parameter Settings for User Entity Instance: vga:out
+ 23. Parameter Settings for User Entity Instance: renderer:renderer
+ 24. Parameter Settings for User Entity Instance: mapa:mapa
+ 25. Parameter Settings for User Entity Instance: update:update
+ 26. Parameter Settings for User Entity Instance: fruta:fruta
+ 27. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:pontuacaoDir
+ 28. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:high_scoreEsq
+ 29. Parameter Settings for Inferred Entity Instance: update:update|altsyncram:corpo_x_rtl_0
+ 30. Parameter Settings for Inferred Entity Instance: update:update|altsyncram:corpo_y_rtl_0
+ 31. Parameter Settings for Inferred Entity Instance: mapa:mapa|altsyncram:mapa_rtl_0
+ 32. Parameter Settings for Inferred Entity Instance: mapa:mapa|altsyncram:mapa_rtl_1
+ 33. Parameter Settings for Inferred Entity Instance: fruta:fruta|lpm_divide:Mod0
+ 34. Parameter Settings for Inferred Entity Instance: fruta:fruta|lpm_divide:Mod1
+ 35. altsyncram Parameter Settings by Entity Instance
+ 36. Port Connectivity Checks: "bin2display:display|bin2bcd:high_scoreEsq"
+ 37. Port Connectivity Checks: "bin2display:display|bin2bcd:pontuacaoDir"
+ 38. Port Connectivity Checks: "bin2display:display|bcd2display:display5"
+ 39. Port Connectivity Checks: "bin2display:display|bcd2display:display4"
+ 40. Port Connectivity Checks: "bin2display:display|bcd2display:display3"
+ 41. Port Connectivity Checks: "bin2display:display|bcd2display:display2"
+ 42. Port Connectivity Checks: "bin2display:display|bcd2display:display1"
+ 43. Port Connectivity Checks: "bin2display:display|bcd2display:display0"
+ 44. Port Connectivity Checks: "update:update"
+ 45. Port Connectivity Checks: "mapa:mapa"
+ 46. Port Connectivity Checks: "renderer:renderer"
+ 47. Port Connectivity Checks: "vga:out"
+ 48. Post-Synthesis Netlist Statistics for Top Partition
+ 49. Elapsed Time Per Partition
+ 50. Analysis & Synthesis Messages
+ 51. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -78,16 +82,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jun 11 22:29:45 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Jun 12 10:16:34 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; cobrinha                                    ;
 ; Top-level Entity Name           ; main                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 317                                         ;
+; Total registers                 ; 350                                         ;
 ; Total pins                      ; 86                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 4,800                                       ;
+; Total block memory bits         ; 7,104                                       ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -205,7 +209,8 @@ refer to the applicable agreement for further details.
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
 ;     Processor 8            ;   0.0%      ;
-;     Processors 9-12        ;   0.0%      ;
+;     Processor 9            ;   0.0%      ;
+;     Processors 10-12       ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -214,16 +219,16 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                          ; Library ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
-; bcd2display.v                    ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/bcd2display.v              ;         ;
-; bin2bcd.v                        ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/bin2bcd.v                  ;         ;
-; bin2display.v                    ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v              ;         ;
-; cobra.v                          ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/cobra.v                    ;         ;
-; fruta.v                          ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v                    ;         ;
-; main.v                           ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v                     ;         ;
-; mapa.v                           ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v                     ;         ;
-; renderer.v                       ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/renderer.v                 ;         ;
-; update.v                         ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v                   ;         ;
-; vga.v                            ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v                      ;         ;
+; bcd2display.v                    ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/bcd2display.v              ;         ;
+; bin2bcd.v                        ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/bin2bcd.v                  ;         ;
+; bin2display.v                    ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v              ;         ;
+; cobra.v                          ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/cobra.v                    ;         ;
+; fruta.v                          ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v                    ;         ;
+; main.v                           ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v                     ;         ;
+; mapa.v                           ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v                     ;         ;
+; renderer.v                       ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/renderer.v                 ;         ;
+; update.v                         ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v                   ;         ;
+; vga.v                            ; yes             ; User Verilog HDL File        ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v                      ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                       ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                          ;         ;
@@ -233,17 +238,19 @@ refer to the applicable agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altrom.inc                                           ;         ;
 ; altram.inc                       ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altram.inc                                           ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/altdpram.inc                                         ;         ;
-; db/altsyncram_a5q1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_a5q1.tdf     ;         ;
-; db/altsyncram_ill1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_ill1.tdf     ;         ;
+; db/altsyncram_l5k1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_l5k1.tdf     ;         ;
+; db/altsyncram_33k1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_33k1.tdf     ;         ;
+; db/altsyncram_a5q1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_a5q1.tdf     ;         ;
+; db/altsyncram_ill1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_ill1.tdf     ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/lpm_divide.tdf                                       ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/abs_divider.inc                                      ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /opt/altera/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                  ;         ;
-; db/lpm_divide_k3m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/lpm_divide_k3m.tdf      ;         ;
-; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/sign_div_unsign_nlh.tdf ;         ;
-; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/alt_u_div_kve.tdf       ;         ;
-; db/lpm_divide_j3m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/lpm_divide_j3m.tdf      ;         ;
-; db/sign_div_unsign_mlh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/sign_div_unsign_mlh.tdf ;         ;
-; db/alt_u_div_ive.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/alt_u_div_ive.tdf       ;         ;
+; db/lpm_divide_k3m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/lpm_divide_k3m.tdf      ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/sign_div_unsign_nlh.tdf ;         ;
+; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/alt_u_div_kve.tdf       ;         ;
+; db/lpm_divide_j3m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/lpm_divide_j3m.tdf      ;         ;
+; db/sign_div_unsign_mlh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/sign_div_unsign_mlh.tdf ;         ;
+; db/alt_u_div_ive.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/alt_u_div_ive.tdf       ;         ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -252,27 +259,27 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 643            ;
+; Estimate of Logic utilization (ALMs needed) ; 721            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1122           ;
-;     -- 7 input functions                    ; 18             ;
-;     -- 6 input functions                    ; 142            ;
-;     -- 5 input functions                    ; 79             ;
-;     -- 4 input functions                    ; 187            ;
-;     -- <=3 input functions                  ; 696            ;
+; Combinational ALUT usage for logic          ; 1211           ;
+;     -- 7 input functions                    ; 3              ;
+;     -- 6 input functions                    ; 178            ;
+;     -- 5 input functions                    ; 80             ;
+;     -- 4 input functions                    ; 186            ;
+;     -- <=3 input functions                  ; 764            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 317            ;
+; Dedicated logic registers                   ; 350            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 86             ;
 ; Total MLAB memory bits                      ; 0              ;
-; Total block memory bits                     ; 4800           ;
+; Total block memory bits                     ; 7104           ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 287            ;
-; Total fan-out                               ; 4985           ;
-; Average fan-out                             ; 3.09           ;
+; Maximum fan-out                             ; 338            ;
+; Total fan-out                               ; 5763           ;
+; Average fan-out                             ; 3.28           ;
 +---------------------------------------------+----------------+
 
 
@@ -281,12 +288,12 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |main                                     ; 1122 (0)            ; 317 (0)                   ; 4800              ; 0          ; 86   ; 0            ; |main                                                                                                             ; main                ; work         ;
-;    |bin2display:display|                  ; 107 (14)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|bin2display:display                                                                                         ; bin2display         ; work         ;
+; |main                                     ; 1211 (1)            ; 350 (0)                   ; 7104              ; 0          ; 86   ; 0            ; |main                                                                                                             ; main                ; work         ;
+;    |bin2display:display|                  ; 116 (14)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|bin2display:display                                                                                         ; bin2display         ; work         ;
 ;       |bcd2display:display0|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|bin2display:display|bcd2display:display0                                                                    ; bcd2display         ; work         ;
 ;       |bcd2display:display1|              ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|bin2display:display|bcd2display:display1                                                                    ; bcd2display         ; work         ;
 ;       |bcd2display:display2|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|bin2display:display|bcd2display:display2                                                                    ; bcd2display         ; work         ;
-;       |bin2bcd:pontuacaoDir|              ; 73 (73)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|bin2display:display|bin2bcd:pontuacaoDir                                                                    ; bin2bcd             ; work         ;
+;       |bin2bcd:pontuacaoDir|              ; 82 (82)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|bin2display:display|bin2bcd:pontuacaoDir                                                                    ; bin2bcd             ; work         ;
 ;    |cobra:comb_3|                         ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |main|cobra:comb_3                                                                                                ; cobra               ; work         ;
 ;    |fruta:fruta|                          ; 512 (78)            ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |main|fruta:fruta                                                                                                 ; fruta               ; work         ;
 ;       |lpm_divide:Mod0|                   ; 216 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|fruta:fruta|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
@@ -302,20 +309,26 @@ refer to the applicable agreement for further details.
 ;          |altsyncram_a5q1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2400              ; 0          ; 0    ; 0            ; |main|mapa:mapa|altsyncram:mapa_rtl_0|altsyncram_a5q1:auto_generated                                              ; altsyncram_a5q1     ; work         ;
 ;       |altsyncram:mapa_rtl_1|             ; 0 (0)               ; 0 (0)                     ; 2400              ; 0          ; 0    ; 0            ; |main|mapa:mapa|altsyncram:mapa_rtl_1                                                                             ; altsyncram          ; work         ;
 ;          |altsyncram_ill1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2400              ; 0          ; 0    ; 0            ; |main|mapa:mapa|altsyncram:mapa_rtl_1|altsyncram_ill1:auto_generated                                              ; altsyncram_ill1     ; work         ;
-;    |update:update|                        ; 368 (368)           ; 208 (208)                 ; 0                 ; 0          ; 0    ; 0            ; |main|update:update                                                                                               ; update              ; work         ;
+;    |update:update|                        ; 447 (447)           ; 241 (241)                 ; 2304              ; 0          ; 0    ; 0            ; |main|update:update                                                                                               ; update              ; work         ;
+;       |altsyncram:corpo_x_rtl_0|          ; 0 (0)               ; 0 (0)                     ; 1280              ; 0          ; 0    ; 0            ; |main|update:update|altsyncram:corpo_x_rtl_0                                                                      ; altsyncram          ; work         ;
+;          |altsyncram_l5k1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1280              ; 0          ; 0    ; 0            ; |main|update:update|altsyncram:corpo_x_rtl_0|altsyncram_l5k1:auto_generated                                       ; altsyncram_l5k1     ; work         ;
+;       |altsyncram:corpo_y_rtl_0|          ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |main|update:update|altsyncram:corpo_y_rtl_0                                                                      ; altsyncram          ; work         ;
+;          |altsyncram_33k1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |main|update:update|altsyncram:corpo_y_rtl_0|altsyncram_33k1:auto_generated                                       ; altsyncram_33k1     ; work         ;
 ;    |vga:out|                              ; 99 (99)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |main|vga:out                                                                                                     ; vga                 ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                              ;
-+---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; Name                                                                      ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
-+---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; mapa:mapa|altsyncram:mapa_rtl_0|altsyncram_a5q1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1200         ; 2            ; 1200         ; 2            ; 2400 ; None ;
-; mapa:mapa|altsyncram:mapa_rtl_1|altsyncram_ill1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1200         ; 2            ; 1200         ; 2            ; 2400 ; None ;
-+---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                     ;
++----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                             ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; mapa:mapa|altsyncram:mapa_rtl_0|altsyncram_a5q1:auto_generated|ALTSYNCRAM        ; AUTO ; Simple Dual Port ; 1200         ; 2            ; 1200         ; 2            ; 2400 ; None ;
+; mapa:mapa|altsyncram:mapa_rtl_1|altsyncram_ill1:auto_generated|ALTSYNCRAM        ; AUTO ; Simple Dual Port ; 1200         ; 2            ; 1200         ; 2            ; 2400 ; None ;
+; update:update|altsyncram:corpo_x_rtl_0|altsyncram_l5k1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 10           ; 128          ; 10           ; 1280 ; None ;
+; update:update|altsyncram:corpo_y_rtl_0|altsyncram_33k1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 8            ; 128          ; 8            ; 1024 ; None ;
++----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
 Encoding Type:  One-Hot
@@ -334,51 +347,62 @@ Encoding Type:  One-Hot
 +-----------------------+----------------------+---------------------+-----------------------+------------+-------------+-------------+------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; fruta:fruta|state_x[17..19]            ; Stuck at GND due to stuck port data_in ;
-; fruta:fruta|fruta_wy[5..9]             ; Stuck at GND due to stuck port data_in ;
-; fruta:fruta|fruta_wx[6..9]             ; Stuck at GND due to stuck port data_in ;
-; update:update|cauda_x[0..9]            ; Stuck at GND due to stuck port data_in ;
-; update:update|cauda_y[0..9]            ; Stuck at GND due to stuck port data_in ;
-; update:update|update_rx[8,9]           ; Lost fanout                            ;
-; update:update|corpo_y[1][9]            ; Lost fanout                            ;
-; update:update|corpo_y[1][8]            ; Lost fanout                            ;
-; update:update|corpo_y[0][9]            ; Lost fanout                            ;
-; update:update|corpo_y[0][8]            ; Lost fanout                            ;
-; update:update|update_wy[8,9]           ; Lost fanout                            ;
-; update:update|temp_score[3]            ; Merged with update:update|score[3]     ;
-; update:update|temp_score[6]            ; Merged with update:update|score[6]     ;
-; update:update|temp_score[9]            ; Merged with update:update|score[9]     ;
-; update:update|temp_score[12]           ; Merged with update:update|score[12]    ;
-; update:update|temp_score[15]           ; Merged with update:update|score[15]    ;
-; update:update|temp_score[18]           ; Merged with update:update|score[18]    ;
-; update:update|temp_score[19]           ; Merged with update:update|score[19]    ;
-; update:update|temp_score[17]           ; Merged with update:update|score[17]    ;
-; update:update|temp_score[16]           ; Merged with update:update|score[16]    ;
-; update:update|temp_score[14]           ; Merged with update:update|score[14]    ;
-; update:update|temp_score[13]           ; Merged with update:update|score[13]    ;
-; update:update|temp_score[11]           ; Merged with update:update|score[11]    ;
-; update:update|temp_score[10]           ; Merged with update:update|score[10]    ;
-; update:update|temp_score[8]            ; Merged with update:update|score[8]     ;
-; update:update|temp_score[7]            ; Merged with update:update|score[7]     ;
-; update:update|temp_score[5]            ; Merged with update:update|score[5]     ;
-; update:update|temp_score[4]            ; Merged with update:update|score[4]     ;
-; update:update|temp_score[2]            ; Merged with update:update|score[2]     ;
-; update:update|temp_score[1]            ; Merged with update:update|score[1]     ;
-; update:update|temp_score[0]            ; Merged with update:update|score[0]     ;
-; fruta:fruta|state_y[1]                 ; Stuck at VCC due to stuck port data_in ;
-; update:update|counter[36..39]          ; Stuck at GND due to stuck port data_in ;
-; update:update|state~9                  ; Lost fanout                            ;
-; update:update|state~10                 ; Lost fanout                            ;
-; update:update|state~11                 ; Lost fanout                            ;
-; update:update|counter[26..35]          ; Stuck at GND due to stuck port data_in ;
-; update:update|tamanho[7]               ; Lost fanout                            ;
-; Total Number of Removed Registers = 79 ;                                        ;
-+----------------------------------------+----------------------------------------+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++----------------------------------------+------------------------------------------+
+; Register name                          ; Reason for Removal                       ;
++----------------------------------------+------------------------------------------+
+; fruta:fruta|state_x[17..19]            ; Stuck at GND due to stuck port data_in   ;
+; fruta:fruta|fruta_wy[5..9]             ; Stuck at GND due to stuck port data_in   ;
+; fruta:fruta|fruta_wx[6..9]             ; Stuck at GND due to stuck port data_in   ;
+; update:update|cabeca_anty[7..9]        ; Stuck at GND due to stuck port data_in   ;
+; update:update|cabeca_antx[7..9]        ; Stuck at GND due to stuck port data_in   ;
+; update:update|update_rx[8,9]           ; Lost fanout                              ;
+; update:update|update_wy[8,9]           ; Lost fanout                              ;
+; update:update|cauda_y[7..9]            ; Lost fanout                              ;
+; update:update|cauda_x[7..9]            ; Lost fanout                              ;
+; update:update|temp_score[3]            ; Merged with update:update|score[3]       ;
+; update:update|temp_score[6]            ; Merged with update:update|score[6]       ;
+; update:update|temp_score[9]            ; Merged with update:update|score[9]       ;
+; update:update|temp_score[12]           ; Merged with update:update|score[12]      ;
+; update:update|temp_score[15]           ; Merged with update:update|score[15]      ;
+; update:update|temp_score[18]           ; Merged with update:update|score[18]      ;
+; update:update|temp_score[19]           ; Merged with update:update|score[19]      ;
+; update:update|temp_score[17]           ; Merged with update:update|score[17]      ;
+; update:update|temp_score[16]           ; Merged with update:update|score[16]      ;
+; update:update|temp_score[14]           ; Merged with update:update|score[14]      ;
+; update:update|temp_score[13]           ; Merged with update:update|score[13]      ;
+; update:update|temp_score[11]           ; Merged with update:update|score[11]      ;
+; update:update|temp_score[10]           ; Merged with update:update|score[10]      ;
+; update:update|temp_score[8]            ; Merged with update:update|score[8]       ;
+; update:update|temp_score[7]            ; Merged with update:update|score[7]       ;
+; update:update|temp_score[5]            ; Merged with update:update|score[5]       ;
+; update:update|temp_score[4]            ; Merged with update:update|score[4]       ;
+; update:update|temp_score[2]            ; Merged with update:update|score[2]       ;
+; update:update|temp_score[1]            ; Merged with update:update|score[1]       ;
+; update:update|temp_score[0]            ; Merged with update:update|score[0]       ;
+; update:update|cabeca_anty[0]           ; Merged with update:update|cabeca_antx[0] ;
+; update:update|cabeca_anty[1]           ; Merged with update:update|cabeca_antx[1] ;
+; update:update|cabeca_anty[2]           ; Merged with update:update|cabeca_antx[2] ;
+; update:update|cabeca_anty[3]           ; Merged with update:update|cabeca_antx[3] ;
+; update:update|cabeca_anty[4]           ; Merged with update:update|cabeca_antx[4] ;
+; update:update|cabeca_anty[5]           ; Merged with update:update|cabeca_antx[5] ;
+; update:update|cabeca_anty[6]           ; Merged with update:update|cabeca_antx[6] ;
+; update:update|cauda_y[0]               ; Merged with update:update|cauda_x[0]     ;
+; update:update|cauda_y[1]               ; Merged with update:update|cauda_x[1]     ;
+; update:update|cauda_y[2]               ; Merged with update:update|cauda_x[2]     ;
+; update:update|cauda_y[3]               ; Merged with update:update|cauda_x[3]     ;
+; update:update|cauda_y[4]               ; Merged with update:update|cauda_x[4]     ;
+; update:update|cauda_y[5]               ; Merged with update:update|cauda_x[5]     ;
+; update:update|cauda_y[6]               ; Merged with update:update|cauda_x[6]     ;
+; fruta:fruta|state_y[1]                 ; Stuck at VCC due to stuck port data_in   ;
+; update:update|counter[36..39]          ; Stuck at GND due to stuck port data_in   ;
+; update:update|state~9                  ; Lost fanout                              ;
+; update:update|state~10                 ; Lost fanout                              ;
+; update:update|state~11                 ; Lost fanout                              ;
+; update:update|counter[26..35]          ; Stuck at GND due to stuck port data_in   ;
+; Total Number of Removed Registers = 80 ;                                          ;
++----------------------------------------+------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -390,12 +414,6 @@ Encoding Type:  One-Hot
 ;                           ; due to stuck port data_in ; update:update|counter[29], update:update|counter[30], update:update|counter[31], ;
 ;                           ;                           ; update:update|counter[32], update:update|counter[33], update:update|counter[34], ;
 ;                           ;                           ; update:update|counter[35]                                                        ;
-; fruta:fruta|fruta_wy[8]   ; Stuck at GND              ; update:update|corpo_y[0][8]                                                      ;
-;                           ; due to stuck port data_in ;                                                                                  ;
-; fruta:fruta|fruta_wy[9]   ; Stuck at GND              ; update:update|corpo_y[0][9]                                                      ;
-;                           ; due to stuck port data_in ;                                                                                  ;
-; update:update|cauda_x[9]  ; Stuck at GND              ; update:update|tamanho[7]                                                         ;
-;                           ; due to stuck port data_in ;                                                                                  ;
 +---------------------------+---------------------------+----------------------------------------------------------------------------------+
 
 
@@ -404,12 +422,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 317   ;
+; Total registers                              ; 350   ;
 ; Number of registers using Synchronous Clear  ; 73    ;
-; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Synchronous Load   ; 67    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 286   ;
+; Number of registers using Clock Enable       ; 285   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -422,10 +440,9 @@ Encoding Type:  One-Hot
 ; update:update|update_wenable            ; 8       ;
 ; update:update|update_wdata[0]           ; 3       ;
 ; update:update|cabeca_x[1]               ; 7       ;
-; update:update|cabeca_y[1]               ; 7       ;
 ; update:update|cabeca_y[3]               ; 7       ;
+; update:update|cabeca_y[1]               ; 7       ;
 ; update:update|cabeca_x[3]               ; 7       ;
-; update:update|tamanho[0]                ; 4       ;
 ; fruta:fruta|state_x[1]                  ; 4       ;
 ; fruta:fruta|state_x[3]                  ; 4       ;
 ; fruta:fruta|state_y[0]                  ; 6       ;
@@ -445,8 +462,103 @@ Encoding Type:  One-Hot
 ; fruta:fruta|state_y[16]                 ; 6       ;
 ; fruta:fruta|state_y[17]                 ; 5       ;
 ; fruta:fruta|state_y[19]                 ; 4       ;
-; Total number of inverted registers = 26 ;         ;
+; Total number of inverted registers = 25 ;         ;
 +-----------------------------------------+---------+
+
+
++----------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                           ;
++----------------------------------------+-----------------------------+
+; Register Name                          ; RAM Name                    ;
++----------------------------------------+-----------------------------+
+; update:update|corpo_x_rtl_0_bypass[0]  ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[1]  ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[2]  ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[3]  ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[4]  ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[5]  ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[6]  ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[7]  ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[8]  ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[9]  ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[10] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[11] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[12] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[13] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[14] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[15] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[16] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[17] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[18] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[19] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[20] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[21] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[22] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[23] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[24] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[25] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[26] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[27] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[28] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[29] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[30] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_x_rtl_0_bypass[31] ; update:update|corpo_x_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[0]  ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[1]  ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[2]  ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[3]  ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[4]  ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[5]  ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[6]  ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[7]  ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[8]  ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[9]  ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[10] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[11] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[12] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[13] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[14] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[15] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[16] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[17] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[18] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[19] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[20] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[21] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[22] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[23] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[24] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[25] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[26] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[27] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[28] ; update:update|corpo_y_rtl_0 ;
+; update:update|corpo_y_rtl_0_bypass[29] ; update:update|corpo_y_rtl_0 ;
+; mapa:mapa|mapa_rtl_1_bypass[0]         ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[1]         ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[2]         ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[3]         ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[4]         ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[5]         ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[6]         ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[7]         ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[8]         ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[9]         ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[10]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[11]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[12]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[13]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[14]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[15]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[16]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[17]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[18]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[19]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[20]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[21]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[22]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[23]        ; mapa:mapa|mapa_rtl_1        ;
+; mapa:mapa|mapa_rtl_1_bypass[24]        ; mapa:mapa|mapa_rtl_1        ;
++----------------------------------------+-----------------------------+
 
 
 +-----------------------------------------------------------+
@@ -459,57 +571,41 @@ Encoding Type:  One-Hot
 +-----------------------------+----------------------+------+
 
 
-+--------------------------------------------------------+
-; Registers Added for RAM Pass-Through Logic             ;
-+---------------------------------+----------------------+
-; Register Name                   ; RAM Name             ;
-+---------------------------------+----------------------+
-; mapa:mapa|mapa_rtl_1_bypass[0]  ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[1]  ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[2]  ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[3]  ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[4]  ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[5]  ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[6]  ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[7]  ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[8]  ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[9]  ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[10] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[11] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[12] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[13] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[14] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[15] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[16] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[17] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[18] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[19] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[20] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[21] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[22] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[23] ; mapa:mapa|mapa_rtl_1 ;
-; mapa:mapa|mapa_rtl_1_bypass[24] ; mapa:mapa|mapa_rtl_1 ;
-+---------------------------------+----------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |main|vga:out|hcounter[0]        ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |main|update:update|update_wx[7] ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 24 LEs               ; 6 LEs                  ; Yes        ; |main|update:update|update_wx[2] ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |main|update:update|update_wy[6] ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 20 LEs               ; 5 LEs                  ; Yes        ; |main|update:update|update_wy[4] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|update:update|cabeca_x[3]  ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |main|vga:out|hcounter           ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |main|vga:out|vcounter           ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; No         ; |main|update:update|Mux7         ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; No         ; |main|update:update|Mux12        ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |main|update:update|state        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |main|vga:out|hcounter[1]         ;
-; 3:1                ; 18 bits   ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; Yes        ; |main|update:update|corpo_y[1][7] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |main|update:update|corpo_y[0][3] ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |main|update:update|update_wx[6]  ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |main|update:update|update_wx[1]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|update:update|cabeca_x[3]   ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |main|update:update|corpo_x       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |main|vga:out|hcounter            ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |main|vga:out|vcounter            ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; No         ; |main|update:update|Mux16         ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; No         ; |main|update:update|Mux3          ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |main|update:update|state         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
++----------------------------------------------------------------------------------------------+
+; Source assignments for update:update|altsyncram:corpo_x_rtl_0|altsyncram_l5k1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------+
+; Assignment                      ; Value              ; From ; To                             ;
++---------------------------------+--------------------+------+--------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                              ;
++---------------------------------+--------------------+------+--------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Source assignments for update:update|altsyncram:corpo_y_rtl_0|altsyncram_33k1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------+
+; Assignment                      ; Value              ; From ; To                             ;
++---------------------------------+--------------------+------+--------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                              ;
++---------------------------------+--------------------+------+--------------------------------+
 
 
 +---------------------------------------------------------------------------------------+
@@ -624,6 +720,128 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------------------+
 ; W              ; 20    ; Signed Integer                                                ;
 +----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: update:update|altsyncram:corpo_x_rtl_0 ;
++------------------------------------+----------------------+-----------------------------+
+; Parameter Name                     ; Value                ; Type                        ;
++------------------------------------+----------------------+-----------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                     ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE              ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                     ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                     ;
+; WIDTH_A                            ; 10                   ; Untyped                     ;
+; WIDTHAD_A                          ; 7                    ; Untyped                     ;
+; NUMWORDS_A                         ; 128                  ; Untyped                     ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                     ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                     ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WIDTH_B                            ; 10                   ; Untyped                     ;
+; WIDTHAD_B                          ; 7                    ; Untyped                     ;
+; NUMWORDS_B                         ; 128                  ; Untyped                     ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                     ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                     ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                     ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                     ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                     ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                     ;
+; BYTE_SIZE                          ; 8                    ; Untyped                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
+; INIT_FILE                          ; UNUSED               ; Untyped                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                     ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                     ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                     ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                     ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_l5k1      ; Untyped                     ;
++------------------------------------+----------------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: update:update|altsyncram:corpo_y_rtl_0 ;
++------------------------------------+----------------------+-----------------------------+
+; Parameter Name                     ; Value                ; Type                        ;
++------------------------------------+----------------------+-----------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                     ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE              ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                     ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                     ;
+; WIDTH_A                            ; 8                    ; Untyped                     ;
+; WIDTHAD_A                          ; 7                    ; Untyped                     ;
+; NUMWORDS_A                         ; 128                  ; Untyped                     ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                     ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                     ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                     ;
+; WIDTH_B                            ; 8                    ; Untyped                     ;
+; WIDTHAD_B                          ; 7                    ; Untyped                     ;
+; NUMWORDS_B                         ; 128                  ; Untyped                     ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                     ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                     ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                     ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                     ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                     ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                     ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                     ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                     ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                     ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                     ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                     ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                     ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                     ;
+; BYTE_SIZE                          ; 8                    ; Untyped                     ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                     ;
+; INIT_FILE                          ; UNUSED               ; Untyped                     ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                     ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                     ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                     ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                     ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                     ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                     ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                     ;
+; CBXI_PARAMETER                     ; altsyncram_33k1      ; Untyped                     ;
++------------------------------------+----------------------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -795,35 +1013,57 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                            ;
-+-------------------------------------------+---------------------------------+
-; Name                                      ; Value                           ;
-+-------------------------------------------+---------------------------------+
-; Number of entity instances                ; 2                               ;
-; Entity Instance                           ; mapa:mapa|altsyncram:mapa_rtl_0 ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                       ;
-;     -- WIDTH_A                            ; 2                               ;
-;     -- NUMWORDS_A                         ; 1200                            ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                    ;
-;     -- WIDTH_B                            ; 2                               ;
-;     -- NUMWORDS_B                         ; 1200                            ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                          ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                    ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                            ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                        ;
-; Entity Instance                           ; mapa:mapa|altsyncram:mapa_rtl_1 ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                       ;
-;     -- WIDTH_A                            ; 2                               ;
-;     -- NUMWORDS_A                         ; 1200                            ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                    ;
-;     -- WIDTH_B                            ; 2                               ;
-;     -- NUMWORDS_B                         ; 1200                            ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                          ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                    ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                            ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                       ;
-+-------------------------------------------+---------------------------------+
++------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                   ;
++-------------------------------------------+----------------------------------------+
+; Name                                      ; Value                                  ;
++-------------------------------------------+----------------------------------------+
+; Number of entity instances                ; 4                                      ;
+; Entity Instance                           ; update:update|altsyncram:corpo_x_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                              ;
+;     -- WIDTH_A                            ; 10                                     ;
+;     -- NUMWORDS_A                         ; 128                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                           ;
+;     -- WIDTH_B                            ; 10                                     ;
+;     -- NUMWORDS_B                         ; 128                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                              ;
+; Entity Instance                           ; update:update|altsyncram:corpo_y_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                              ;
+;     -- WIDTH_A                            ; 8                                      ;
+;     -- NUMWORDS_A                         ; 128                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                           ;
+;     -- WIDTH_B                            ; 8                                      ;
+;     -- NUMWORDS_B                         ; 128                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                              ;
+; Entity Instance                           ; mapa:mapa|altsyncram:mapa_rtl_0        ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                              ;
+;     -- WIDTH_A                            ; 2                                      ;
+;     -- NUMWORDS_A                         ; 1200                                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                           ;
+;     -- WIDTH_B                            ; 2                                      ;
+;     -- NUMWORDS_B                         ; 1200                                   ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                               ;
+; Entity Instance                           ; mapa:mapa|altsyncram:mapa_rtl_1        ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                              ;
+;     -- WIDTH_A                            ; 2                                      ;
+;     -- NUMWORDS_A                         ; 1200                                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                           ;
+;     -- WIDTH_B                            ; 2                                      ;
+;     -- NUMWORDS_B                         ; 1200                                   ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                              ;
++-------------------------------------------+----------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -950,39 +1190,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 317                         ;
-;     ENA               ; 221                         ;
+; arriav_ff             ; 350                         ;
+;     ENA               ; 189                         ;
 ;     ENA SCLR          ; 61                          ;
-;     ENA SLD           ; 4                           ;
+;     ENA SLD           ; 35                          ;
 ;     SCLR              ; 12                          ;
-;     plain             ; 19                          ;
-; arriav_lcell_comb     ; 1126                        ;
-;     arith             ; 462                         ;
+;     SLD               ; 32                          ;
+;     plain             ; 21                          ;
+; arriav_lcell_comb     ; 1214                        ;
+;     arith             ; 469                         ;
 ;         0 data inputs ; 69                          ;
-;         1 data inputs ; 214                         ;
-;         2 data inputs ; 24                          ;
+;         1 data inputs ; 220                         ;
+;         2 data inputs ; 25                          ;
 ;         3 data inputs ; 93                          ;
 ;         4 data inputs ; 62                          ;
-;     extend            ; 18                          ;
-;         7 data inputs ; 18                          ;
-;     normal            ; 589                         ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 685                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 29                          ;
-;         2 data inputs ; 125                         ;
-;         3 data inputs ; 87                          ;
-;         4 data inputs ; 125                         ;
-;         5 data inputs ; 79                          ;
-;         6 data inputs ; 142                         ;
+;         2 data inputs ; 168                         ;
+;         3 data inputs ; 104                         ;
+;         4 data inputs ; 124                         ;
+;         5 data inputs ; 80                          ;
+;         6 data inputs ; 178                         ;
 ;     shared            ; 57                          ;
 ;         0 data inputs ; 5                           ;
 ;         1 data inputs ; 14                          ;
 ;         2 data inputs ; 27                          ;
 ;         3 data inputs ; 11                          ;
 ; boundary_port         ; 86                          ;
-; stratixv_ram_block    ; 4                           ;
+; stratixv_ram_block    ; 22                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 25.90                       ;
-; Average LUT depth     ; 10.66                       ;
+; Average LUT depth     ; 10.42                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1001,115 +1242,147 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Jun 11 22:29:38 2024
+    Info: Processing started: Wed Jun 12 10:16:26 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cobrinha -c cobrinha
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Warning (12019): Can't analyze file -- file ram_bb.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file bcd2display.v
-    Info (12023): Found entity 1: bcd2display File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/bcd2display.v Line: 1
+    Info (12023): Found entity 1: bcd2display File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/bcd2display.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bin2bcd.v
-    Info (12023): Found entity 1: bin2bcd File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/bin2bcd.v Line: 1
-Warning (10263): Verilog HDL Event Control warning at bin2display.v(70): event expression contains "|" or "||" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v Line: 70
+    Info (12023): Found entity 1: bin2bcd File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/bin2bcd.v Line: 1
+Warning (10263): Verilog HDL Event Control warning at bin2display.v(70): event expression contains "|" or "||" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v Line: 70
 Info (12021): Found 1 design units, including 1 entities, in source file bin2display.v
-    Info (12023): Found entity 1: bin2display File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v Line: 1
+    Info (12023): Found entity 1: bin2display File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cobra.v
-    Info (12023): Found entity 1: cobra File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/cobra.v Line: 1
-Warning (10229): Verilog HDL Expression warning at fruta.v(12): truncated literal to match 32 bits File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 12
+    Info (12023): Found entity 1: cobra File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/cobra.v Line: 1
+Warning (10229): Verilog HDL Expression warning at fruta.v(12): truncated literal to match 32 bits File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file fruta.v
-    Info (12023): Found entity 1: fruta File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 1
+    Info (12023): Found entity 1: fruta File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
-    Info (12023): Found entity 1: main File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 1
+    Info (12023): Found entity 1: main File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mapa.v
-    Info (12023): Found entity 1: mapa File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v Line: 1
+    Info (12023): Found entity 1: mapa File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/mapa.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file obstaculo.v
-    Info (12023): Found entity 1: obstaculo File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/obstaculo.v Line: 1
+    Info (12023): Found entity 1: obstaculo File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/obstaculo.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file renderer.v
-    Info (12023): Found entity 1: renderer File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/renderer.v Line: 1
+    Info (12023): Found entity 1: renderer File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/renderer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file update.v
-    Info (12023): Found entity 1: update File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 1
+    Info (12023): Found entity 1: update File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga.v
-    Info (12023): Found entity 1: vga File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at main.v(92): created implicit net for "vga_active" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 92
-Warning (10236): Verilog HDL Implicit Net warning at main.v(112): created implicit net for "mapa_R" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 112
-Warning (10236): Verilog HDL Implicit Net warning at main.v(113): created implicit net for "mapa_G" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 113
-Warning (10236): Verilog HDL Implicit Net warning at main.v(114): created implicit net for "mapa_B" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 114
-Warning (10236): Verilog HDL Implicit Net warning at main.v(115): created implicit net for "mapa_read" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 115
-Warning (10236): Verilog HDL Implicit Net warning at main.v(169): created implicit net for "obstaculo_wx" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 169
-Warning (10236): Verilog HDL Implicit Net warning at main.v(170): created implicit net for "obstaculo_wy" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 170
-Warning (10222): Verilog HDL Parameter Declaration warning at fruta.v(12): Parameter Declaration in module "fruta" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 12
-Warning (10222): Verilog HDL Parameter Declaration warning at update.v(41): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 41
-Warning (10222): Verilog HDL Parameter Declaration warning at update.v(42): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 42
-Warning (10222): Verilog HDL Parameter Declaration warning at update.v(43): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 43
-Warning (10222): Verilog HDL Parameter Declaration warning at update.v(44): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 44
-Warning (10222): Verilog HDL Parameter Declaration warning at update.v(45): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 45
-Warning (10222): Verilog HDL Parameter Declaration warning at update.v(46): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 46
-Warning (10222): Verilog HDL Parameter Declaration warning at update.v(47): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 47
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(185): instance has no name File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 185
+    Info (12023): Found entity 1: vga File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at main.v(92): created implicit net for "vga_active" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 92
+Warning (10236): Verilog HDL Implicit Net warning at main.v(112): created implicit net for "mapa_R" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 112
+Warning (10236): Verilog HDL Implicit Net warning at main.v(113): created implicit net for "mapa_G" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 113
+Warning (10236): Verilog HDL Implicit Net warning at main.v(114): created implicit net for "mapa_B" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 114
+Warning (10236): Verilog HDL Implicit Net warning at main.v(115): created implicit net for "mapa_read" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 115
+Warning (10236): Verilog HDL Implicit Net warning at main.v(169): created implicit net for "obstaculo_wx" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 169
+Warning (10236): Verilog HDL Implicit Net warning at main.v(170): created implicit net for "obstaculo_wy" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 170
+Warning (10222): Verilog HDL Parameter Declaration warning at fruta.v(12): Parameter Declaration in module "fruta" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 12
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(41): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 41
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(42): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 42
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(43): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 43
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(44): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 44
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(45): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 45
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(46): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 46
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(47): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 47
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(185): instance has no name File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 185
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Info (12128): Elaborating entity "vga" for hierarchy "vga:out" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 95
-Warning (10230): Verilog HDL assignment warning at vga.v(45): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 45
-Warning (10230): Verilog HDL assignment warning at vga.v(46): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 46
-Warning (10230): Verilog HDL assignment warning at vga.v(47): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 47
-Warning (10230): Verilog HDL assignment warning at vga.v(48): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 48
-Warning (10230): Verilog HDL assignment warning at vga.v(49): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 49
-Warning (10230): Verilog HDL assignment warning at vga.v(50): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 50
-Warning (10230): Verilog HDL assignment warning at vga.v(63): truncated value with size 32 to match size of target (11) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 63
-Warning (10230): Verilog HDL assignment warning at vga.v(66): truncated value with size 32 to match size of target (11) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 66
-Warning (10230): Verilog HDL assignment warning at vga.v(72): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 72
-Warning (10230): Verilog HDL assignment warning at vga.v(73): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 73
-Info (12128): Elaborating entity "renderer" for hierarchy "renderer:renderer" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 116
-Warning (10036): Verilog HDL or VHDL warning at renderer.v(40): object "linha_x" assigned a value but never read File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/renderer.v Line: 40
+Info (12128): Elaborating entity "vga" for hierarchy "vga:out" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 95
+Warning (10230): Verilog HDL assignment warning at vga.v(45): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 45
+Warning (10230): Verilog HDL assignment warning at vga.v(46): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 46
+Warning (10230): Verilog HDL assignment warning at vga.v(47): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 47
+Warning (10230): Verilog HDL assignment warning at vga.v(48): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 48
+Warning (10230): Verilog HDL assignment warning at vga.v(49): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 49
+Warning (10230): Verilog HDL assignment warning at vga.v(50): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 50
+Warning (10230): Verilog HDL assignment warning at vga.v(63): truncated value with size 32 to match size of target (11) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 63
+Warning (10230): Verilog HDL assignment warning at vga.v(66): truncated value with size 32 to match size of target (11) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 66
+Warning (10230): Verilog HDL assignment warning at vga.v(72): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 72
+Warning (10230): Verilog HDL assignment warning at vga.v(73): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 73
+Info (12128): Elaborating entity "renderer" for hierarchy "renderer:renderer" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 116
+Warning (10036): Verilog HDL or VHDL warning at renderer.v(40): object "linha_x" assigned a value but never read File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/renderer.v Line: 40
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "linha" into its bus
-Info (12128): Elaborating entity "mapa" for hierarchy "mapa:mapa" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 143
-Info (12128): Elaborating entity "update" for hierarchy "update:update" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 175
-Warning (10036): Verilog HDL or VHDL warning at update.v(54): object "corpo_counter" assigned a value but never read File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 54
-Warning (10036): Verilog HDL or VHDL warning at update.v(59): object "cabeca_last_x" assigned a value but never read File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 59
-Warning (10036): Verilog HDL or VHDL warning at update.v(60): object "cabeca_last_y" assigned a value but never read File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 60
-Warning (10036): Verilog HDL or VHDL warning at update.v(71): object "inicial" assigned a value but never read File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 71
-Warning (10036): Verilog HDL or VHDL warning at update.v(75): object "game_over" assigned a value but never read File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 75
-Warning (10855): Verilog HDL warning at update.v(78): initial value for variable update_wx should be constant File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 78
-Warning (10855): Verilog HDL warning at update.v(78): initial value for variable update_wy should be constant File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 78
-Warning (10230): Verilog HDL assignment warning at update.v(123): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 123
-Warning (10230): Verilog HDL assignment warning at update.v(126): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 126
-Warning (10230): Verilog HDL assignment warning at update.v(137): truncated value with size 32 to match size of target (30) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 137
-Warning (10230): Verilog HDL assignment warning at update.v(160): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 160
-Warning (10230): Verilog HDL assignment warning at update.v(163): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 163
-Warning (10230): Verilog HDL assignment warning at update.v(166): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 166
-Warning (10230): Verilog HDL assignment warning at update.v(169): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 169
-Warning (10230): Verilog HDL assignment warning at update.v(192): truncated value with size 32 to match size of target (8) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 192
-Warning (10230): Verilog HDL assignment warning at update.v(193): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 193
-Info (12128): Elaborating entity "cobra" for hierarchy "cobra:comb_3" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 185
-Info (12128): Elaborating entity "fruta" for hierarchy "fruta:fruta" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 196
-Warning (10230): Verilog HDL assignment warning at fruta.v(19): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 19
-Warning (10230): Verilog HDL assignment warning at fruta.v(20): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 20
-Warning (10230): Verilog HDL assignment warning at fruta.v(26): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 26
-Warning (10230): Verilog HDL assignment warning at fruta.v(27): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 27
-Info (12128): Elaborating entity "bin2display" for hierarchy "bin2display:display" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 208
-Info (12128): Elaborating entity "bcd2display" for hierarchy "bin2display:display|bcd2display:display0" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v Line: 29
-Warning (10235): Verilog HDL Always Construct warning at bcd2display.v(22): variable "flag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/bcd2display.v Line: 22
-Info (12128): Elaborating entity "bin2bcd" for hierarchy "bin2display:display|bin2bcd:pontuacaoDir" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v Line: 59
+Info (12128): Elaborating entity "mapa" for hierarchy "mapa:mapa" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 143
+Info (12128): Elaborating entity "update" for hierarchy "update:update" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 175
+Warning (10036): Verilog HDL or VHDL warning at update.v(67): object "inicial" assigned a value but never read File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 67
+Warning (10036): Verilog HDL or VHDL warning at update.v(71): object "game_over" assigned a value but never read File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 71
+Warning (10855): Verilog HDL warning at update.v(74): initial value for variable update_wx should be constant File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 74
+Warning (10855): Verilog HDL warning at update.v(74): initial value for variable update_wy should be constant File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 74
+Warning (10230): Verilog HDL assignment warning at update.v(119): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 119
+Warning (10230): Verilog HDL assignment warning at update.v(122): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 122
+Warning (10230): Verilog HDL assignment warning at update.v(133): truncated value with size 32 to match size of target (30) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 133
+Warning (10230): Verilog HDL assignment warning at update.v(154): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 154
+Warning (10230): Verilog HDL assignment warning at update.v(157): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 157
+Warning (10230): Verilog HDL assignment warning at update.v(160): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 160
+Warning (10230): Verilog HDL assignment warning at update.v(163): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 163
+Warning (10230): Verilog HDL assignment warning at update.v(186): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 186
+Warning (10230): Verilog HDL assignment warning at update.v(196): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 196
+Warning (10230): Verilog HDL assignment warning at update.v(197): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 197
+Warning (10230): Verilog HDL assignment warning at update.v(209): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 209
+Warning (10230): Verilog HDL assignment warning at update.v(210): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 210
+Info (12128): Elaborating entity "cobra" for hierarchy "cobra:comb_3" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 185
+Info (12128): Elaborating entity "fruta" for hierarchy "fruta:fruta" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 196
+Warning (10230): Verilog HDL assignment warning at fruta.v(19): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 19
+Warning (10230): Verilog HDL assignment warning at fruta.v(20): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 20
+Warning (10230): Verilog HDL assignment warning at fruta.v(26): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 26
+Warning (10230): Verilog HDL assignment warning at fruta.v(27): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 27
+Info (12128): Elaborating entity "bin2display" for hierarchy "bin2display:display" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 208
+Info (12128): Elaborating entity "bcd2display" for hierarchy "bin2display:display|bcd2display:display0" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at bcd2display.v(22): variable "flag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/bcd2display.v Line: 22
+Info (12128): Elaborating entity "bin2bcd" for hierarchy "bin2display:display|bin2bcd:pontuacaoDir" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v Line: 59
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "R[7]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 60
-    Warning (12110): Net "R[6]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 60
-    Warning (12110): Net "R[5]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 60
-    Warning (12110): Net "R[4]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 60
-    Warning (12110): Net "R[3]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 60
-    Warning (12110): Net "R[2]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 60
-    Warning (12110): Net "G[7]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
-    Warning (12110): Net "G[6]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
-    Warning (12110): Net "G[5]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
-    Warning (12110): Net "G[4]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
-    Warning (12110): Net "G[3]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
-    Warning (12110): Net "G[2]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
-    Warning (12110): Net "B[7]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 62
-    Warning (12110): Net "B[6]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 62
-    Warning (12110): Net "B[5]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 62
-    Warning (12110): Net "B[4]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 62
-    Warning (12110): Net "B[3]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 62
-    Warning (12110): Net "B[2]" is missing source, defaulting to GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 62
+    Warning (12110): Net "R[7]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 60
+    Warning (12110): Net "R[6]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 60
+    Warning (12110): Net "R[5]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 60
+    Warning (12110): Net "R[4]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 60
+    Warning (12110): Net "R[3]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 60
+    Warning (12110): Net "R[2]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 60
+    Warning (12110): Net "G[7]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
+    Warning (12110): Net "G[6]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
+    Warning (12110): Net "G[5]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
+    Warning (12110): Net "G[4]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
+    Warning (12110): Net "G[3]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
+    Warning (12110): Net "G[2]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 61
+    Warning (12110): Net "B[7]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 62
+    Warning (12110): Net "B[6]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 62
+    Warning (12110): Net "B[5]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 62
+    Warning (12110): Net "B[4]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 62
+    Warning (12110): Net "B[3]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 62
+    Warning (12110): Net "B[2]" is missing source, defaulting to GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 62
+Warning (276020): Inferred RAM node "update:update|corpo_x_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276020): Inferred RAM node "update:update|corpo_y_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "mapa:mapa|mapa_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
-Info (19000): Inferred 2 megafunctions from design logic
+Info (19000): Inferred 4 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "update:update|corpo_x_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 10
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 128
+        Info (286033): Parameter WIDTH_B set to 10
+        Info (286033): Parameter WIDTHAD_B set to 7
+        Info (286033): Parameter NUMWORDS_B set to 128
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "update:update|corpo_y_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 128
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 7
+        Info (286033): Parameter NUMWORDS_B set to 128
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
     Info (276029): Inferred altsyncram megafunction from the following design logic: "mapa:mapa|mapa_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 2
@@ -1144,8 +1417,44 @@ Info (19000): Inferred 2 megafunctions from design logic
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter RDCONTROL_REG_B set to CLOCK0
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "fruta:fruta|Mod0" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 19
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "fruta:fruta|Mod1" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 20
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "fruta:fruta|Mod0" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "fruta:fruta|Mod1" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 20
+Info (12130): Elaborated megafunction instantiation "update:update|altsyncram:corpo_x_rtl_0"
+Info (12133): Instantiated megafunction "update:update|altsyncram:corpo_x_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "10"
+    Info (12134): Parameter "WIDTHAD_A" = "7"
+    Info (12134): Parameter "NUMWORDS_A" = "128"
+    Info (12134): Parameter "WIDTH_B" = "10"
+    Info (12134): Parameter "WIDTHAD_B" = "7"
+    Info (12134): Parameter "NUMWORDS_B" = "128"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_l5k1.tdf
+    Info (12023): Found entity 1: altsyncram_l5k1 File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_l5k1.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "update:update|altsyncram:corpo_y_rtl_0"
+Info (12133): Instantiated megafunction "update:update|altsyncram:corpo_y_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "7"
+    Info (12134): Parameter "NUMWORDS_A" = "128"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "7"
+    Info (12134): Parameter "NUMWORDS_B" = "128"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_33k1.tdf
+    Info (12023): Found entity 1: altsyncram_33k1 File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_33k1.tdf Line: 27
 Info (12130): Elaborated megafunction instantiation "mapa:mapa|altsyncram:mapa_rtl_0"
 Info (12133): Instantiated megafunction "mapa:mapa|altsyncram:mapa_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1165,7 +1474,7 @@ Info (12133): Instantiated megafunction "mapa:mapa|altsyncram:mapa_rtl_0" with t
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
     Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_a5q1.tdf
-    Info (12023): Found entity 1: altsyncram_a5q1 File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_a5q1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_a5q1 File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_a5q1.tdf Line: 27
 Info (12130): Elaborated megafunction instantiation "mapa:mapa|altsyncram:mapa_rtl_1"
 Info (12133): Instantiated megafunction "mapa:mapa|altsyncram:mapa_rtl_1" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1184,107 +1493,107 @@ Info (12133): Instantiated megafunction "mapa:mapa|altsyncram:mapa_rtl_1" with t
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ill1.tdf
-    Info (12023): Found entity 1: altsyncram_ill1 File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_ill1.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "fruta:fruta|lpm_divide:Mod0" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 19
-Info (12133): Instantiated megafunction "fruta:fruta|lpm_divide:Mod0" with the following parameter: File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 19
+    Info (12023): Found entity 1: altsyncram_ill1 File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/altsyncram_ill1.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "fruta:fruta|lpm_divide:Mod0" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 19
+Info (12133): Instantiated megafunction "fruta:fruta|lpm_divide:Mod0" with the following parameter: File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 19
     Info (12134): Parameter "LPM_WIDTHN" = "20"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_k3m.tdf
-    Info (12023): Found entity 1: lpm_divide_k3m File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/lpm_divide_k3m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_k3m File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/lpm_divide_k3m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_nlh File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/sign_div_unsign_nlh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/sign_div_unsign_nlh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
-    Info (12023): Found entity 1: alt_u_div_kve File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/alt_u_div_kve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "fruta:fruta|lpm_divide:Mod1" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 20
-Info (12133): Instantiated megafunction "fruta:fruta|lpm_divide:Mod1" with the following parameter: File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 20
+    Info (12023): Found entity 1: alt_u_div_kve File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/alt_u_div_kve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "fruta:fruta|lpm_divide:Mod1" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 20
+Info (12133): Instantiated megafunction "fruta:fruta|lpm_divide:Mod1" with the following parameter: File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 20
     Info (12134): Parameter "LPM_WIDTHN" = "20"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_j3m.tdf
-    Info (12023): Found entity 1: lpm_divide_j3m File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/lpm_divide_j3m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_j3m File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/lpm_divide_j3m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_mlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_mlh File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/sign_div_unsign_mlh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_mlh File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/sign_div_unsign_mlh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ive.tdf
-    Info (12023): Found entity 1: alt_u_div_ive File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/db/alt_u_div_ive.tdf Line: 22
+    Info (12023): Found entity 1: alt_u_div_ive File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/db/alt_u_div_ive.tdf Line: 22
 Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
-    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
-    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
-    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
-    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
-    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
-    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
-    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
-    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
-    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
-    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
-    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
-    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
-    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
-    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
-    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
-    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
-    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
-    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
-    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
-    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
-    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 19
-    Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 20
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 10
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 11
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 12
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 16
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 17
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 18
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 19
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 20
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 12 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/output_files/cobrinha.map.smsg
+Info (17049): 13 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/output_files/cobrinha.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 9 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[1]" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[2]" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[3]" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[4]" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[5]" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[6]" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
-Info (21057): Implemented 1340 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
+Info (21057): Implemented 1498 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 71 output pins
-    Info (21061): Implemented 1250 logic cells
-    Info (21064): Implemented 4 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 128 warnings
-    Info: Peak virtual memory: 1364 megabytes
-    Info: Processing ended: Tue Jun 11 22:29:45 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+    Info (21061): Implemented 1390 logic cells
+    Info (21064): Implemented 22 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 130 warnings
+    Info: Peak virtual memory: 1359 megabytes
+    Info: Processing ended: Wed Jun 12 10:16:34 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/ec2022/ra260545/Documents/mc613/2024s1-mc613-projeto-rafofo-e-amigos/output_files/cobrinha.map.smsg.
+The suppressed messages can be found in /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/output_files/cobrinha.map.smsg.
 
 
