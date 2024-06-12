@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Jun 12 11:18:48 2024
+Analysis & Synthesis Status : Successful - Wed Jun 12 11:56:43 2024
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : cobrinha
 Top-level Entity Name : main
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 340
+Total registers : 397
 Total pins : 86
 Total virtual pins : 0
 Total block memory bits : 4,704

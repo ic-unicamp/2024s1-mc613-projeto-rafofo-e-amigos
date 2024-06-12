@@ -4,7 +4,6 @@ module update #(
 ) (
     input clk,
     input reset,
-
     output reg update_renable,
     input [1:0] update_rdata,
     output reg [9:0] update_rx,
@@ -49,8 +48,10 @@ module update #(
     parameter ATUALIZA_COBRA = 5;
     parameter NOVA_FRUTA = 8;
     parameter GAME_OVER = 6;
+    //parameter speed_limit = 10000000;
 
     reg [3:0] state = RESET;
+    reg [3:0] last_state;
     reg [3:0] aux;
 
     reg [9:0] corpo_x [127:0];
@@ -70,16 +71,16 @@ module update #(
 
     reg [29:0] delaycounter = 0;
 
-    reg inicial = 1;
     reg [9:0] icounterx = 0;
     reg [9:0] icountery = 0;
 
+    
     reg comeu_fruta = 0;
 
 always @(posedge clk) begin
     if (reset == 0) begin
         state = RESET;
-    end else begin
+    end else begin 
         case (state)
             RESET: begin
                 game_over = 0;
@@ -116,7 +117,6 @@ always @(posedge clk) begin
                     if (icountery == 30) begin
                         icountery = 0;
                         icounterx = 0;
-                        inicial = 0;
                         update_wenable = 0;
                         state = DELAY;
                     end
@@ -173,10 +173,15 @@ always @(posedge clk) begin
                     comeu_fruta = 1;
                     temp_score = temp_score + 1;
                     score = temp_score; 
+                    // Atualiza a pontuação do jogo
                     if (score > high_score) begin
                         high_score = score;
                         beating_high_score = 1;
                     end
+                    // Aumenta a velocidade de cobra
+                    //if (speed > speed_limit) begin
+                        speed = speed - 10000000;
+                    //end
                 end else if ((obs_x == cabeca_x && obs_y == cabeca_y)) begin
                     // Encontrou com si mesma ou um obstáculo
                     game_over = 1;
