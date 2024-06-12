@@ -1,13 +1,11 @@
 # Projeto final de MC613 - 2024s1
 
-Grupo:
+Grupo: Rafofo e Amigos
 
-- RA - Nome
-- RA - Nome
-- RA - Nome
+250960 RA - Eduardo Rittner Coelho
+260660 RA - Rafael de Almeida Casonato
+260545 RA - João Yukio Takaki
 
-## Descrição
+## Jogo da Cobra
 
-Descrição do projeto.
-
-
+Toda vez que a cobra come uma fruta surge um novo obstáculo e a velocidade da cobra aumenta. O high score de todas as runs é armazenado, e se run atual estiver melhor que o high score a cobra fica dourada.
