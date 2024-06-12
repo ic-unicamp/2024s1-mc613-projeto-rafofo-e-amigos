@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cobrinha
-Wed Jun 12 11:56:43 2024
+Wed Jun 12 12:00:33 2024
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -14,48 +14,47 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. State Machine - |main|update:update|last_state
- 10. State Machine - |main|update:update|state
- 11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Registers Added for RAM Pass-Through Logic
- 16. Registers Packed Into Inferred Megafunctions
- 17. Multiplexer Restructuring Statistics (Restructuring Performed)
- 18. Source assignments for update:update|altsyncram:corpo_x_rtl_0|altsyncram_l5k1:auto_generated
- 19. Source assignments for update:update|altsyncram:corpo_y_rtl_0|altsyncram_33k1:auto_generated
- 20. Source assignments for mapa:mapa|altsyncram:mapa_rtl_0|altsyncram_a5q1:auto_generated
- 21. Parameter Settings for User Entity Instance: Top-level Entity: |main
- 22. Parameter Settings for User Entity Instance: vga:out
- 23. Parameter Settings for User Entity Instance: renderer:renderer
- 24. Parameter Settings for User Entity Instance: mapa:mapa
- 25. Parameter Settings for User Entity Instance: update:update
- 26. Parameter Settings for User Entity Instance: fruta:fruta
- 27. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:pontuacaoDir
- 28. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:high_scoreEsq
- 29. Parameter Settings for Inferred Entity Instance: update:update|altsyncram:corpo_x_rtl_0
- 30. Parameter Settings for Inferred Entity Instance: update:update|altsyncram:corpo_y_rtl_0
- 31. Parameter Settings for Inferred Entity Instance: mapa:mapa|altsyncram:mapa_rtl_0
- 32. Parameter Settings for Inferred Entity Instance: fruta:fruta|lpm_divide:Mod0
- 33. Parameter Settings for Inferred Entity Instance: fruta:fruta|lpm_divide:Mod1
- 34. altsyncram Parameter Settings by Entity Instance
- 35. Port Connectivity Checks: "bin2display:display|bin2bcd:high_scoreEsq"
- 36. Port Connectivity Checks: "bin2display:display|bin2bcd:pontuacaoDir"
- 37. Port Connectivity Checks: "bin2display:display|bcd2display:display5"
- 38. Port Connectivity Checks: "bin2display:display|bcd2display:display4"
- 39. Port Connectivity Checks: "bin2display:display|bcd2display:display3"
- 40. Port Connectivity Checks: "bin2display:display|bcd2display:display2"
- 41. Port Connectivity Checks: "bin2display:display|bcd2display:display1"
- 42. Port Connectivity Checks: "bin2display:display|bcd2display:display0"
- 43. Port Connectivity Checks: "update:update"
- 44. Port Connectivity Checks: "mapa:mapa"
- 45. Port Connectivity Checks: "renderer:renderer"
- 46. Port Connectivity Checks: "vga:out"
- 47. Post-Synthesis Netlist Statistics for Top Partition
- 48. Elapsed Time Per Partition
- 49. Analysis & Synthesis Messages
- 50. Analysis & Synthesis Suppressed Messages
+  9. State Machine - |main|update:update|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Registers Added for RAM Pass-Through Logic
+ 15. Registers Packed Into Inferred Megafunctions
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for update:update|altsyncram:corpo_x_rtl_0|altsyncram_l5k1:auto_generated
+ 18. Source assignments for update:update|altsyncram:corpo_y_rtl_0|altsyncram_33k1:auto_generated
+ 19. Source assignments for mapa:mapa|altsyncram:mapa_rtl_0|altsyncram_a5q1:auto_generated
+ 20. Parameter Settings for User Entity Instance: Top-level Entity: |main
+ 21. Parameter Settings for User Entity Instance: vga:out
+ 22. Parameter Settings for User Entity Instance: renderer:renderer
+ 23. Parameter Settings for User Entity Instance: mapa:mapa
+ 24. Parameter Settings for User Entity Instance: update:update
+ 25. Parameter Settings for User Entity Instance: fruta:fruta
+ 26. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:pontuacaoDir
+ 27. Parameter Settings for User Entity Instance: bin2display:display|bin2bcd:high_scoreEsq
+ 28. Parameter Settings for Inferred Entity Instance: update:update|altsyncram:corpo_x_rtl_0
+ 29. Parameter Settings for Inferred Entity Instance: update:update|altsyncram:corpo_y_rtl_0
+ 30. Parameter Settings for Inferred Entity Instance: mapa:mapa|altsyncram:mapa_rtl_0
+ 31. Parameter Settings for Inferred Entity Instance: fruta:fruta|lpm_divide:Mod0
+ 32. Parameter Settings for Inferred Entity Instance: fruta:fruta|lpm_divide:Mod1
+ 33. altsyncram Parameter Settings by Entity Instance
+ 34. Port Connectivity Checks: "bin2display:display|bin2bcd:high_scoreEsq"
+ 35. Port Connectivity Checks: "bin2display:display|bin2bcd:pontuacaoDir"
+ 36. Port Connectivity Checks: "bin2display:display|bcd2display:display5"
+ 37. Port Connectivity Checks: "bin2display:display|bcd2display:display4"
+ 38. Port Connectivity Checks: "bin2display:display|bcd2display:display3"
+ 39. Port Connectivity Checks: "bin2display:display|bcd2display:display2"
+ 40. Port Connectivity Checks: "bin2display:display|bcd2display:display1"
+ 41. Port Connectivity Checks: "bin2display:display|bcd2display:display0"
+ 42. Port Connectivity Checks: "update:update"
+ 43. Port Connectivity Checks: "mapa:mapa"
+ 44. Port Connectivity Checks: "renderer:renderer"
+ 45. Port Connectivity Checks: "vga:out"
+ 46. Post-Synthesis Netlist Statistics for Top Partition
+ 47. Elapsed Time Per Partition
+ 48. Analysis & Synthesis Messages
+ 49. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -81,13 +80,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jun 12 11:56:43 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Jun 12 12:00:33 2024       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; cobrinha                                    ;
 ; Top-level Entity Name           ; main                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 397                                         ;
+; Total registers                 ; 387                                         ;
 ; Total pins                      ; 86                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,704                                       ;
@@ -257,16 +256,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 867            ;
+; Estimate of Logic utilization (ALMs needed) ; 880            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1430           ;
+; Combinational ALUT usage for logic          ; 1442           ;
 ;     -- 7 input functions                    ; 13             ;
-;     -- 6 input functions                    ; 239            ;
-;     -- 5 input functions                    ; 131            ;
-;     -- 4 input functions                    ; 213            ;
-;     -- <=3 input functions                  ; 834            ;
+;     -- 6 input functions                    ; 255            ;
+;     -- 5 input functions                    ; 111            ;
+;     -- 4 input functions                    ; 221            ;
+;     -- <=3 input functions                  ; 842            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 397            ;
+; Dedicated logic registers                   ; 387            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 86             ;
 ; Total MLAB memory bits                      ; 0              ;
@@ -275,8 +274,8 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 383            ;
-; Total fan-out                               ; 6808           ;
+; Maximum fan-out                             ; 373            ;
+; Total fan-out                               ; 6809           ;
 ; Average fan-out                             ; 3.37           ;
 +---------------------------------------------+----------------+
 
@@ -286,7 +285,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |main                                     ; 1430 (1)            ; 397 (0)                   ; 4704              ; 0          ; 86   ; 0            ; |main                                                                                                             ; main                ; work         ;
+; |main                                     ; 1442 (1)            ; 387 (0)                   ; 4704              ; 0          ; 86   ; 0            ; |main                                                                                                             ; main                ; work         ;
 ;    |bin2display:display|                  ; 232 (28)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|bin2display:display                                                                                         ; bin2display         ; work         ;
 ;       |bcd2display:display0|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|bin2display:display|bcd2display:display0                                                                    ; bcd2display         ; work         ;
 ;       |bcd2display:display1|              ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|bin2display:display|bcd2display:display1                                                                    ; bcd2display         ; work         ;
@@ -309,7 +308,7 @@ refer to the applicable agreement for further details.
 ;    |mapa:mapa|                            ; 16 (16)             ; 0 (0)                     ; 2400              ; 0          ; 0    ; 0            ; |main|mapa:mapa                                                                                                   ; mapa                ; work         ;
 ;       |altsyncram:mapa_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 2400              ; 0          ; 0    ; 0            ; |main|mapa:mapa|altsyncram:mapa_rtl_0                                                                             ; altsyncram          ; work         ;
 ;          |altsyncram_a5q1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2400              ; 0          ; 0    ; 0            ; |main|mapa:mapa|altsyncram:mapa_rtl_0|altsyncram_a5q1:auto_generated                                              ; altsyncram_a5q1     ; work         ;
-;    |update:update|                        ; 567 (567)           ; 313 (313)                 ; 2304              ; 0          ; 0    ; 0            ; |main|update:update                                                                                               ; update              ; work         ;
+;    |update:update|                        ; 579 (579)           ; 303 (303)                 ; 2304              ; 0          ; 0    ; 0            ; |main|update:update                                                                                               ; update              ; work         ;
 ;       |altsyncram:corpo_x_rtl_0|          ; 0 (0)               ; 0 (0)                     ; 1280              ; 0          ; 0    ; 0            ; |main|update:update|altsyncram:corpo_x_rtl_0                                                                      ; altsyncram          ; work         ;
 ;          |altsyncram_l5k1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1280              ; 0          ; 0    ; 0            ; |main|update:update|altsyncram:corpo_x_rtl_0|altsyncram_l5k1:auto_generated                                       ; altsyncram_l5k1     ; work         ;
 ;       |altsyncram:corpo_y_rtl_0|          ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |main|update:update|altsyncram:corpo_y_rtl_0                                                                      ; altsyncram          ; work         ;
@@ -331,39 +330,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |main|update:update|last_state                                                                                                                                                                                           ;
-+----------------------------+------------------+----------------------+---------------------------+--------------------------+----------------------------+-----------------+------------------+------------------+-----------------------+
-; Name                       ; last_state.PAUSE ; last_state.GAME_OVER ; last_state.ATUALIZA_COBRA ; last_state.CHECA_COLISAO ; last_state.CALCULA_POSICAO ; last_state.IDLE ; last_state.DELAY ; last_state.RESET ; last_state.NOVA_FRUTA ;
-+----------------------------+------------------+----------------------+---------------------------+--------------------------+----------------------------+-----------------+------------------+------------------+-----------------------+
-; last_state.RESET           ; 0                ; 0                    ; 0                         ; 0                        ; 0                          ; 0               ; 0                ; 0                ; 0                     ;
-; last_state.DELAY           ; 0                ; 0                    ; 0                         ; 0                        ; 0                          ; 0               ; 1                ; 1                ; 0                     ;
-; last_state.IDLE            ; 0                ; 0                    ; 0                         ; 0                        ; 0                          ; 1               ; 0                ; 1                ; 0                     ;
-; last_state.CALCULA_POSICAO ; 0                ; 0                    ; 0                         ; 0                        ; 1                          ; 0               ; 0                ; 1                ; 0                     ;
-; last_state.CHECA_COLISAO   ; 0                ; 0                    ; 0                         ; 1                        ; 0                          ; 0               ; 0                ; 1                ; 0                     ;
-; last_state.ATUALIZA_COBRA  ; 0                ; 0                    ; 1                         ; 0                        ; 0                          ; 0               ; 0                ; 1                ; 0                     ;
-; last_state.GAME_OVER       ; 0                ; 1                    ; 0                         ; 0                        ; 0                          ; 0               ; 0                ; 1                ; 0                     ;
-; last_state.PAUSE           ; 1                ; 0                    ; 0                         ; 0                        ; 0                          ; 0               ; 0                ; 1                ; 0                     ;
-; last_state.NOVA_FRUTA      ; 0                ; 0                    ; 0                         ; 0                        ; 0                          ; 0               ; 0                ; 1                ; 1                     ;
-+----------------------------+------------------+----------------------+---------------------------+--------------------------+----------------------------+-----------------+------------------+------------------+-----------------------+
-
-
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |main|update:update|state                                                                                                                                              ;
-+-----------------------+-------------+-----------------+----------------------+---------------------+-----------------------+------------+-------------+-------------+------------------+
-; Name                  ; state.PAUSE ; state.GAME_OVER ; state.ATUALIZA_COBRA ; state.CHECA_COLISAO ; state.CALCULA_POSICAO ; state.IDLE ; state.DELAY ; state.RESET ; state.NOVA_FRUTA ;
-+-----------------------+-------------+-----------------+----------------------+---------------------+-----------------------+------------+-------------+-------------+------------------+
-; state.RESET           ; 0           ; 0               ; 0                    ; 0                   ; 0                     ; 0          ; 0           ; 0           ; 0                ;
-; state.DELAY           ; 0           ; 0               ; 0                    ; 0                   ; 0                     ; 0          ; 1           ; 1           ; 0                ;
-; state.IDLE            ; 0           ; 0               ; 0                    ; 0                   ; 0                     ; 1          ; 0           ; 1           ; 0                ;
-; state.CALCULA_POSICAO ; 0           ; 0               ; 0                    ; 0                   ; 1                     ; 0          ; 0           ; 1           ; 0                ;
-; state.CHECA_COLISAO   ; 0           ; 0               ; 0                    ; 1                   ; 0                     ; 0          ; 0           ; 1           ; 0                ;
-; state.ATUALIZA_COBRA  ; 0           ; 0               ; 1                    ; 0                   ; 0                     ; 0          ; 0           ; 1           ; 0                ;
-; state.GAME_OVER       ; 0           ; 1               ; 0                    ; 0                   ; 0                     ; 0          ; 0           ; 1           ; 0                ;
-; state.PAUSE           ; 1           ; 0               ; 0                    ; 0                   ; 0                     ; 0          ; 0           ; 1           ; 0                ;
-; state.NOVA_FRUTA      ; 0           ; 0               ; 0                    ; 0                   ; 0                     ; 0          ; 0           ; 1           ; 1                ;
-+-----------------------+-------------+-----------------+----------------------+---------------------+-----------------------+------------+-------------+-------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |main|update:update|state                                                                                                                                ;
++-----------------------+-----------------+----------------------+---------------------+-----------------------+------------+-------------+-------------+------------------+
+; Name                  ; state.GAME_OVER ; state.ATUALIZA_COBRA ; state.CHECA_COLISAO ; state.CALCULA_POSICAO ; state.IDLE ; state.DELAY ; state.RESET ; state.NOVA_FRUTA ;
++-----------------------+-----------------+----------------------+---------------------+-----------------------+------------+-------------+-------------+------------------+
+; state.RESET           ; 0               ; 0                    ; 0                   ; 0                     ; 0          ; 0           ; 0           ; 0                ;
+; state.DELAY           ; 0               ; 0                    ; 0                   ; 0                     ; 0          ; 1           ; 1           ; 0                ;
+; state.IDLE            ; 0               ; 0                    ; 0                   ; 0                     ; 1          ; 0           ; 1           ; 0                ;
+; state.CALCULA_POSICAO ; 0               ; 0                    ; 0                   ; 1                     ; 0          ; 0           ; 1           ; 0                ;
+; state.CHECA_COLISAO   ; 0               ; 0                    ; 1                   ; 0                     ; 0          ; 0           ; 1           ; 0                ;
+; state.ATUALIZA_COBRA  ; 0               ; 1                    ; 0                   ; 0                     ; 0          ; 0           ; 1           ; 0                ;
+; state.GAME_OVER       ; 1               ; 0                    ; 0                   ; 0                     ; 0          ; 0           ; 1           ; 0                ;
+; state.NOVA_FRUTA      ; 0               ; 0                    ; 0                   ; 0                     ; 0          ; 0           ; 1           ; 1                ;
++-----------------------+-----------------+----------------------+---------------------+-----------------------+------------+-------------+-------------+------------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -400,13 +380,10 @@ Encoding Type:  One-Hot
 ; update:update|temp_score[1]            ; Merged with update:update|score[1]     ;
 ; update:update|temp_score[0]            ; Merged with update:update|score[0]     ;
 ; fruta:fruta|state_y[1]                 ; Stuck at VCC due to stuck port data_in ;
-; update:update|last_state~2             ; Lost fanout                            ;
-; update:update|last_state~3             ; Lost fanout                            ;
-; update:update|last_state~4             ; Lost fanout                            ;
-; update:update|state~20                 ; Lost fanout                            ;
-; update:update|state~21                 ; Lost fanout                            ;
-; update:update|state~22                 ; Lost fanout                            ;
-; Total Number of Removed Registers = 56 ;                                        ;
+; update:update|state~10                 ; Lost fanout                            ;
+; update:update|state~11                 ; Lost fanout                            ;
+; update:update|state~12                 ; Lost fanout                            ;
+; Total Number of Removed Registers = 53 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -441,12 +418,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 397   ;
+; Total registers                              ; 387   ;
 ; Number of registers using Synchronous Clear  ; 73    ;
 ; Number of registers using Synchronous Load   ; 67    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 330   ;
+; Number of registers using Clock Enable       ; 321   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -456,9 +433,9 @@ Encoding Type:  One-Hot
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; update:update|fruta_y[2]                ; 2       ;
 ; update:update|fruta_y[3]                ; 2       ;
 ; update:update|cabeca_y[3]               ; 8       ;
+; update:update|fruta_y[2]                ; 2       ;
 ; update:update|fruta_y[0]                ; 2       ;
 ; update:update|cabeca_y[1]               ; 7       ;
 ; update:update|fruta_x[2]                ; 2       ;
@@ -466,28 +443,28 @@ Encoding Type:  One-Hot
 ; update:update|cabeca_x[1]               ; 9       ;
 ; update:update|fruta_x[3]                ; 2       ;
 ; update:update|cabeca_x[3]               ; 7       ;
-; update:update|speed[25]                 ; 2       ;
-; update:update|speed[23]                 ; 2       ;
-; update:update|speed[22]                 ; 2       ;
-; update:update|speed[21]                 ; 2       ;
-; update:update|speed[20]                 ; 2       ;
-; update:update|speed[19]                 ; 2       ;
-; update:update|speed[17]                 ; 2       ;
-; update:update|speed[15]                 ; 2       ;
-; update:update|speed[14]                 ; 2       ;
-; update:update|speed[13]                 ; 2       ;
-; update:update|speed[12]                 ; 2       ;
-; update:update|speed[7]                  ; 3       ;
-; fruta:fruta|state_y[2]                  ; 6       ;
+; update:update|speed[25]                 ; 4       ;
+; update:update|speed[23]                 ; 3       ;
+; update:update|speed[22]                 ; 4       ;
+; update:update|speed[21]                 ; 3       ;
+; update:update|speed[20]                 ; 4       ;
+; update:update|speed[19]                 ; 3       ;
+; update:update|speed[17]                 ; 4       ;
+; update:update|speed[15]                 ; 4       ;
+; update:update|speed[14]                 ; 3       ;
+; update:update|speed[13]                 ; 3       ;
+; update:update|speed[12]                 ; 4       ;
+; update:update|speed[7]                  ; 4       ;
 ; fruta:fruta|state_y[3]                  ; 6       ;
+; fruta:fruta|state_y[2]                  ; 6       ;
 ; fruta:fruta|state_y[0]                  ; 6       ;
 ; fruta:fruta|state_x[1]                  ; 4       ;
 ; fruta:fruta|state_x[3]                  ; 4       ;
 ; fruta:fruta|state_x[4]                  ; 4       ;
 ; fruta:fruta|state_y[6]                  ; 6       ;
 ; fruta:fruta|state_y[7]                  ; 6       ;
-; fruta:fruta|state_y[5]                  ; 6       ;
 ; fruta:fruta|state_y[8]                  ; 6       ;
+; fruta:fruta|state_y[5]                  ; 6       ;
 ; fruta:fruta|state_x[6]                  ; 4       ;
 ; fruta:fruta|state_x[10]                 ; 4       ;
 ; fruta:fruta|state_y[10]                 ; 6       ;
@@ -597,9 +574,9 @@ Encoding Type:  One-Hot
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |main|vga:out|hcounter              ;
 ; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |main|vga:out|vcounter              ;
 ; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |main|update:update|Mux17           ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |main|update:update|Mux7            ;
-; 12:1               ; 4 bits    ; 32 LEs        ; 20 LEs               ; 12 LEs                 ; No         ; |main|update:update|state           ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 10 LEs               ; 8 LEs                  ; No         ; |main|update:update|state           ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |main|update:update|Mux4            ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |main|update:update|state           ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; No         ; |main|update:update|state           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
@@ -1122,14 +1099,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 397                         ;
-;     ENA               ; 234                         ;
+; arriav_ff             ; 387                         ;
+;     ENA               ; 225                         ;
 ;     ENA SCLR          ; 61                          ;
 ;     ENA SLD           ; 35                          ;
 ;     SCLR              ; 12                          ;
 ;     SLD               ; 32                          ;
-;     plain             ; 23                          ;
-; arriav_lcell_comb     ; 1434                        ;
+;     plain             ; 22                          ;
+; arriav_lcell_comb     ; 1446                        ;
 ;     arith             ; 504                         ;
 ;         0 data inputs ; 57                          ;
 ;         1 data inputs ; 267                         ;
@@ -1138,14 +1115,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 62                          ;
 ;     extend            ; 13                          ;
 ;         7 data inputs ; 13                          ;
-;     normal            ; 868                         ;
+;     normal            ; 880                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 45                          ;
-;         2 data inputs ; 182                         ;
-;         3 data inputs ; 118                         ;
-;         4 data inputs ; 151                         ;
-;         5 data inputs ; 131                         ;
-;         6 data inputs ; 239                         ;
+;         2 data inputs ; 204                         ;
+;         3 data inputs ; 104                         ;
+;         4 data inputs ; 159                         ;
+;         5 data inputs ; 111                         ;
+;         6 data inputs ; 255                         ;
 ;     shared            ; 49                          ;
 ;         0 data inputs ; 5                           ;
 ;         1 data inputs ; 14                          ;
@@ -1155,7 +1132,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 20                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 25.90                       ;
-; Average LUT depth     ; 11.09                       ;
+; Average LUT depth     ; 11.03                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1174,7 +1151,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Jun 12 11:56:35 2024
+    Info: Processing started: Wed Jun 12 12:00:24 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cobrinha -c cobrinha
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1208,9 +1185,10 @@ Warning (10236): Verilog HDL Implicit Net warning at main.v(114): created implic
 Warning (10236): Verilog HDL Implicit Net warning at main.v(115): created implicit net for "mapa_G" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 115
 Warning (10236): Verilog HDL Implicit Net warning at main.v(116): created implicit net for "mapa_B" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 116
 Warning (10236): Verilog HDL Implicit Net warning at main.v(117): created implicit net for "mapa_read" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 117
-Warning (10236): Verilog HDL Implicit Net warning at main.v(171): created implicit net for "obstaculo_wx" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 171
-Warning (10236): Verilog HDL Implicit Net warning at main.v(172): created implicit net for "obstaculo_wy" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 172
+Warning (10236): Verilog HDL Implicit Net warning at main.v(170): created implicit net for "obstaculo_wx" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 170
+Warning (10236): Verilog HDL Implicit Net warning at main.v(171): created implicit net for "obstaculo_wy" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 171
 Warning (10222): Verilog HDL Parameter Declaration warning at fruta.v(12): Parameter Declaration in module "fruta" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 12
+Warning (10222): Verilog HDL Parameter Declaration warning at update.v(43): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 43
 Warning (10222): Verilog HDL Parameter Declaration warning at update.v(44): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 44
 Warning (10222): Verilog HDL Parameter Declaration warning at update.v(45): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 45
 Warning (10222): Verilog HDL Parameter Declaration warning at update.v(46): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 46
@@ -1218,9 +1196,7 @@ Warning (10222): Verilog HDL Parameter Declaration warning at update.v(47): Para
 Warning (10222): Verilog HDL Parameter Declaration warning at update.v(48): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 48
 Warning (10222): Verilog HDL Parameter Declaration warning at update.v(49): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 49
 Warning (10222): Verilog HDL Parameter Declaration warning at update.v(50): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 50
-Warning (10222): Verilog HDL Parameter Declaration warning at update.v(51): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 51
-Warning (10222): Verilog HDL Parameter Declaration warning at update.v(52): Parameter Declaration in module "update" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 52
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(190): instance has no name File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 190
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(189): instance has no name File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 189
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "vga" for hierarchy "vga:out" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 97
 Warning (10230): Verilog HDL assignment warning at vga.v(45): truncated value with size 32 to match size of target (1) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/vga.v Line: 45
@@ -1237,26 +1213,26 @@ Info (12128): Elaborating entity "renderer" for hierarchy "renderer:renderer" Fi
 Warning (10036): Verilog HDL or VHDL warning at renderer.v(40): object "linha_x" assigned a value but never read File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/renderer.v Line: 40
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "linha" into its bus
 Info (12128): Elaborating entity "mapa" for hierarchy "mapa:mapa" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 145
-Info (12128): Elaborating entity "update" for hierarchy "update:update" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 180
-Warning (10230): Verilog HDL assignment warning at update.v(118): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 118
-Warning (10230): Verilog HDL assignment warning at update.v(121): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 121
-Warning (10230): Verilog HDL assignment warning at update.v(136): truncated value with size 32 to match size of target (30) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 136
-Warning (10230): Verilog HDL assignment warning at update.v(157): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 157
-Warning (10230): Verilog HDL assignment warning at update.v(160): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 160
-Warning (10230): Verilog HDL assignment warning at update.v(163): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 163
-Warning (10230): Verilog HDL assignment warning at update.v(166): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 166
-Warning (10230): Verilog HDL assignment warning at update.v(184): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 184
-Warning (10230): Verilog HDL assignment warning at update.v(204): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 204
-Warning (10230): Verilog HDL assignment warning at update.v(218): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 218
-Warning (10034): Output port "update_rx" at update.v(10) has no driver File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 10
-Warning (10034): Output port "update_ry" at update.v(11) has no driver File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 11
-Info (12128): Elaborating entity "cobra" for hierarchy "cobra:comb_3" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 190
-Info (12128): Elaborating entity "fruta" for hierarchy "fruta:fruta" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 201
+Info (12128): Elaborating entity "update" for hierarchy "update:update" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 179
+Warning (10230): Verilog HDL assignment warning at update.v(113): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 113
+Warning (10230): Verilog HDL assignment warning at update.v(116): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 116
+Warning (10230): Verilog HDL assignment warning at update.v(126): truncated value with size 32 to match size of target (30) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 126
+Warning (10230): Verilog HDL assignment warning at update.v(147): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 147
+Warning (10230): Verilog HDL assignment warning at update.v(150): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 150
+Warning (10230): Verilog HDL assignment warning at update.v(153): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 153
+Warning (10230): Verilog HDL assignment warning at update.v(156): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 156
+Warning (10230): Verilog HDL assignment warning at update.v(174): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 174
+Warning (10230): Verilog HDL assignment warning at update.v(194): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 194
+Warning (10230): Verilog HDL assignment warning at update.v(208): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 208
+Warning (10034): Output port "update_rx" at update.v(9) has no driver File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 9
+Warning (10034): Output port "update_ry" at update.v(10) has no driver File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/update.v Line: 10
+Info (12128): Elaborating entity "cobra" for hierarchy "cobra:comb_3" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 189
+Info (12128): Elaborating entity "fruta" for hierarchy "fruta:fruta" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 200
 Warning (10230): Verilog HDL assignment warning at fruta.v(19): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 19
 Warning (10230): Verilog HDL assignment warning at fruta.v(20): truncated value with size 32 to match size of target (10) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 20
 Warning (10230): Verilog HDL assignment warning at fruta.v(26): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 26
 Warning (10230): Verilog HDL assignment warning at fruta.v(27): truncated value with size 32 to match size of target (20) File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/fruta.v Line: 27
-Info (12128): Elaborating entity "bin2display" for hierarchy "bin2display:display" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 213
+Info (12128): Elaborating entity "bin2display" for hierarchy "bin2display:display" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 212
 Info (12128): Elaborating entity "bcd2display" for hierarchy "bin2display:display|bcd2display:display0" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v Line: 29
 Warning (10235): Verilog HDL Always Construct warning at bcd2display.v(22): variable "flag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/bcd2display.v Line: 22
 Info (12128): Elaborating entity "bin2bcd" for hierarchy "bin2display:display|bin2bcd:pontuacaoDir" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/bin2display.v Line: 59
@@ -1440,11 +1416,12 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 19
     Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 20
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 11 registers lost all their fanouts during netlist optimizations.
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/output_files/cobrinha.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
     Warning (15610): No output dependent on input pin "SW[2]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
     Warning (15610): No output dependent on input pin "SW[3]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
     Warning (15610): No output dependent on input pin "SW[4]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
@@ -1453,16 +1430,16 @@ Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
     Warning (15610): No output dependent on input pin "SW[8]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
     Warning (15610): No output dependent on input pin "SW[9]" File: /home/ec2022/ra260660/Documents/MC613/2024s1-mc613-projeto-rafofo-e-amigos/main.v Line: 6
-Info (21057): Implemented 1707 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1710 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 71 output pins
-    Info (21061): Implemented 1601 logic cells
+    Info (21061): Implemented 1604 logic cells
     Info (21064): Implemented 20 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 105 warnings
-    Info: Peak virtual memory: 1358 megabytes
-    Info: Processing ended: Wed Jun 12 11:56:43 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 1359 megabytes
+    Info: Processing ended: Wed Jun 12 12:00:33 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +------------------------------------------+
