@@ -47,6 +47,7 @@ module update #(
     parameter CALCULA_POSICAO = 3;
     parameter CHECA_COLISAO = 4;
     parameter ATUALIZA_COBRA = 5;
+    parameter COLISAO_COBRA = 7;
     parameter NOVA_FRUTA = 8;
     parameter GAME_OVER = 6;
 
@@ -55,6 +56,8 @@ module update #(
 
     reg [9:0] corpo_x [127:0];
     reg [9:0] corpo_y [127:0];
+
+    reg [9:0] colisao_counter = 0;
 
     reg [9:0] cabeca_x = 10;
     reg [9:0] cabeca_y = 10;
@@ -131,6 +134,7 @@ always @(posedge clk) begin
             end
             IDLE: begin
                 counter = counter + 1;
+                colisao_counter = (cauda_lista + 1) % 128;
                 update_wenable = 0;
                 update_renable = 0;
                 fruta_enable = 0;
@@ -160,14 +164,12 @@ always @(posedge clk) begin
                 state = CHECA_COLISAO;
             end
             CHECA_COLISAO: begin
-
+                // Pinta a nova cabeça
                 update_wx = cabeca_x;
                 update_wy = cabeca_y;
                 update_wdata = 2'b01;
                 update_wenable = 1;
 
-                // QUANDO TEM TAMANHO 2 NAO TA RECONHECENDO A Fruta, SO AS VEZES E QUANDO RECINHECE BUGA A COBRA
-                state = ATUALIZA_COBRA;
                 if (fruta_x == cabeca_x && fruta_y == cabeca_y) begin 
                     // Encontrou com uma fruta
                     comeu_fruta = 1;
@@ -177,10 +179,27 @@ always @(posedge clk) begin
                         high_score = score;
                         beating_high_score = 1;
                     end
+                    state = ATUALIZA_COBRA;
                 end else if ((obs_x == cabeca_x && obs_y == cabeca_y)) begin
-                    // Encontrou com si mesma ou um obstáculo
+                    // Encontrou com um obstaculo
                     game_over = 1;
                     state = GAME_OVER;
+                    state = RESET;
+                end else begin
+                    state = COLISAO_COBRA;
+                end
+            end
+            COLISAO_COBRA: begin
+                if (colisao_counter == cabeca_lista) begin
+                    state = ATUALIZA_COBRA;
+                end else begin
+                    if (cabeca_x == corpo_x[colisao_counter] &&
+                        cabeca_y == corpo_y[colisao_counter]) begin
+                        game_over = 1;
+                        state = RESET;
+                    end else begin
+                        colisao_counter = (colisao_counter + 1) % 128;
+                    end
                 end
             end
             GAME_OVER: begin
