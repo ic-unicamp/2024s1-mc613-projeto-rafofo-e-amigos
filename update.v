@@ -185,6 +185,7 @@ always @(posedge clk) begin
                     if (speed > speed_limit) begin
                         speed = speed - 5000000;
                     end
+                    state = ATUALIZA_COBRA;
                 end else if ((obs_x == cabeca_x && obs_y == cabeca_y)) begin
                     // Encontrou com um obstaculo
                     game_over = 1;
