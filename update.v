@@ -50,6 +50,8 @@ module update #(
     parameter NOVA_FRUTA = 8;
     parameter GAME_OVER = 6;
     parameter PINTA_CABECA = 9;
+    parameter NOVO_OBSTACULO = 10;
+    parameter COLISAO_OBSTACULO = 11;
     parameter speed_limit = 10000000;
 
     reg [3:0] state = RESET;
@@ -61,11 +63,17 @@ module update #(
     reg [9:0] cabeca_x = 10;
     reg [9:0] cabeca_y = 10;
 
+    reg [9:0] obstaculo_x = 13;
+    reg [9:0] obstaculo_y = 13;
+    reg [9:0] obs_counter = 0;
+
     reg [9:0] fruta_x = 13;
     reg [9:0] fruta_y = 13;
+    reg [9:0] fruta_counter = 0;
 
-    reg [9:0] obs_x = 3;
-    reg [9:0] obs_y = 4;
+    reg [9:0] obs_x [127:0];
+    reg [9:0] obs_y [127:0];
+    reg [9:0] obs_lista;
 
     reg [9:0] colisao_counter = 0;
     reg [9:0] cabeca_lista = 0;
@@ -96,6 +104,7 @@ always @(posedge clk) begin
                 colisao_counter = 0;
                 corpo_x[0] = cabeca_x;
                 corpo_y[0] = cabeca_y;
+                obs_lista = 0;
                 temp_score = 0;
                 score = 0;
                 beating_high_score = 0;
@@ -107,8 +116,6 @@ always @(posedge clk) begin
                     update_wdata = 2'b01;
                 end else if (icounterx == fruta_x && icountery == fruta_y)begin
                     update_wdata = 2'b10;
-                end else if (icounterx == obs_x && icountery == obs_y)begin
-                    update_wdata = 2'b11;
                 end else begin
                     update_wdata = 0;
                 end
@@ -165,7 +172,6 @@ always @(posedge clk) begin
                 state = CHECA_COLISAO;
             end
             CHECA_COLISAO: begin
-
                 if (fruta_x == cabeca_x && fruta_y == cabeca_y) begin 
                     // Encontrou com uma fruta
                     comeu_fruta = 1;
@@ -176,17 +182,31 @@ always @(posedge clk) begin
                         high_score = score;
                         beating_high_score = 1;
                     end
-                    state = ATUALIZA_COBRA;
                     // Aumenta a velocidade de cobra
                     if (speed > speed_limit) begin
                         speed = speed - 5000000;
                     end
                     state = ATUALIZA_COBRA;
-                end else if ((obs_x == cabeca_x && obs_y == cabeca_y)) begin
+                //end else if ((obs_x == cabeca_x && obs_y == cabeca_y)) begin
                     // Encontrou com um obstaculo
-                    game_over = 1;
-                    state = GAME_OVER;
+                    //game_over = 1;
+                    //state = GAME_OVER;
                 end else begin
+                    state = COLISAO_OBSTACULO;
+                end
+            end
+            COLISAO_OBSTACULO: begin
+                if (obs_counter <= obs_lista) begin
+                    if (cabeca_x == obs_x[obs_counter] &&
+                        cabeca_y == obs_y[obs_counter]) begin
+                        obs_counter = 0;
+                        game_over = 1;
+                        state = GAME_OVER;
+                    end else begin
+                        obs_counter = obs_counter + 1;
+                    end
+                end else begin
+                    obs_counter = 0;
                     state = COLISAO_COBRA;
                 end
             end
@@ -244,10 +264,38 @@ always @(posedge clk) begin
                 fruta_x = fruta_wx;
                 fruta_y = fruta_wy;
 
-                update_wx = fruta_wx;
-                update_wy = fruta_wy;
-                update_wdata = 2'b10;
+                if (fruta_counter <= score) begin
+                    if (fruta_x == corpo_x[(fruta_counter + cauda_lista % 128)] &&
+                        fruta_y == corpo_y[(fruta_counter + cauda_lista % 128)]) begin
+                        // Colide com a cobra, gera outra fruta e começa do
+                        // zero
+                        fruta_counter = 0;
+                        fruta_enable = 1;
+                    end else begin
+                        // Checa proximo no da cobra
+                        fruta_counter = fruta_counter + 1;
+                    end
+                end else begin
+                    fruta_counter = 0;
+
+                    update_wx = fruta_wx;
+                    update_wy = fruta_wy;
+                    update_wdata = 2'b10;
+                    update_wenable = 1;
+                    state = NOVO_OBSTACULO;
+                end
+            end
+            NOVO_OBSTACULO: begin
+                obs_lista = obs_lista + 1;
+
+                obs_x[obs_lista] = (fruta_wx << 2) % 40;
+                obs_y[obs_lista] = (fruta_wy << 2) % 30;
+
+                update_wx = (fruta_wx << 2) % 40;
+                update_wy = (fruta_wy << 2) % 30;
+                update_wdata = 2'b11;
                 update_wenable = 1;
+
                 state = IDLE;
             end
         endcase
