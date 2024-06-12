@@ -36,7 +36,7 @@ module update #(
     output reg game_over
 );
 
-    reg [39:0] speed = 50000000;
+    reg [39:0] speed;
     reg [39:0] counter = 0;
     reg [19:0] temp_score = 0;
 
@@ -49,7 +49,7 @@ module update #(
     parameter COLISAO_COBRA = 7;
     parameter NOVA_FRUTA = 8;
     parameter GAME_OVER = 6;
-    //parameter speed_limit = 10000000;
+    parameter speed_limit = 10000000;
 
     reg [3:0] state = RESET;
     reg [3:0] last_state;
@@ -98,7 +98,7 @@ always @(posedge clk) begin
                 temp_score = 0;
                 score = 0;
                 beating_high_score = 0;
-
+                speed = 50000000;
                 update_wx = icounterx;
                 update_wy = icountery;
 
@@ -182,9 +182,9 @@ always @(posedge clk) begin
                     end
                     state = ATUALIZA_COBRA;
                     // Aumenta a velocidade de cobra
-                    //if (speed > speed_limit) begin
-                        speed = speed - 10000000;
-                    //end
+                    if (speed > speed_limit) begin
+                        speed = speed - 5000000;
+                    end
                 end else if ((obs_x == cabeca_x && obs_y == cabeca_y)) begin
                     // Encontrou com um obstaculo
                     game_over = 1;
