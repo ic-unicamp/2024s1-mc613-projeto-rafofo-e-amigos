@@ -74,6 +74,15 @@ module main (
   parameter [9:0] MAPA_WIDTH = SCREEN_WIDTH / BLOCK_SIZE;
   parameter [9:0] MAPA_HEIGHT = SCREEN_HEIGHT / BLOCK_SIZE;
 
+  wire [7:0] sprite_addr;
+  wire [23:0] sprite_data;
+
+  //sprit
+  sprite_rom rom (
+        .addr(sprite_addr),
+        .data(sprite_data)
+    );
+
   // Display vga
   vga out (
     .CLOCK_50(CLOCK_50),
